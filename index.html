@@ -6,6 +6,16 @@
     <title>StoreCamVaz-20 - Exclusive Amazon Deals</title>
     <meta name="description" content="Discover the best Amazon deals. Electronics, home, fashion and more with exclusive discounts.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
@@ -150,151 +160,6 @@
             background: rgba(255, 255, 255, 0.1);
         }
 
-        /* Cookie Settings Modal */
-        .cookie-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.8);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 10001;
-            padding: 1rem;
-        }
-        
-        .cookie-modal.active {
-            display: flex;
-        }
-        
-        .modal-content {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            max-width: 600px;
-            width: 100%;
-            max-height: 80vh;
-            overflow-y: auto;
-            color: var(--text);
-        }
-        
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid var(--gray);
-        }
-        
-        .modal-header h2 {
-            color: var(--dark);
-            font-size: 1.5rem;
-        }
-        
-        .close-modal {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-light);
-            padding: 0.5rem;
-        }
-        
-        .close-modal:hover {
-            color: var(--text);
-        }
-        
-        .cookie-option {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--gray);
-        }
-        
-        .option-info h4 {
-            margin-bottom: 0.5rem;
-            color: var(--dark);
-        }
-        
-        .option-info p {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            line-height: 1.5;
-        }
-        
-        .toggle-switch {
-            position: relative;
-            width: 50px;
-            height: 26px;
-        }
-        
-        .toggle-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        
-        .toggle-slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
-        }
-        
-        .toggle-slider:before {
-            position: absolute;
-            content: "";
-            height: 18px;
-            width: 18px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        
-        input:checked + .toggle-slider {
-            background-color: var(--primary);
-        }
-        
-        input:checked + .toggle-slider:before {
-            transform: translateX(24px);
-        }
-        
-        .modal-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: flex-end;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 2px solid var(--gray);
-        }
-        
-        .save-settings {
-            background: var(--primary);
-            color: var(--dark);
-            padding: 12px 24px;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .save-settings:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-        
         /* Modern Header */
         header {
             background: var(--dark);
@@ -819,56 +684,6 @@
         </div>
     </div>
 
-    <!-- Cookie Settings Modal -->
-    <div class="cookie-modal" id="cookieModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Cookie Preferences</h2>
-                <button class="close-modal" id="closeModal">&times;</button>
-            </div>
-            
-            <div class="cookie-options">
-                <div class="cookie-option">
-                    <div class="option-info">
-                        <h4>Essential Cookies</h4>
-                        <p>Required for the website to function properly. Cannot be disabled.</p>
-                    </div>
-                    <label class="toggle-switch">
-                        <input type="checkbox" checked disabled>
-                        <span class="toggle-slider"></span>
-                    </label>
-                </div>
-                
-                <div class="cookie-option">
-                    <div class="option-info">
-                        <h4>Analytics Cookies</h4>
-                        <p>Help us understand how visitors interact with our website through Google Analytics.</p>
-                    </div>
-                    <label class="toggle-switch">
-                        <input type="checkbox" id="analyticsCookies" checked>
-                        <span class="toggle-slider"></span>
-                    </label>
-                </div>
-                
-                <div class="cookie-option">
-                    <div class="option-info">
-                        <h4>Marketing Cookies</h4>
-                        <p>Used to track visitors across websites for advertising purposes.</p>
-                    </div>
-                    <label class="toggle-switch">
-                        <input type="checkbox" id="marketingCookies">
-                        <span class="toggle-slider"></span>
-                    </label>
-                </div>
-            </div>
-            
-            <div class="modal-actions">
-                <button class="cookie-btn cookie-reject" id="modalReject">Reject All</button>
-                <button class="save-settings" id="saveSettings">Save Preferences</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Header -->
     <header>
         <div class="container">
@@ -1090,15 +905,8 @@
     <script>
         // Cookie Consent Management
         const cookieBanner = document.getElementById('cookieBanner');
-        const cookieModal = document.getElementById('cookieModal');
         const acceptCookies = document.getElementById('acceptCookies');
         const rejectCookies = document.getElementById('rejectCookies');
-        const settingsCookies = document.getElementById('settingsCookies');
-        const closeModal = document.getElementById('closeModal');
-        const saveSettings = document.getElementById('saveSettings');
-        const modalReject = document.getElementById('modalReject');
-        const analyticsCookies = document.getElementById('analyticsCookies');
-        const marketingCookies = document.getElementById('marketingCookies');
 
         // Check if user has already made a choice
         function checkCookieConsent() {
@@ -1110,98 +918,50 @@
                 }, 1000);
             } else {
                 // User has already consented, load analytics if accepted
-                if (consent === 'accepted' || (consent === 'custom' && localStorage.getItem('analyticsCookies') === 'true')) {
-                    loadGoogleAnalytics();
+                if (consent === 'accepted') {
+                    // Google Analytics is already loaded in head
+                    trackPageView();
                 }
             }
         }
 
-        // Load Google Analytics
-        function loadGoogleAnalytics() {
-            // Google tag (gtag.js)
-            const script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P';
-            document.head.appendChild(script);
+        // Track page view for Google Analytics
+        function trackPageView() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view', {
+                    'page_title': document.title,
+                    'page_location': window.location.href
+                });
+            }
+        }
 
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-BYMJS3X12P');
-
-            // Enhanced affiliate link tracking
+        // Enhanced affiliate link tracking
+        function setupAffiliateTracking() {
             document.querySelectorAll('a[target="_blank"]').forEach(link => {
                 link.addEventListener('click', function() {
-                    gtag('event', 'affiliate_click', {
-                        'event_category': 'Affiliate',
-                        'event_label': this.href,
-                        'link_url': this.href
-                    });
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'affiliate_click', {
+                            'event_category': 'Affiliate',
+                            'event_label': this.href,
+                            'link_url': this.href
+                        });
+                    }
+                    console.log('Affiliate link clicked: ' + this.href);
                 });
-            });
-
-            // Track page views
-            gtag('event', 'page_view', {
-                'page_title': document.title,
-                'page_location': window.location.href
             });
         }
 
         // Accept all cookies
         acceptCookies.addEventListener('click', () => {
             localStorage.setItem('cookieConsent', 'accepted');
-            localStorage.setItem('analyticsCookies', 'true');
-            localStorage.setItem('marketingCookies', 'true');
             cookieBanner.classList.remove('active');
-            loadGoogleAnalytics();
+            trackPageView();
         });
 
         // Reject all cookies
         rejectCookies.addEventListener('click', () => {
             localStorage.setItem('cookieConsent', 'rejected');
-            localStorage.setItem('analyticsCookies', 'false');
-            localStorage.setItem('marketingCookies', 'false');
             cookieBanner.classList.remove('active');
-        });
-
-        // Open settings modal
-        settingsCookies.addEventListener('click', () => {
-            cookieModal.classList.add('active');
-        });
-
-        // Close modal
-        closeModal.addEventListener('click', () => {
-            cookieModal.classList.remove('active');
-        });
-
-        // Save custom settings
-        saveSettings.addEventListener('click', () => {
-            localStorage.setItem('cookieConsent', 'custom');
-            localStorage.setItem('analyticsCookies', analyticsCookies.checked.toString());
-            localStorage.setItem('marketingCookies', marketingCookies.checked.toString());
-            
-            cookieModal.classList.remove('active');
-            cookieBanner.classList.remove('active');
-            
-            if (analyticsCookies.checked) {
-                loadGoogleAnalytics();
-            }
-        });
-
-        // Reject from modal
-        modalReject.addEventListener('click', () => {
-            localStorage.setItem('cookieConsent', 'rejected');
-            localStorage.setItem('analyticsCookies', 'false');
-            localStorage.setItem('marketingCookies', 'false');
-            cookieModal.classList.remove('active');
-            cookieBanner.classList.remove('active');
-        });
-
-        // Close modal when clicking outside
-        cookieModal.addEventListener('click', (e) => {
-            if (e.target === cookieModal) {
-                cookieModal.classList.remove('active');
-            }
         });
 
         // Scroll animations
@@ -1219,8 +979,9 @@
             });
         }, observerOptions);
 
-        // Observe elements with fade-in class
+        // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
+            // Setup animations
             const fadeElements = document.querySelectorAll('.fade-in');
             fadeElements.forEach(el => {
                 el.style.opacity = '0';
@@ -1229,8 +990,17 @@
                 observer.observe(el);
             });
 
-            // Check cookie consent on page load
+            // Setup affiliate tracking
+            setupAffiliateTracking();
+
+            // Check cookie consent
             checkCookieConsent();
+
+            // Track initial page view if cookies accepted
+            const consent = localStorage.getItem('cookieConsent');
+            if (consent === 'accepted') {
+                trackPageView();
+            }
         });
     </script>
 </body>
