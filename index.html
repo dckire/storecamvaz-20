@@ -1,21 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrimeDeals - Exclusive Amazon Offers</title>
-    <!-----pinterest domain verify --->
-    <meta name="p:domain_verify" content="f0ed92b3b38a651dc3827d9546e12a7a"/>
-    <!-- Google Analytics -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BYMJS3X12P');
-    </script>
-    
+    <title>Navidad Mágica - Tienda de Regalos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -25,108 +14,50 @@
         }
         
         body {
-            background: linear-gradient(135deg, #1a2a3a, #232f3e);
-            color: #333;
+            background: linear-gradient(135deg, #0a3d1e, #1a5e2c);
+            color: #fff;
             line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Cookie Banner Styles */
-        .cookie-banner {
+        /* Efecto de nieve */
+        .snowflakes {
             position: fixed;
-            bottom: 0;
+            top: 0;
             left: 0;
-            right: 0;
-            background: #2d3748;
-            color: white;
-            padding: 20px;
-            box-shadow: 0 -4px 12px rgba(0,0,0,0.3);
-            z-index: 1000;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
         }
         
-        .cookie-banner.show {
-            transform: translateY(0);
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: #fff;
+            font-size: 1.5em;
+            opacity: 0.8;
+            animation: fall linear forwards;
         }
         
-        .cookie-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
+        @keyframes fall {
+            to {
+                transform: translateY(105vh) rotate(360deg);
+                opacity: 0;
+            }
         }
         
-        .cookie-text {
-            flex: 1;
-        }
-        
-        .cookie-text h3 {
-            margin-bottom: 8px;
-            color: #FF9900;
-        }
-        
-        .cookie-text p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            line-height: 1.5;
-        }
-        
-        .cookie-text a {
-            color: #FF9900;
-            text-decoration: underline;
-        }
-        
-        .cookie-buttons {
-            display: flex;
-            gap: 10px;
-            flex-shrink: 0;
-        }
-        
-        .cookie-btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .cookie-reject {
-            background: #718096;
-            color: white;
-        }
-        
-        .cookie-settings {
-            background: transparent;
-            color: #FF9900;
-            border: 2px solid #FF9900;
-        }
-        
-        .cookie-accept {
-            background: #FF9900;
-            color: #232f3e;
-        }
-        
-        .cookie-btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        /* Header Styles */
+        /* Header */
         header {
-            background: linear-gradient(to right, #232f3e, #37475A);
+            background: linear-gradient(to right, #b30000, #d40000);
             color: white;
-            padding: 30px 0;
+            padding: 20px 0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             position: relative;
             overflow: hidden;
+            border-bottom: 5px solid #0a3d1e;
         }
         
         header::before {
@@ -147,11 +78,20 @@
         }
         
         .logo {
-            font-size: 2.8rem;
+            font-size: 3rem;
             font-weight: 700;
             margin-bottom: 10px;
-            color: #FF9900;
+            color: #fff;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .logo i {
+            color: #ffcc00;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
         }
         
         .tagline {
@@ -162,8 +102,8 @@
         
         .discount-badge {
             display: inline-block;
-            background: #FF9900;
-            color: #232f3e;
+            background: #ffcc00;
+            color: #b30000;
             padding: 8px 20px;
             border-radius: 30px;
             font-weight: bold;
@@ -173,23 +113,24 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1545425528-98e231fdc8fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
             padding: 80px 20px;
             margin-bottom: 40px;
+            position: relative;
         }
         
         .hero h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 20px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             max-width: 700px;
             margin: 0 auto 30px;
             opacity: 0.9;
@@ -197,29 +138,31 @@
         
         .cta-button {
             display: inline-block;
-            background: #FF9900;
-            color: #232f3e;
+            background: #ffcc00;
+            color: #b30000;
             padding: 15px 40px;
             border-radius: 30px;
             font-weight: bold;
             font-size: 1.2rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4);
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
         }
         
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 153, 0, 0.6);
+            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.6);
+            background: #ffd633;
         }
         
         /* Products Grid */
         .section-title {
             text-align: center;
             color: white;
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin: 40px 0 30px;
             position: relative;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
         .section-title::after {
@@ -227,7 +170,7 @@
             display: block;
             width: 100px;
             height: 4px;
-            background: #FF9900;
+            background: #ffcc00;
             margin: 15px auto;
             border-radius: 2px;
         }
@@ -246,6 +189,7 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             position: relative;
+            border: 3px solid #b30000;
         }
         
         .product-card:hover {
@@ -275,7 +219,7 @@
         .product-price {
             font-size: 1.3rem;
             font-weight: bold;
-            color: #B12704;
+            color: #b30000;
             margin-bottom: 15px;
         }
         
@@ -287,14 +231,14 @@
         }
         
         .product-rating {
-            color: #FFA41C;
+            color: #ffcc00;
             margin-bottom: 15px;
             font-size: 1.1rem;
         }
         
         .buy-button {
             display: block;
-            background: #FF9900;
+            background: #b30000;
             color: white;
             text-align: center;
             padding: 12px;
@@ -305,14 +249,14 @@
         }
         
         .buy-button:hover {
-            background: #e68900;
+            background: #d40000;
         }
         
         .sale-badge {
             position: absolute;
             top: 15px;
             right: 15px;
-            background: #B12704;
+            background: #b30000;
             color: white;
             padding: 5px 10px;
             border-radius: 4px;
@@ -340,8 +284,8 @@
         }
         
         .category-btn:hover, .category-btn.active {
-            background: #FF9900;
-            color: #232f3e;
+            background: #ffcc00;
+            color: #b30000;
         }
         
         /* Disclosure */
@@ -353,16 +297,17 @@
             margin: 40px 0;
             font-size: 0.9rem;
             color: #555;
-            border-left: 4px solid #FF9900;
+            border-left: 4px solid #b30000;
         }
         
         /* Footer */
         footer {
-            background: #232f3e;
+            background: #0a3d1e;
             color: white;
             text-align: center;
             padding: 30px 0;
             margin-top: 50px;
+            border-top: 5px solid #b30000;
         }
         
         .footer-links {
@@ -380,12 +325,43 @@
         }
         
         .footer-links a:hover {
-            color: #FF9900;
+            color: #ffcc00;
         }
         
         .copyright {
             font-size: 0.9rem;
             opacity: 0.7;
+        }
+        
+        /* Christmas decorations */
+        .christmas-tree {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 3rem;
+            color: #0a3d1e;
+            z-index: 99;
+            animation: sway 3s infinite alternate ease-in-out;
+        }
+        
+        @keyframes sway {
+            0% { transform: rotate(-5deg); }
+            100% { transform: rotate(5deg); }
+        }
+        
+        .gift-box {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            font-size: 2.5rem;
+            color: #b30000;
+            z-index: 99;
+            animation: bounce 2s infinite alternate;
+        }
+        
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
         }
         
         /* Responsive */
@@ -402,15 +378,6 @@
             .logo {
                 font-size: 2.2rem;
             }
-            
-            .cookie-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .cookie-buttons {
-                justify-content: center;
-            }
         }
         
         @media (max-width: 480px) {
@@ -422,40 +389,31 @@
                 padding: 50px 20px;
             }
             
-            .cookie-buttons {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .cookie-btn {
-                width: 100%;
+            .christmas-tree, .gift-box {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Cookie Consent Banner -->
-    <div class="cookie-banner" id="cookieBanner">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                <h3>🍪 We Value Your Privacy</h3>
-                <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking "Accept All", you consent to our use of cookies. <a href="#" id="privacyLink">Privacy Policy</a></p>
-            </div>
-            <div class="cookie-buttons">
-                <button class="cookie-btn cookie-reject" id="rejectCookies">Reject All</button>
-                <button class="cookie-btn cookie-settings" id="settingsCookies">Settings</button>
-                <button class="cookie-btn cookie-accept" id="acceptCookies">Accept All</button>
-            </div>
-        </div>
-    </div>
+    <!-- Efecto de nieve -->
+    <div class="snowflakes" id="snowflakes"></div>
+    
+    <!-- Decoraciones navideñas -->
+    <div class="christmas-tree">🎄</div>
+    <div class="gift-box">🎁</div>
 
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">PrimeDeals</div>
-                <p class="tagline">Exclusive Amazon Offers - Limited Time Only!</p>
-                <div class="discount-badge">UP TO 60% OFF SELECTED ITEMS</div>
+                <div class="logo">
+                    <i class="fas fa-gift"></i>
+                    Navidad Mágica
+                    <i class="fas fa-gift"></i>
+                </div>
+                <p class="tagline">Regalos Especiales para una Navidad Inolvidable</p>
+                <div class="discount-badge">OFERTAS NAVIDEÑAS HASTA 50% OFF</div>
             </div>
         </div>
     </header>
@@ -463,240 +421,124 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h2>Discover Amazing Deals on Top Products</h2>
-            <p>Shop the best selection of electronics, home goods, and more with exclusive discounts available only through our store.</p>
-            <a href="https://amzn.to/3LWVbIq" class="cta-button">SHOP NOW</a>
+            <h2>¡Felices Fiestas! Encuentra los Mejores Regalos</h2>
+            <p>Descubre nuestra selección especial de regalos navideños para toda la familia. Desde decoraciones hasta juguetes, tenemos todo para hacer tu Navidad mágica.</p>
+            <a href="#products" class="cta-button">VER REGALOS</a>
         </div>
     </section>
     
     <!-- Categories -->
     <div class="container">
         <div class="categories">
-            <a href="https://amzn.to/3KeccNH" class="category-btn active">Electronics</a>
-            <a href="https://amzn.to/48cga1d" class="category-btn">Home & Kitchen</a>
-            <a href="https://amzn.to/3K12SNf" class="category-btn">Sports & Outdoors</a>
-            <a href="https://amzn.to/48vcOI7" class="category-btn">Gaming</a>
+            <a href="#" class="category-btn active">Decoraciones</a>
+            <a href="#" class="category-btn">Juguetes</a>
+            <a href="#" class="category-btn">Regalos Tecnológicos</a>
+            <a href="#" class="category-btn">Regalos Gourmet</a>
         </div>
     </div>
     
     <!-- Products Section -->
     <div class="container">
-        <h2 class="section-title" id="products">Featured Products</h2>
+        <h2 class="section-title" id="products">Regalos Navideños Destacados</h2>
         
         <div class="products-grid">
             <!-- Product 1 -->
             <div class="product-card">
-                <div class="sale-badge">SAVE 20%</div>
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Headphones" class="product-image">
+                <div class="sale-badge">OFERTA</div>
+                <img src="https://images.unsplash.com/photo-1574359411659-6196241dccb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Árbol de Navidad" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">Wireless Bluetooth Headphones with Noise Cancellation</h3>
-                    <div class="product-price">$129.99 <span class="original-price">$239.99</span></div>
+                    <h3 class="product-title">Árbol de Navidad Artificial de 6 Pies con Luces LED</h3>
+                    <div class="product-price">$89.99 <span class="original-price">$129.99</span></div>
                     <div class="product-rating">★★★★★</div>
-                    <a href="https://amzn.to/4prO2hB" class="buy-button" target="_blank">BUY ON AMAZON</a>
+                    <a href="#" class="buy-button">COMPRAR AHORA</a>
                 </div>
             </div>
             
             <!-- Product 2 -->
             <div class="product-card">
-                <div class="sale-badge">BEST SELLER</div>
-                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Camera" class="product-image">
+                <div class="sale-badge">MÁS VENDIDO</div>
+                <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Juguetes" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">4K Digital Camera with 48MP Photography</h3>
-                    <div class="product-price">$56.99 <span class="original-price">$75.99</span></div>
+                    <h3 class="product-title">Set de Construcción de Bloques para Niños - 500 Piezas</h3>
+                    <div class="product-price">$39.99 <span class="original-price">$49.99</span></div>
                     <div class="product-rating">★★★★☆</div>
-                    <a href="https://amzn.to/3KfsGVX" class="buy-button" target="_blank">BUY ON AMAZON</a>
+                    <a href="#" class="buy-button">COMPRAR AHORA</a>
                 </div>
             </div>
             
             <!-- Product 3 -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Smart Watch" class="product-image">
+                <img src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Suéter Navideño" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">Smart Watch with Fitness Tracker and Heart Rate Monitor</h3>
-                    <div class="product-price">$59.99</div>
+                    <h3 class="product-title">Suéter Navideño Familiar - Tallas para Adultos y Niños</h3>
+                    <div class="product-price">$24.99</div>
                     <div class="product-rating">★★★★★</div>
-                    <a href="https://amzn.to/3Xa2Aqj" class="buy-button" target="_blank">BUY ON AMAZON</a>
+                    <a href="#" class="buy-button">COMPRAR AHORA</a>
                 </div>
             </div>
             
             <!-- Product 4 -->
             <div class="product-card">
-                <div class="sale-badge">LIMITED TIME</div>
-                <img src="https://m.media-amazon.com/images/I/717viwdyBdL._SL1500_.jpg" alt="Gaming Console" class="product-image">
+                <div class="sale-badge">NUEVO</div>
+                <img src="https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Tablet" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">Next-Gen Gaming Console with 1TB Storage</h3>
-                    <div class="product-price">$33.99 <span class="original-price">$39.99</span></div>
+                    <h3 class="product-title">Tablet Android 10" - Ideal para Regalo</h3>
+                    <div class="product-price">$159.99 <span class="original-price">$199.99</span></div>
                     <div class="product-rating">★★★★☆</div>
-                    <a href="https://amzn.to/43OzgJz" class="buy-button" target="_blank">BUY ON AMAZON</a>
+                    <a href="#" class="buy-button">COMPRAR AHORA</a>
                 </div>
             </div>
             
             <!-- Product 5 -->
             <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/719cyf7ypzL._AC_SL1280_.jpg" alt="Tablet" class="product-image">
+                <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Juego de Mesa" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">10-inch Tablet with Stylus and Keyboard</h3>
-                    <div class="product-price">$199.99</div>
+                    <h3 class="product-title">Juego de Mesa Familiar para Noches Navideñas</h3>
+                    <div class="product-price">$29.99</div>
                     <div class="product-rating">★★★★☆</div>
-                    <a href="https://amzn.to/4p83lw8" class="buy-button" target="_blank">BUY ON AMAZON</a>
+                    <a href="#" class="buy-button">COMPRAR AHORA</a>
                 </div>
             </div>
             
             <!-- Product 6 -->
             <div class="product-card">
-                <div class="sale-badge">NEW</div>
-                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Laptop" class="product-image">
+                <div class="sale-badge">LIMITADO</div>
+                <img src="https://images.unsplash.com/photo-1572187712892-5848e4f4d6f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cesta Gourmet" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">Ultra-Thin Laptop with 16GB RAM and 512GB SSD</h3>
-                    <div class="product-price">$269.99</div>
+                    <h3 class="product-title">Cesta Gourmet Navideña con Vino y Delicatessen</h3>
+                    <div class="product-price">$69.99</div>
                     <div class="product-rating">★★★★★</div>
-                    <a href="https://amzn.to/4aahKU1" class="buy-button" target="_blank">BUY ON AMAZON</a>
+                    <a href="#" class="buy-button">COMPRAR AHORA</a>
                 </div>
             </div>
             
             <!-- Product 7 -->
             <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/61x0q1vrbhL._AC_SY695_.jpg" alt="Sneakers" class="product-image">
+                <img src="https://images.unsplash.com/photo-1572635148811-6c65e31a0255?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Auriculares" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">Premium Running Shoes with Cushion Technology</h3>
-                    <div class="product-price">$101.00 <span class="original-price">$139.99</span></div>
+                    <h3 class="product-title">Auriculares Inalámbricos con Cancelación de Ruido</h3>
+                    <div class="product-price">$129.99 <span class="original-price">$159.99</span></div>
                     <div class="product-rating">★★★★☆</div>
-                    <a href="https://amzn.to/4ieR4Ul" class="buy-button" target="_blank">BUY ON AMAZON</a>
+                    <a href="#" class="buy-button">COMPRAR AHORA</a>
                 </div>
             </div>
             
             <!-- Product 8 -->
             <div class="product-card">
-                <div class="sale-badge">HOT DEAL</div>
-                <img src="https://m.media-amazon.com/images/I/619vXcl8bRL._AC_SL1500_.jpg" alt="Smartphone" class="product-image">
+                <div class="sale-badge">OFERTA</div>
+                <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Kit de Manualidades" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">Latest Smartphone with Triple Camera and 5G</h3>
-                    <div class="product-price">$178.88 </div>
+                    <h3 class="product-title">Kit de Manualidades Navideñas para Niños</h3>
+                    <div class="product-price">$19.99 <span class="original-price">$29.99</span></div>
                     <div class="product-rating">★★★★★</div>
-                    <a href="https://amzn.to/3JTnKWJ" class="buy-button" target="_blank">BUY ON AMAZON</a>
-                </div>
-            </div>
-            
-            <!-- Product 9 -->
-            <div class="product-card">
-                <div class="sale-badge">SAVE 30%</div>
-                <img src="https://m.media-amazon.com/images/I/71Ib+1UTNQL._AC_SL1500_.jpg" alt="Smart Home" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Smart Video Doorbell with Motion Detection</h3>
-                    <div class="product-price">$89.99 <span class="original-price">$149.98</span></div>
-                    <div class="product-rating">★★★★★</div>
-                    <a href="https://amzn.to/48bDpIN" class="buy-button" target="_blank">BUY ON AMAZON</a>
-                </div>
-            </div>
-            
-            <!-- Product 10 -->
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/71CqREk30pL._AC_SL1500_.jpg" alt="Kitchen" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Air Fryer with Digital Touchscreen</h3>
-                    <div class="product-price">$89.99 <span class="original-price">$249.99</span></div>
-                    <div class="product-rating">★★★★☆</div>
-                    <a href="https://amzn.to/3Mhzgf6" class="buy-button" target="_blank">BUY ON AMAZON</a>
-                </div>
-            </div>
-            
-            <!-- Product 11 -->
-            <div class="product-card">
-                <div class="sale-badge">NEW</div>
-                <img src="https://m.media-amazon.com/images/I/61AsNPxU58L._AC_SL1500_.jpg" alt="Gaming" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Wireless Gaming Mouse with RGB Lighting</h3>
-                    <div class="product-price">$109.95 <span class="original-price">$139.95</span></div>
-                    <div class="product-rating">★★★★★</div>
-                    <a href="https://amzn.to/48vdeyb" class="buy-button" target="_blank">BUY ON AMAZON</a>
-                </div>
-            </div>
-            
-            <!-- Product 12 -->
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/71D1q4DFOjL._AC_SL1500_.jpg" alt="Monitor" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">27-inch 4K Monitor with HDR</h3>
-                    <div class="product-price">$155.99 <span class="original-price">$199.99</span></div>
-                    <div class="product-rating">★★★★☆</div>
-                    <a href="https://amzn.to/4ab05LZ" class="buy-button" target="_blank">BUY ON AMAZON</a>
-                </div>
-            </div>
-            
-            <!-- Product 13 -->
-            <div class="product-card">
-                <div class="sale-badge">BEST VALUE</div>
-                <img src="https://m.media-amazon.com/images/I/615Yg+I6NnL._AC_SL1500_.jpg" alt="Backpack" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Waterproof Laptop Backpack with USB Charging</h3>
-                    <div class="product-price">$115.20 <span class="original-price">$160.00</span></div>
-                    <div class="product-rating">★★★★★</div>
-                    <a href="https://amzn.to/49vgD0Z" class="buy-button" target="_blank">BUY ON AMAZON</a>
-                </div>
-            </div>
-            
-            <!-- Product 14 -->
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/71fLXt38SsL._AC_SX679_.jpg" alt="Sunglasses" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Polarized Sunglasses with UV Protection</h3>
-                    <div class="product-price">$27.19 <span class="original-price">$39.99</span></div>
-                    <div class="product-rating">★★★★☆</div>
-                    <a href="https://amzn.to/3MhywGQ" class="buy-button" target="_blank">BUY ON AMAZON</a>
-                </div>
-            </div>
-            
-            <!-- Product 15 -->
-            <div class="product-card">
-                <div class="sale-badge">TOP RATED</div>
-                <img src="https://m.media-amazon.com/images/I/71qn3SyXtvL._AC_SL1500_.jpg" alt="Fitness" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Adjustable Dumbbell Set 5-50 lbs</h3>
-                    <div class="product-price">$181.16 <span class="original-price">$349.00</span></div>
-                    <div class="product-rating">★★★★★</div>
-                    <a href="https://amzn.to/4p26iOY" class="buy-button" target="_blank">BUY ON AMAZON</a>
-                </div>
-            </div>
-            
-            <!-- Product 16 -->
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/41W9VihES7L._AC_.jpg" alt="Coffee Maker" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Programmable Coffee Maker with Thermal Carafe</h3>
-                    <div class="product-price">$69.99</div>
-                    <div class="product-rating">★★★★☆</div>
-                    <a href="https://amzn.to/47UIyWY" class="buy-button" target="_blank">BUY ON AMAZON</a>
-                </div>
-            </div>
-            
-            <!-- Product 17 -->
-            <div class="product-card">
-                <div class="sale-badge">DEAL</div>
-                <img src="https://m.media-amazon.com/images/I/4103qhAfftL._AC_SL1000_.jpg" alt="Router" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">WiFi 6 Router with Mesh Technology</h3>
-                    <div class="product-price">$132.93 <span class="original-price">$189.90</span></div>
-                    <div class="product-rating">★★★★★</div>
-                    <a href="https://amzn.to/43ITJQa" class="buy-button" target="_blank">BUY ON AMAZON</a>
-                </div>
-            </div>
-
-            <!-- Product 18 -->
-            <div class="product-card">
-                <div class="sale-badge">DEAL</div>
-                <img src="https://m.media-amazon.com/images/I/81PDeQCiICL._AC_SL1500_.jpg" alt="Car Care" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Armor All Premier Car Care Kit</h3>
-                    <div class="product-price">$28.47 <span class="original-price">$36.99</span></div>
-                    <div class="product-rating">★★★★★</div>
-                    <a href="https://amzn.to/4imDrTa" class="buy-button" target="_blank">BUY ON AMAZON</a>
+                    <a href="#" class="buy-button">COMPRAR AHORA</a>
                 </div>
             </div>
         </div>
         
         <!-- Disclosure -->
         <div class="disclosure">
-            <p><strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. This means I may receive a small commission if you make a purchase through the links on this site, at no extra cost to you. Thank you for supporting my work!</p>
+            <p><strong>Aviso:</strong> Los precios y disponibilidad pueden variar. Las ofertas son por tiempo limitado y sujetas a cambios.</p>
         </div>
     </div>
     
@@ -704,57 +546,56 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="https://amzn.to/47UIJl6">Home</a>
-                <a href="https://www.aboutamazon.com/?utm_source=gateway&utm_medium=footer&token=about">About</a>
-                <a href="https://www.amazon.jobs/en/">Careers</a>
+                <a href="#">Inicio</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Contacto</a>
+                <a href="#">Política de Privacidad</a>
             </div>
-            <p class="copyright">© 2023 PrimeDeals. All rights reserved.</p>
+            <p class="copyright">© 2023 Navidad Mágica. Todos los derechos reservados. | ¡Felices Fiestas!</p>
         </div>
     </footer>
 
     <script>
-        // Cookie Banner Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const cookieBanner = document.getElementById('cookieBanner');
-            const acceptCookies = document.getElementById('acceptCookies');
-            const rejectCookies = document.getElementById('rejectCookies');
-            const settingsCookies = document.getElementById('settingsCookies');
-            const privacyLink = document.getElementById('privacyLink');
+        // Efecto de nieve
+        function createSnowflakes() {
+            const snowflakesContainer = document.getElementById('snowflakes');
+            const snowflakeCount = 50;
             
-            // Check if user has already made a choice
-            if (!localStorage.getItem('cookieConsent')) {
-                // Show banner after a short delay
-                setTimeout(() => {
-                    cookieBanner.classList.add('show');
-                }, 1000);
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.innerHTML = '❄';
+                
+                // Posición aleatoria
+                const startPositionX = Math.random() * 100;
+                const startPositionY = Math.random() * 100;
+                
+                // Tamaño aleatorio
+                const size = Math.random() * 1.5 + 0.5;
+                
+                // Duración y delay aleatorios
+                const duration = Math.random() * 10 + 5;
+                const delay = Math.random() * 5;
+                
+                snowflake.style.left = `${startPositionX}%`;
+                snowflake.style.top = `${startPositionY}%`;
+                snowflake.style.fontSize = `${size}em`;
+                snowflake.style.animationDuration = `${duration}s`;
+                snowflake.style.animationDelay = `${delay}s`;
+                
+                snowflakesContainer.appendChild(snowflake);
             }
+        }
+        
+        // Inicializar efectos cuando se carga la página
+        document.addEventListener('DOMContentLoaded', function() {
+            createSnowflakes();
             
-            // Accept Cookies
-            acceptCookies.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'accepted');
-                cookieBanner.classList.remove('show');
-                // Here you would typically initialize your analytics cookies
-                console.log('Cookies accepted');
-            });
-            
-            // Reject Cookies
-            rejectCookies.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'rejected');
-                cookieBanner.classList.remove('show');
-                // Here you would typically avoid setting analytics cookies
-                console.log('Cookies rejected');
-            });
-            
-            // Settings (for future implementation)
-            settingsCookies.addEventListener('click', function() {
-                alert('Cookie settings would open here. For now, please use Accept or Reject.');
-            });
-            
-            // Privacy Policy Link
-            privacyLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                alert('Privacy policy page would open here.');
-            });
+            // Agregar efecto de parpadeo a las luces del árbol
+            const tree = document.querySelector('.christmas-tree');
+            setInterval(() => {
+                tree.style.textShadow = tree.style.textShadow ? '' : '0 0 10px rgba(255, 255, 255, 0.8)';
+            }, 500);
         });
     </script>
 </body>
