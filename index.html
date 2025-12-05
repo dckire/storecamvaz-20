@@ -1,445 +1,161 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Amazon Luxury Guide | Luxury Watches, Jewelry & Handbags</title>
-    <meta name="description" content="Official Amazon Luxury Stores affiliate. Shop authentic luxury watches, fine jewelry, designer handbags from Rolex, Omega, Gucci, Louis Vuitton with free shipping.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechReviewPro - Las Mejores Reseñas de Tecnología</title>
+    <meta name="description" content="Reseñas honestas y comparativas de los mejores productos tecnológicos. Enlaces de afiliado a Amazon.">
     
-    <!-- Critical Resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://m.media-amazon.com">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preconnect para Amazon -->
+    <link rel="preconnect" href="https://www.amazon.com">
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#000000">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Amazon Luxury Guide | Official Luxury Shopping Affiliate">
-    <meta property="og:description" content="Shop authentic luxury on Amazon with free shipping & authenticity guarantee">
-    <meta property="og:type" content="website">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <style>
-        /* ==========================================================================
-           CRITICAL CSS - LOADS FIRST
-           ========================================================================== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            /* Colors */
-            --black: #000000;
-            --white: #FFFFFF;
-            --gray-light: #F5F5F5;
-            --gray-dark: #333333;
-            --gold: #D4AF37;
-            --gold-light: #F4E8C1;
-            --amazon-orange: #FF9900;
-            --amazon-blue: #146EB4;
-            
-            /* Spacing */
-            --space-xs: 0.25rem;
-            --space-sm: 0.5rem;
-            --space-md: 1rem;
-            --space-lg: 1.5rem;
-            --space-xl: 2rem;
-            --space-2xl: 3rem;
-            --space-3xl: 4rem;
-            
-            /* Border Radius */
-            --radius-sm: 4px;
-            --radius-md: 8px;
-            --radius-lg: 12px;
-            --radius-xl: 16px;
-            
-            /* Shadows */
-            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
-            --shadow-lg: 0 8px 16px rgba(0,0,0,0.1);
-            --shadow-xl: 0 16px 32px rgba(0,0,0,0.15);
-            
-            /* Transitions */
-            --transition-fast: 0.2s ease;
-            --transition-base: 0.3s ease;
-            --transition-slow: 0.5s ease;
-        }
-
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: var(--gray-dark);
-            background: var(--white);
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* Loading Screen */
-        #loading {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--black);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.3s ease;
-        }
-
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 3px solid var(--gold);
-            border-top-color: transparent;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-bottom: var(--space-lg);
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        .loading-text {
-            color: var(--white);
-            font-size: 1rem;
-            opacity: 0.8;
-        }
-
-        /* Container */
-        .container {
-            width: 100%;
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 var(--space-lg);
-        }
-
-        /* Mobile First Styles */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 var(--space-md);
-            }
-            
-            html {
-                font-size: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 var(--space-sm);
-            }
-            
-            html {
-                font-size: 14px;
-            }
-        }
-    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loading">
-        <div class="spinner"></div>
-        <div class="loading-text">Loading Luxury Guide...</div>
-    </div>
-
-    <!-- Header -->
-    <header class="header">
+    <!-- Barra de navegación -->
+    <nav class="navbar">
         <div class="container">
-            <div class="header-top">
-                <div class="header-left">
-                    <a href="/" class="logo">
-                        <span class="logo-text">Amazon Luxury Guide</span>
-                        <span class="affiliate-badge">Official Affiliate</span>
-                    </a>
-                </div>
-                
-                <div class="header-right">
-                    <!-- Mobile Menu Toggle -->
-                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                        <span class="menu-icon"></span>
-                        <span class="menu-icon"></span>
-                        <span class="menu-icon"></span>
-                    </button>
-                    
-                    <!-- Desktop Navigation -->
-                    <nav class="main-nav">
-                        <ul class="nav-list">
-                            <li><a href="#watches"><i class="fas fa-clock"></i> Watches</a></li>
-                            <li><a href="#jewelry"><i class="fas fa-gem"></i> Jewelry</a></li>
-                            <li><a href="#handbags"><i class="fas fa-shopping-bag"></i> Bags</a></li>
-                            <li><a href="#sunglasses"><i class="fas fa-sun"></i> Sunglasses</a></li>
-                            <li><a href="#shoes"><i class="fas fa-shoe-prints"></i> Shoes</a></li>
-                        </ul>
-                    </nav>
-                </div>
+            <a href="index.html" class="logo">
+                <i class="fas fa-laptop"></i>
+                <span>TechReview</span>Pro
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="active"><i class="fas fa-home"></i> Inicio</a>
+                <a href="reseñas.html"><i class="fas fa-star"></i> Reseñas</a>
+                <a href="comparativas.html"><i class="fas fa-balance-scale"></i> Comparativas</a>
+                <a href="guias.html"><i class="fas fa-book"></i> Guías</a>
+                <a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
             </div>
             
-            <!-- Mobile Search -->
-            <div class="mobile-search">
-                <div class="search-box">
-                    <input type="text" placeholder="Search luxury brands..." class="search-input">
-                    <button class="search-btn" aria-label="Search">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Las Mejores Reseñas de Tecnología</h1>
+            <p class="subtitle">Análisis honestos, comparativas detalladas y recomendaciones verificadas</p>
+            <p class="disclaimer">
+                <i class="fas fa-exclamation-circle"></i>
+                <strong>Aviso de Afiliados:</strong> Este sitio contiene enlaces de afiliado Amazon. Como Afiliado de Amazon, gano por compras calificadas.
+            </p>
+            <a href="#reseñas-destacadas" class="cta-button">
+                Ver Reseñas Destacadas <i class="fas fa-arrow-down"></i>
+            </a>
         </div>
     </header>
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" id="mobileNavOverlay">
-        <div class="mobile-nav-container">
-            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
-                <i class="fas fa-times"></i>
-            </button>
-            
-            <nav class="mobile-nav">
-                <ul class="mobile-nav-list">
-                    <li><a href="#watches"><i class="fas fa-clock"></i> Luxury Watches</a></li>
-                    <li><a href="#jewelry"><i class="fas fa-gem"></i> Fine Jewelry</a></li>
-                    <li><a href="#handbags"><i class="fas fa-shopping-bag"></i> Designer Bags</a></li>
-                    <li><a href="#sunglasses"><i class="fas fa-sun"></i> Sunglasses</a></li>
-                    <li><a href="#shoes"><i class="fas fa-shoe-prints"></i> Luxury Shoes</a></li>
-                    <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-                
-                <div class="mobile-cta">
-                    <a href="https://www.amazon.com/stores/luxurystores/page/B6BC6264-7221-424B-9191-DAE2BCF963A2?tag=storecamvaz-20" 
-                       class="btn-primary" 
-                       target="_blank" 
-                       rel="nofollow sponsored">
-                       <i class="fab fa-amazon"></i> Shop Luxury Stores
+    <!-- Sección de Afiliado -->
+    <section class="affiliate-info">
+        <div class="container">
+            <div class="affiliate-card">
+                <div class="affiliate-icon">
+                    <i class="fab fa-amazon"></i>
+                </div>
+                <div class="affiliate-content">
+                    <h3><i class="fas fa-badge-check"></i> Afiliado Amazon Verificado</h3>
+                    <p>ID de afiliado: <code class="affiliate-id">storecamvaz-20</code></p>
+                    <p>Todas nuestras recomendaciones incluyen enlaces de afiliado. Al comprar a través de nuestros enlaces, nos apoyas sin costo adicional para ti.</p>
+                    <a href="https://www.amazon.com/?tag=storecamvaz-20" target="_blank" class="amazon-button">
+                        <i class="fab fa-amazon"></i> Ir a Amazon
                     </a>
                 </div>
-            </nav>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Discover Luxury on Amazon</h1>
-                <p class="hero-subtitle">Authentic watches, jewelry & handbags from the world's most iconic brands</p>
-                
-                <div class="hero-cta">
-                    <a href="#watches" class="btn-primary btn-large">
-                        <i class="fas fa-gem"></i> Explore Collections
-                    </a>
-                    <a href="https://www.amazon.com/stores/luxurystores/page/B6BC6264-7221-424B-9191-DAE2BCF963A2?tag=storecamvaz-20" 
-                       class="btn-secondary btn-large" 
-                       target="_blank" 
-                       rel="nofollow sponsored">
-                       <i class="fab fa-amazon"></i> Shop Now
-                    </a>
-                </div>
-                
-                <div class="hero-features">
-                    <div class="feature">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Authenticity Guaranteed</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-shipping-fast"></i>
-                        <span>Free Premium Shipping</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-undo-alt"></i>
-                        <span>Easy Returns</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Brands Section -->
-    <section class="brands-section">
+    <!-- Reseñas Destacadas -->
+    <section id="reseñas-destacadas" class="featured-reviews">
         <div class="container">
-            <h2 class="section-title">Featured Luxury Brands</h2>
-            <p class="section-subtitle">Shop authentic products from the world's most prestigious brands</p>
-            
-            <div class="brands-grid">
-                <!-- Brand Logos with Amazon links -->
-                <a href="https://amzn.to/4oubpq0" class="brand-card" target="_blank" rel="nofollow sponsored">
-                    <img src="https://m.media-amazon.com/images/I/41p1Gc8iWqL._AC_SY200_.png" 
-                         alt="Rolex" 
-                         loading="lazy">
-                    <span class="brand-name">Rolex</span>
-                </a>
-                
-                <a href="https://amzn.to/48iTA8M" class="brand-card" target="_blank" rel="nofollow sponsored">
-                    <img src="https://m.media-amazon.com/images/I/41kIP6Jih+L._AC_SY200_.png" 
-                         alt="Omega" 
-                         loading="lazy">
-                    <span class="brand-name">Omega</span>
-                </a>
-                
-                <a href="https://amzn.to/4ryWihH" class="brand-card" target="_blank" rel="nofollow sponsored">
-                    <img src="https://m.media-amazon.com/images/I/41SXk9GzB+L._AC_SY200_.png" 
-                         alt="Cartier" 
-                         loading="lazy">
-                    <span class="brand-name">Cartier</span>
-                </a>
-                
-                <a href="https://amzn.to/4pFMIrz" class="brand-card" target="_blank" rel="nofollow sponsored">
-                    <img src="https://m.media-amazon.com/images/I/41HqH4yAeQL._AC_SY200_.png" 
-                         alt="Gucci" 
-                         loading="lazy">
-                    <span class="brand-name">Gucci</span>
-                </a>
-                
-                <a href="https://amzn.to/3YajGVf" class="brand-card" target="_blank" rel="nofollow sponsored">
-                    <img src="https://m.media-amazon.com/images/I/41YlR6Fv5-L._AC_SY200_.png" 
-                         alt="Louis Vuitton" 
-                         loading="lazy">
-                    <span class="brand-name">Louis Vuitton</span>
-                </a>
-                
-                <a href="https://amzn.to/48LCCjk" class="brand-card" target="_blank" rel="nofollow sponsored">
-                    <img src="https://m.media-amazon.com/images/I/41BQ03nnlLL._AC_SY200_.png" 
-                         alt="Chanel" 
-                         loading="lazy">
-                    <span class="brand-name">Chanel</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Watches Section -->
-    <section id="watches" class="products-section">
-        <div class="container">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">Luxury Watches</h2>
-                    <p class="section-subtitle">Timepieces that appreciate in value</p>
-                </div>
-                <a href="https://amzn.to/4izunKB" class="btn-link" target="_blank" rel="nofollow sponsored">
-                    View All <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
+            <h2 class="section-title"><i class="fas fa-crown"></i> Productos Destacados</h2>
+            <p class="section-subtitle">Nuestras mejores recomendaciones del mes</p>
             
             <div class="products-grid">
-                <!-- Product 1 -->
+                <!-- Producto 1 -->
                 <div class="product-card">
-                    <div class="product-badge">Bestseller</div>
-                    <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/712BY6k-jJL._AC_SY695_.jpg" 
-                             alt="Rolex Submariner Luxury Watch"
-                             loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Rolex Submariner</h3>
-                        <p class="product-description">Iconic dive watch with automatic movement</p>
+                    <div class="product-badge">Mejor Elección</div>
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Audífonos Premium" class="product-img">
+                    <div class="product-content">
+                        <h3>Audífonos Inalámbricos Premium</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-text">4.5/5</span>
+                        </div>
+                        <p class="product-desc">Sonido de alta calidad, cancelación de ruido y 30 horas de batería.</p>
                         <div class="product-price">
-                            <span class="price">$21,950</span>
-                            <span class="badge">Luxury Item</span>
+                            <span class="price">$129.99</span>
+                            <span class="price-old">$179.99</span>
                         </div>
-                        <div class="product-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <span class="rating-count">(428 reviews)</span>
-                        </div>
-                        <a href="https://amzn.to/4oubpq0" 
-                           class="btn-amazon" 
-                           target="_blank" 
-                           rel="nofollow sponsored">
-                           <i class="fab fa-amazon"></i> View on Amazon
+                        <a href="https://www.amazon.com/dp/B08N5WRWNW/?tag=storecamvaz-20" target="_blank" class="buy-button">
+                            <i class="fab fa-amazon"></i> Ver en Amazon
                         </a>
                     </div>
                 </div>
-                
-                <!-- Product 2 -->
+
+                <!-- Producto 2 -->
                 <div class="product-card">
-                    <div class="product-badge">Investment Piece</div>
-                    <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/81slXqkpYxL._AC_SY879_.jpg" 
-                             alt="Omega Speedmaster Professional"
-                             loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Omega Speedmaster</h3>
-                        <p class="product-description">"Moonwatch" professional chronograph</p>
+                    <div class="product-badge">Gran Valor</div>
+                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Smartwatch" class="product-img">
+                    <div class="product-content">
+                        <h3>Smartwatch Deportivo 2024</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-text">4.0/5</span>
+                        </div>
+                        <p class="product-desc">Monitoreo de salud, GPS integrado y resistencia al agua.</p>
                         <div class="product-price">
-                            <span class="price">$4,150</span>
-                            <span class="badge">Luxury Item</span>
+                            <span class="price">$89.99</span>
+                            <span class="price-old">$129.99</span>
                         </div>
-                        <div class="product-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <span class="rating-count">(312 reviews)</span>
-                        </div>
-                        <a href="https://amzn.to/48iTA8M" 
-                           class="btn-amazon" 
-                           target="_blank" 
-                           rel="nofollow sponsored">
-                           <i class="fab fa-amazon"></i> View on Amazon
+                        <a href="https://www.amazon.com/dp/B09V3MN4XK/?tag=storecamvaz-20" target="_blank" class="buy-button">
+                            <i class="fab fa-amazon"></i> Ver en Amazon
                         </a>
                     </div>
                 </div>
-                
-                <!-- Product 3 -->
+
+                <!-- Producto 3 -->
                 <div class="product-card">
-                    <div class="product-badge">New Arrival</div>
-                    <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/81syJFvHvsL._AC_SY879_.jpg" 
-                             alt="Tag Heuer Carrera Automatic"
-                             loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Tag Heuer Carrera</h3>
-                        <p class="product-description">Swiss automatic with date complication</p>
+                    <div class="product-badge">Recomendado</div>
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Altavoz Bluetooth" class="product-img">
+                    <div class="product-content">
+                        <h3>Altavoz Bluetooth Portátil</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-text">5.0/5</span>
+                        </div>
+                        <p class="product-desc">Sonido 360°, resistente al agua y 24 horas de batería.</p>
                         <div class="product-price">
-                            <span class="price">$2,600</span>
-                            <span class="badge">Luxury Item</span>
+                            <span class="price">$59.99</span>
+                            <span class="price-save">Ahorras 25%</span>
                         </div>
-                        <div class="product-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span class="rating-count">(187 reviews)</span>
-                        </div>
-                        <a href="https://amzn.to/3XzShMm" 
-                           class="btn-amazon" 
-                           target="_blank" 
-                           rel="nofollow sponsored">
-                           <i class="fab fa-amazon"></i> View on Amazon
+                        <a href="https://www.amazon.com/dp/B08C4Z5V6T/?tag=storecamvaz-20" target="_blank" class="buy-button">
+                            <i class="fab fa-amazon"></i> Ver en Amazon
                         </a>
                     </div>
                 </div>
@@ -447,245 +163,20 @@
         </div>
     </section>
 
-    <!-- Jewelry Section -->
-    <section id="jewelry" class="products-section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">Fine Jewelry</h2>
-                    <p class="section-subtitle">Pieces to pass down for generations</p>
-                </div>
-                <a href="https://amzn.to/4p8EA34" class="btn-link" target="_blank" rel="nofollow sponsored">
-                    View All <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            
-            <div class="products-grid">
-                <!-- Jewelry Product 1 -->
-                <div class="product-card">
-                    <div class="product-badge">Diamond</div>
-                    <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/71oBm+W+26L._AC_SY695_.jpg" 
-                             alt="Diamond Tennis Bracelet"
-                             loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Diamond Tennis Bracelet</h3>
-                        <p class="product-description">14k white gold with 2ct diamonds</p>
-                        <div class="product-price">
-                            <span class="price">$4,850</span>
-                            <span class="badge">Luxury Item</span>
-                        </div>
-                        <a href="https://amzn.to/4pbXwhj" 
-                           class="btn-amazon" 
-                           target="_blank" 
-                           rel="nofollow sponsored">
-                           <i class="fab fa-amazon"></i> View on Amazon
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Jewelry Product 2 -->
-                <div class="product-card">
-                    <div class="product-badge">Pearl</div>
-                    <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/610bI4uQqjL._AC_SX679_.jpg" 
-                             alt="Akoya Pearl Necklace"
-                             loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Akoya Pearl Necklace</h3>
-                        <p class="product-description">8mm Japanese pearls with diamond clasp</p>
-                        <div class="product-price">
-                            <span class="price">$1,300</span>
-                            <span class="badge">Luxury Item</span>
-                        </div>
-                        <a href="https://amzn.to/49NrdR8" 
-                           class="btn-amazon" 
-                           target="_blank" 
-                           rel="nofollow sponsored">
-                           <i class="fab fa-amazon"></i> View on Amazon
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Jewelry Product 3 -->
-                <div class="product-card">
-                    <div class="product-badge">Emerald</div>
-                    <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/61XXE0+tWDL._AC_SY695_.jpg" 
-                             alt="Emerald and Diamond Ring"
-                             loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Emerald & Diamond Ring</h3>
-                        <p class="product-description">2ct Colombian emerald with halo</p>
-                        <div class="product-price">
-                            <span class="price">$1,999</span>
-                            <span class="badge">Luxury Item</span>
-                        </div>
-                        <a href="https://amzn.to/4pKoSLu" 
-                           class="btn-amazon" 
-                           target="_blank" 
-                           rel="nofollow sponsored">
-                           <i class="fab fa-amazon"></i> View on Amazon
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Handbags Section -->
-    <section id="handbags" class="products-section">
-        <div class="container">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">Designer Handbags</h2>
-                    <p class="section-subtitle">The most coveted bags in fashion</p>
-                </div>
-                <a href="https://amzn.to/48MKvVE" class="btn-link" target="_blank" rel="nofollow sponsored">
-                    View All <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            
-            <div class="products-grid">
-                <!-- Handbag Product 1 -->
-                <div class="product-card">
-                    <div class="product-badge">Iconic</div>
-                    <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/71uyOJm1r7L._AC_SX679_.jpg" 
-                             alt="Louis Vuitton Neverfull Bag"
-                             loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Louis Vuitton Neverfull</h3>
-                        <p class="product-description">Monogram canvas tote bag MM</p>
-                        <div class="product-price">
-                            <span class="price">$3,245</span>
-                            <span class="badge">Luxury Item</span>
-                        </div>
-                        <a href="https://amzn.to/3YajGVf" 
-                           class="btn-amazon" 
-                           target="_blank" 
-                           rel="nofollow sponsored">
-                           <i class="fab fa-amazon"></i> View on Amazon
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Handbag Product 2 -->
-                <div class="product-card">
-                    <div class="product-badge">Timeless</div>
-                    <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/81HOvbEBfPL._AC_SX679_.jpg" 
-                             alt="Chanel Classic Flap Bag"
-                             loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Chanel Classic Flap</h3>
-                        <p class="product-description">Caviar leather, gold hardware</p>
-                        <div class="product-price">
-                            <span class="price">$5,900</span>
-                            <span class="badge">Luxury Item</span>
-                        </div>
-                        <a href="https://amzn.to/48LCCjk" 
-                           class="btn-amazon" 
-                           target="_blank" 
-                           rel="nofollow sponsored">
-                           <i class="fab fa-amazon"></i> View on Amazon
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Handbag Product 3 -->
-                <div class="product-card">
-                    <div class="product-badge">Trendy</div>
-                    <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/71mVEnm4qTL._AC_SX679_.jpg" 
-                             alt="Gucci GG Marmont Bag"
-                             loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Gucci GG Marmont</h3>
-                        <p class="product-description">Matelassé leather, 26cm</p>
-                        <div class="product-price">
-                            <span class="price">$2,130</span>
-                            <span class="badge">Luxury Item</span>
-                        </div>
-                        <a href="https://amzn.to/4pFMIrz" 
-                           class="btn-amazon" 
-                           target="_blank" 
-                           rel="nofollow sponsored">
-                           <i class="fab fa-amazon"></i> View on Amazon
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="benefits-section bg-dark">
-        <div class="container">
-            <h2 class="section-title text-white">Why Shop Amazon Luxury Stores?</h2>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <h3>Authenticity Guaranteed</h3>
-                    <p>Every item is verified authentic and sourced directly from luxury brands or authorized retailers.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-shipping-fast"></i>
-                    </div>
-                    <h3>Premium Shipping</h3>
-                    <p>Free expedited shipping on all orders, with white-glove delivery for select items.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-undo-alt"></i>
-                    </div>
-                    <h3>Easy Returns</h3>
-                    <p>30-day return policy with free return shipping for a hassle-free experience.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Secure Shopping</h3>
-                    <p>Amazon's A-to-z Guarantee protects your luxury purchases.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter-section">
+    <!-- CTA Newsletter -->
+    <section class="newsletter">
         <div class="container">
             <div class="newsletter-content">
-                <h2>Get Exclusive Luxury Updates</h2>
-                <p>Subscribe to receive curated luxury finds, price alerts, and style guides.</p>
-                
-                <form class="newsletter-form" id="newsletterForm">
-                    <div class="form-group">
-                        <input type="email" 
-                               placeholder="Your email address" 
-                               required
-                               class="form-input">
-                        <button type="submit" class="btn-primary">
-                            <i class="fas fa-paper-plane"></i> Subscribe
-                        </button>
-                    </div>
-                    <p class="form-note">We respect your privacy. Unsubscribe at any time.</p>
-                </form>
+                <i class="fas fa-envelope-open-text newsletter-icon"></i>
+                <div>
+                    <h2>Recibe Ofertas Exclusivas</h2>
+                    <p>Suscríbete para recibir nuestras mejores recomendaciones y descuentos especiales.</p>
+                </div>
             </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirse <i class="fas fa-paper-plane"></i></button>
+            </form>
         </div>
     </section>
 
@@ -693,1257 +184,58 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-section">
-                    <h3 class="footer-title">Amazon Luxury Guide</h3>
-                    <p>Your trusted guide to Amazon Luxury Stores. We help you discover authentic luxury products with confidence.</p>
-                    <div class="disclaimer">
-                        <p><strong>Affiliate Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases.</p>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="footer-title">Categories</h3>
-                    <ul class="footer-links">
-                        <li><a href="#watches">Luxury Watches</a></li>
-                        <li><a href="#jewelry">Fine Jewelry</a></li>
-                        <li><a href="#handbags">Designer Handbags</a></li>
-                        <li><a href="#sunglasses">Luxury Sunglasses</a></li>
-                        <li><a href="#shoes">Designer Shoes</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#terms">Terms of Service</a></li>
-                        <li><a href="#disclaimer">Affiliate Disclosure</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="footer-title">Connect</h3>
+                <div class="footer-col">
+                    <h3><i class="fas fa-laptop"></i> TechReviewPro</h3>
+                    <p>Reseñas honestas de productos tecnológicos. Enlaces de afiliado Amazon.</p>
                     <div class="social-links">
-                        <a href="https://pin.it/yynJ6tbSs" target="_blank" aria-label="Pinterest">
-                            <i class="fab fa-pinterest"></i>
-                        </a>
-                        <a href="https://www.instagram.com/ada_ptix?igsh=NTc4MTIwNjQ2YQ==" target="_blank" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://x.com/Erick48447239?t=ZHl-SFKOHig0Lne0TSJWRw&s=09" target="_blank" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
-                    <div class="affiliate-id">
-                        Amazon Associate ID: <strong>storecamvaz-20</strong>
-                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="reseñas.html"><i class="fas fa-chevron-right"></i> Reseñas</a></li>
+                        <li><a href="comparativas.html"><i class="fas fa-chevron-right"></i> Comparativas</a></li>
+                        <li><a href="guias.html"><i class="fas fa-chevron-right"></i> Guías de Compra</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Aviso de Afiliados</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Política de Privacidad</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Términos y Condiciones</a></li>
+                        <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Amazon Afiliado</h3>
+                    <p>ID: <strong>storecamvaz-20</strong></p>
+                    <p>Este sitio participa en el Programa de Afiliados de Amazon.</p>
+                    <a href="https://www.amazon.com/?tag=storecamvaz-20" target="_blank" class="footer-amazon">
+                        <i class="fab fa-amazon"></i> Comprar en Amazon
+                    </a>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2024 Amazon Luxury Guide. All rights reserved. This site participates in the Amazon Services LLC Associates Program.</p>
-                <p class="device-notice">
-                    <i class="fas fa-mobile-alt"></i> Optimized for all devices • 
-                    <i class="fas fa-bolt"></i> Fast loading • 
-                    <i class="fas fa-lock"></i> Secure
+                <p>&copy; 2024 TechReviewPro. Todos los derechos reservados.</p>
+                <p class="affiliate-disclaimer">
+                    <i class="fas fa-info-circle"></i>
+                    TechReviewPro es un participante en el Programa de Afiliados de Amazon Services LLC, un programa publicitario de afiliados diseñado para proporcionar un medio para que los sitios ganen tarifas de publicidad mediante publicidad y enlaces a Amazon.com.
                 </p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <!-- Notification -->
-    <div class="notification" id="notification"></div>
-
-    <style>
-        /* ==========================================================================
-           MAIN STYLES
-           ========================================================================== */
-        
-        /* Header */
-        .header {
-            background: var(--black);
-            color: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: var(--shadow-md);
-        }
-
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: var(--space-md) 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            text-decoration: none;
-            color: var(--white);
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .affiliate-badge {
-            background: var(--gold);
-            color: var(--black);
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: var(--space-xs);
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .menu-icon {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--white);
-            border-radius: 2px;
-            transition: var(--transition-base);
-        }
-
-        .main-nav .nav-list {
-            display: flex;
-            gap: var(--space-lg);
-            list-style: none;
-        }
-
-        .main-nav a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: var(--space-xs) var(--space-sm);
-            border-radius: var(--radius-sm);
-            transition: var(--transition-base);
-        }
-
-        .main-nav a:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .mobile-search {
-            display: none;
-            padding-bottom: var(--space-md);
-        }
-
-        .search-box {
-            display: flex;
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-        }
-
-        .search-input {
-            flex: 1;
-            padding: var(--space-md);
-            border: none;
-            font-size: 1rem;
-            outline: none;
-        }
-
-        .search-btn {
-            background: var(--gold);
-            color: var(--black);
-            border: none;
-            padding: 0 var(--space-lg);
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: var(--transition-base);
-        }
-
-        .search-btn:hover {
-            background: var(--gold-light);
-        }
-
-        /* Mobile Navigation Overlay */
-        .mobile-nav-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 2000;
-            display: none;
-            opacity: 0;
-            transition: opacity var(--transition-base);
-        }
-
-        .mobile-nav-overlay.active {
-            display: block;
-            opacity: 1;
-        }
-
-        .mobile-nav-container {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 100%;
-            max-width: 400px;
-            height: 100%;
-            background: var(--black);
-            padding: var(--space-xl);
-            overflow-y: auto;
-        }
-
-        .mobile-close-btn {
-            position: absolute;
-            top: var(--space-lg);
-            right: var(--space-lg);
-            background: none;
-            border: none;
-            color: var(--white);
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: var(--space-xs);
-        }
-
-        .mobile-nav-list {
-            list-style: none;
-            margin-top: var(--space-2xl);
-        }
-
-        .mobile-nav-list li {
-            margin-bottom: var(--space-sm);
-        }
-
-        .mobile-nav-list a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: var(--space-md);
-            padding: var(--space-md);
-            border-radius: var(--radius-md);
-            transition: var(--transition-base);
-        }
-
-        .mobile-nav-list a:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .mobile-cta {
-            margin-top: var(--space-2xl);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-                        url('https://images.unsplash.com/photo-1551816230-ef5deaed4a26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            padding: var(--space-3xl) 0;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin-bottom: var(--space-md);
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: var(--space-2xl);
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: var(--space-md);
-            justify-content: center;
-            margin-bottom: var(--space-2xl);
-            flex-wrap: wrap;
-        }
-
-        .hero-features {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-2xl);
-            flex-wrap: wrap;
-        }
-
-        .feature {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .feature i {
-            color: var(--gold);
-            font-size: 1.2rem;
-        }
-
-        /* Brands Section */
-        .brands-section {
-            padding: var(--space-3xl) 0;
-            background: var(--gray-light);
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: var(--space-md);
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: var(--space-2xl);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .brands-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: var(--space-lg);
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .brand-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-lg);
-            text-decoration: none;
-            color: var(--gray-dark);
-            transition: var(--transition-base);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: var(--space-md);
-            border: 1px solid #eee;
-        }
-
-        .brand-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--gold);
-        }
-
-        .brand-card img {
-            height: 50px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .brand-name {
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /* Products Section */
-        .products-section {
-            padding: var(--space-3xl) 0;
-        }
-
-        .bg-light {
-            background: var(--gray-light);
-        }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: var(--space-2xl);
-            flex-wrap: wrap;
-            gap: var(--space-md);
-        }
-
-        .btn-link {
-            color: var(--amazon-blue);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-xs);
-            transition: gap var(--transition-base);
-        }
-
-        .btn-link:hover {
-            gap: var(--space-sm);
-            color: var(--gold);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-xl);
-        }
-
-        .product-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition-base);
-            position: relative;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .product-badge {
-            position: absolute;
-            top: var(--space-md);
-            left: var(--space-md);
-            background: var(--gold);
-            color: var(--black);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            z-index: 1;
-        }
-
-        .product-image {
-            height: 300px;
-            overflow: hidden;
-            background: #f8f8f8;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform var(--transition-slow);
-        }
-
-        .product-card:hover .product-image img {
-            transform: scale(1.05);
-        }
-
-        .product-info {
-            padding: var(--space-xl);
-        }
-
-        .product-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: var(--space-sm);
-            color: var(--gray-dark);
-        }
-
-        .product-description {
-            color: #666;
-            margin-bottom: var(--space-lg);
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        .product-price {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: var(--space-lg);
-        }
-
-        .price {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--gray-dark);
-        }
-
-        .badge {
-            background: var(--amazon-blue);
-            color: var(--white);
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .product-rating {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-lg);
-        }
-
-        .stars {
-            color: #FFB700;
-        }
-
-        .rating-count {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* Buttons */
-        .btn-primary, .btn-secondary, .btn-amazon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-sm);
-            padding: var(--space-md) var(--space-xl);
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition-base);
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: var(--gold);
-            color: var(--black);
-        }
-
-        .btn-primary:hover {
-            background: var(--gold-light);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--gold);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(212, 175, 55, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .btn-large {
-            padding: var(--space-lg) var(--space-2xl);
-            font-size: 1.1rem;
-        }
-
-        .btn-amazon {
-            background: linear-gradient(135deg, #FF9900, #FFAC31);
-            color: var(--black);
-            width: 100%;
-        }
-
-        .btn-amazon:hover {
-            background: linear-gradient(135deg, #FFAC31, #FF9900);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 153, 0, 0.3);
-        }
-
-        /* Benefits Section */
-        .benefits-section {
-            padding: var(--space-3xl) 0;
-        }
-
-        .bg-dark {
-            background: var(--black);
-            color: var(--white);
-        }
-
-        .text-white {
-            color: var(--white);
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-2xl);
-            margin-top: var(--space-2xl);
-        }
-
-        .benefit-card {
-            text-align: center;
-        }
-
-        .benefit-icon {
-            font-size: 3rem;
-            color: var(--gold);
-            margin-bottom: var(--space-lg);
-        }
-
-        .benefit-card h3 {
-            margin-bottom: var(--space-md);
-            font-size: 1.3rem;
-        }
-
-        /* Newsletter */
-        .newsletter-section {
-            background: linear-gradient(135deg, #232F3E, #000);
-            color: var(--white);
-            padding: var(--space-3xl) 0;
-        }
-
-        .newsletter-content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .newsletter-content h2 {
-            margin-bottom: var(--space-md);
-        }
-
-        .newsletter-content p {
-            margin-bottom: var(--space-2xl);
-            opacity: 0.9;
-        }
-
-        .newsletter-form {
-            margin-bottom: var(--space-md);
-        }
-
-        .form-group {
-            display: flex;
-            gap: var(--space-sm);
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .form-input {
-            flex: 1;
-            padding: var(--space-md);
-            border: none;
-            border-radius: var(--radius-md);
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-        }
-
-        .form-input::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .form-note {
-            font-size: 0.85rem;
-            opacity: 0.7;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--black);
-            color: var(--white);
-            padding: var(--space-3xl) 0 var(--space-xl);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-2xl);
-            margin-bottom: var(--space-2xl);
-        }
-
-        .footer-title {
-            font-size: 1.2rem;
-            margin-bottom: var(--space-lg);
-            color: var(--white);
-        }
-
-        .footer-section p {
-            opacity: 0.8;
-            line-height: 1.6;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: var(--space-sm);
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: var(--transition-base);
-            font-size: 0.95rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--gold);
-            padding-left: var(--space-xs);
-        }
-
-        .social-links {
-            display: flex;
-            gap: var(--space-md);
-            margin-bottom: var(--space-lg);
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--white);
-            text-decoration: none;
-            transition: var(--transition-base);
-            font-size: 1.2rem;
-        }
-
-        .social-links a:hover {
-            background: var(--gold);
-            color: var(--black);
-            transform: translateY(-3px);
-        }
-
-        .affiliate-id {
-            background: rgba(255, 255, 255, 0.1);
-            padding: var(--space-sm) var(--space-md);
-            border-radius: var(--radius-sm);
-            font-size: 0.9rem;
-            margin-top: var(--space-lg);
-        }
-
-        .disclaimer {
-            background: rgba(212, 175, 55, 0.1);
-            padding: var(--space-md);
-            border-radius: var(--radius-sm);
-            margin-top: var(--space-lg);
-            font-size: 0.9rem;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: var(--space-xl);
-            text-align: center;
-        }
-
-        .footer-bottom p {
-            opacity: 0.7;
-            margin-bottom: var(--space-sm);
-            font-size: 0.9rem;
-        }
-
-        .device-notice {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-md);
-            flex-wrap: wrap;
-            font-size: 0.85rem;
-            opacity: 0.6;
-        }
-
-        .device-notice i {
-            margin-right: 4px;
-        }
-
-        /* Back to Top */
-        .back-to-top {
-            position: fixed;
-            bottom: var(--space-xl);
-            right: var(--space-xl);
-            width: 50px;
-            height: 50px;
-            background: var(--gold);
-            color: var(--black);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px);
-            transition: all var(--transition-base);
-            z-index: 999;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .back-to-top:hover {
-            background: var(--gold-light);
-            transform: translateY(-5px);
-        }
-
-        /* Notification */
-        .notification {
-            position: fixed;
-            top: var(--space-xl);
-            right: var(--space-xl);
-            background: var(--gold);
-            color: var(--black);
-            padding: var(--space-md) var(--space-lg);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-lg);
-            z-index: 1001;
-            transform: translateX(100%);
-            opacity: 0;
-            transition: all var(--transition-base);
-            max-width: 400px;
-        }
-
-        .notification.show {
-            transform: translateX(0);
-            opacity: 1;
-        }
-
-        /* ==========================================================================
-           RESPONSIVE STYLES
-           ========================================================================== */
-
-        /* Tablet */
-        @media (max-width: 1024px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .brands-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            .mobile-menu-toggle {
-                display: flex;
-            }
-            
-            .main-nav {
-                display: none;
-            }
-            
-            .mobile-search {
-                display: block;
-            }
-            
-            .hero-title {
-                font-size: 2rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-            
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .hero-cta .btn-primary,
-            .hero-cta .btn-secondary {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .hero-features {
-                flex-direction: column;
-                gap: var(--space-lg);
-                align-items: center;
-            }
-            
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .brands-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-md);
-            }
-            
-            .section-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: var(--space-md);
-            }
-            
-            .form-group {
-                flex-direction: column;
-            }
-            
-            .back-to-top {
-                bottom: var(--space-md);
-                right: var(--space-md);
-                width: 45px;
-                height: 45px;
-            }
-            
-            .mobile-nav-container {
-                max-width: 100%;
-                padding: var(--space-xl) var(--space-lg);
-            }
-        }
-
-        /* Small Mobile */
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 1.8rem;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .brands-grid {
-                grid-template-columns: 1fr;
-                max-width: 300px;
-            }
-            
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-xl);
-            }
-            
-            .product-image {
-                height: 250px;
-            }
-        }
-
-        /* Print Styles */
-        @media print {
-            .header,
-            .hero,
-            .benefits-section,
-            .newsletter-section,
-            .back-to-top,
-            .mobile-menu-toggle {
-                display: none !important;
-            }
-            
-            .product-card {
-                break-inside: avoid;
-                page-break-inside: avoid;
-                border: 1px solid #ccc;
-                box-shadow: none;
-            }
-            
-            a[href*="amzn.to"]:after {
-                content: " (Amazon)";
-            }
-        }
-    </style>
-
-    <script>
-        // Page Initialization
-        document.addEventListener('DOMContentLoaded', function() {
-            // Hide loading screen
-            setTimeout(() => {
-                const loading = document.getElementById('loading');
-                loading.style.opacity = '0';
-                setTimeout(() => {
-                    loading.style.display = 'none';
-                }, 300);
-            }, 1000);
-
-            // Initialize all features
-            initMobileMenu();
-            initBackToTop();
-            initSmoothScroll();
-            initNewsletter();
-            initNotification();
-            initProductHover();
-            initImageLoading();
-            initResponsiveImages();
-        });
-
-        // Mobile Menu
-        function initMobileMenu() {
-            const menuToggle = document.getElementById('mobileMenuToggle');
-            const closeBtn = document.getElementById('mobileCloseBtn');
-            const overlay = document.getElementById('mobileNavOverlay');
-
-            if (!menuToggle || !overlay) return;
-
-            // Open menu
-            menuToggle.addEventListener('click', () => {
-                overlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-
-            // Close menu
-            function closeMenu() {
-                overlay.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-
-            closeBtn?.addEventListener('click', closeMenu);
-
-            // Close on overlay click
-            overlay.addEventListener('click', (e) => {
-                if (e.target === overlay) {
-                    closeMenu();
-                }
-            });
-
-            // Close on escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && overlay.classList.contains('active')) {
-                    closeMenu();
-                }
-            });
-        }
-
-        // Back to Top Button
-        function initBackToTop() {
-            const backToTop = document.getElementById('backToTop');
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) {
-                    backToTop.classList.add('visible');
-                } else {
-                    backToTop.classList.remove('visible');
-                }
-            });
-
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
-
-        // Smooth Scroll
-        function initSmoothScroll() {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        // Close mobile menu if open
-                        const overlay = document.getElementById('mobileNavOverlay');
-                        if (overlay?.classList.contains('active')) {
-                            overlay.classList.remove('active');
-                            document.body.style.overflow = 'auto';
-                        }
-
-                        // Scroll to target
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 100,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        }
-
-        // Newsletter Form
-        function initNewsletter() {
-            const form = document.getElementById('newsletterForm');
-            if (!form) return;
-
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const emailInput = this.querySelector('input[type="email"]');
-                const email = emailInput.value.trim();
-
-                if (!validateEmail(email)) {
-                    showNotification('Please enter a valid email address', 'error');
-                    emailInput.focus();
-                    return;
-                }
-
-                // Simulate successful subscription
-                showNotification('Thank you for subscribing to luxury updates!', 'success');
-                
-                // Reset form
-                emailInput.value = '';
-                
-                // Track subscription (in production, send to your backend)
-                console.log('Newsletter subscription:', email);
-            });
-        }
-
-        // Notification System
-        function initNotification() {
-            window.showNotification = function(message, type = 'info') {
-                const notification = document.getElementById('notification');
-                if (!notification) return;
-
-                // Remove existing notification classes
-                notification.className = 'notification';
-                
-                // Add message and type
-                notification.textContent = message;
-                notification.classList.add(type, 'show');
-
-                // Auto-hide after 5 seconds
-                setTimeout(() => {
-                    notification.classList.remove('show');
-                }, 5000);
-            };
-        }
-
-        // Product Hover Effects
-        function initProductHover() {
-            const productCards = document.querySelectorAll('.product-card');
-            
-            productCards.forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    if (window.innerWidth > 768) {
-                        card.style.zIndex = '10';
-                    }
-                });
-                
-                card.addEventListener('mouseleave', () => {
-                    card.style.zIndex = '';
-                });
-            });
-        }
-
-        // Image Loading
-        function initImageLoading() {
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            
-            images.forEach(img => {
-                if (img.complete) {
-                    img.classList.add('loaded');
-                } else {
-                    img.addEventListener('load', () => {
-                        img.classList.add('loaded');
-                    });
-                    
-                    img.addEventListener('error', () => {
-                        console.warn('Failed to load image:', img.src);
-                        img.style.backgroundColor = '#f8f8f8';
-                    });
-                }
-            });
-        }
-
-        // Responsive Images
-        function initResponsiveImages() {
-            function updateImageSizes() {
-                const screenWidth = window.innerWidth;
-                const productImages = document.querySelectorAll('.product-image img');
-                
-                productImages.forEach(img => {
-                    if (screenWidth < 480) {
-                        img.style.objectFit = 'cover';
-                    } else {
-                        img.style.objectFit = 'contain';
-                    }
-                });
-            }
-            
-            // Initial update
-            updateImageSizes();
-            
-            // Update on resize (with debounce)
-            let resizeTimeout;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(updateImageSizes, 250);
-            });
-        }
-
-        // Utility Functions
-        function validateEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
-        }
-
-        // Track Amazon Clicks
-        document.querySelectorAll('a[href*="amzn.to"]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                // Don't prevent default - let link open
-                const productName = this.closest('.product-card')?.querySelector('.product-title')?.textContent || 'Unknown';
-                
-                // Track click (in production, use analytics)
-                console.log(`Amazon affiliate click: ${productName}`);
-                console.log(`URL: ${this.href}`);
-                
-                // Small delay to ensure tracking
-                setTimeout(() => {
-                    // Link will open in new tab automatically
-                }, 100);
-            });
-        });
-
-        // Performance Monitoring
-        window.addEventListener('load', () => {
-            if ('performance' in window) {
-                const timing = performance.timing;
-                const loadTime = timing.loadEventEnd - timing.navigationStart;
-                
-                console.log(`Page loaded in ${loadTime}ms`);
-                
-                // Send to analytics if configured
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'timing_complete', {
-                        'name': 'page_load',
-                        'value': loadTime,
-                        'event_category': 'Performance'
-                    });
-                }
-            }
-        });
-
-        // Touch Device Support
-        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-            document.body.classList.add('touch-device');
-            
-            // Add touch feedback
-            document.querySelectorAll('.product-card, .brand-card').forEach(card => {
-                card.addEventListener('touchstart', function() {
-                    this.style.transform = 'scale(0.98)';
-                });
-                
-                card.addEventListener('touchend', function() {
-                    this.style.transform = '';
-                });
-            });
-        }
-    </script>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
