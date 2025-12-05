@@ -3,97 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Luxury</title>
-    <meta name="description" content="Handpicked electronics and gadgets with direct Amazon links. Best prices, free shipping, and trusted recommendations.">
+    <title>ShopTop - Curated Amazon Products</title>
+    <meta name="description" content="Best deals on Amazon. Direct links to top-rated products.">
     
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://www.amazon.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Mobile meta -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <i class="fab fa-amazon"></i>
-                    <span>Amazon</span>Luxury
-                </a>
-                
-                <div class="nav-menu" id="navMenu">
-                    <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
-                    <a href="#featured" class="nav-link"><i class="fas fa-star"></i> Featured</a>
-                    <a href="#best-sellers" class="nav-link"><i class="fas fa-crown"></i> Best Sellers</a>
-                    <a href="#deals" class="nav-link"><i class="fas fa-fire"></i> Hot Deals</a>
-                    <a href="#categories" class="nav-link"><i class="fas fa-th-large"></i> Categories</a>
+            <div class="header-inner">
+                <div class="logo">
+                    <i class="fas fa-bolt"></i>
+                    <span>ShopTop</span>
                 </div>
                 
-                <div class="nav-actions">
-                    <div class="amazon-link">
-                        <a href="https://www.amazon.com/?tag=storecamvaz-20" target="_blank">
-                            <i class="fab fa-amazon"></i> Amazon Store
-                        </a>
-                    </div>
-                    <button class="menu-toggle" id="menuToggle">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </nav>
+                <nav class="nav">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#deals" class="nav-link">Deals</a>
+                    <a href="#categories" class="nav-link">Categories</a>
+                </nav>
+                
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Banner -->
-    <section class="hero-banner" id="home">
+    <!-- Hero -->
+    <section class="hero" id="home">
         <div class="container">
-            <div class="banner-content">
-                <h1>Best Tech Products<br>Curated for You</h1>
-                <p>Direct links to Amazon with competitive prices and fast shipping.</p>
-                <a href="#featured" class="btn-shop-now">
-                    <i class="fas fa-shopping-cart"></i> Shop Recommended Products
+            <div class="hero-content">
+                <h1>Curated Selection of<br>Top Amazon Products</h1>
+                <p>Handpicked items with the best value and reviews.</p>
+                <a href="#products" class="btn btn-primary">
+                    <i class="fas fa-shopping-cart"></i> Shop Now
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Featured Products -->
-    <section class="featured-products" id="featured">
+    <!-- Products Grid -->
+    <section class="products-section" id="products">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-gem"></i>
-                    Editor's Picks
-                </h2>
-                <p class="section-subtitle">Top recommended products this month</p>
-            </div>
+            <h2 class="section-title">Featured Products</h2>
+            <p class="section-subtitle">Top-rated items with great reviews</p>
             
             <div class="products-grid">
                 <!-- Product 1 -->
                 <div class="product-card">
-                    <div class="product-badge">#1 Best Seller</div>
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Sony Noise Cancelling Headphones">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Sony Headphones" loading="lazy">
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Sony WH-1000XM4 Wireless Headphones</h3>
+                    <div class="product-info">
+                        <h3>Sony WH-1000XM4</h3>
+                        <p class="product-desc">Noise cancelling headphones with 30h battery</p>
                         <div class="product-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <span class="rating-count">12,543 reviews</span>
+                            <span class="stars">★★★★★</span>
+                            <span class="rating">4.7 (12k)</span>
                         </div>
-                        <p class="product-desc">Industry-leading noise cancellation with 30-hour battery life.</p>
                         <div class="product-price">
-                            <span class="current-price">$298.00</span>
-                            <span class="original-price">$348.00</span>
-                            <span class="discount">Save 14%</span>
+                            <span class="price">$298.00</span>
+                            <span class="old-price">$348.00</span>
                         </div>
                         <a href="https://www.amazon.com/dp/B0863TXGM3/?tag=storecamvaz-20" 
                            target="_blank" 
-                           class="btn-buy-amazon">
+                           class="btn btn-amazon">
                             <i class="fab fa-amazon"></i> View on Amazon
                         </a>
                     </div>
@@ -101,28 +87,24 @@
 
                 <!-- Product 2 -->
                 <div class="product-card">
-                    <div class="product-badge">Premium Pick</div>
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Apple Watch Series 9">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Apple Watch" loading="lazy">
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Apple Watch Series 9 GPS</h3>
+                    <div class="product-info">
+                        <h3>Apple Watch Series 9</h3>
+                        <p class="product-desc">GPS, health monitoring, water resistant</p>
                         <div class="product-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <span class="rating-count">21,098 reviews</span>
+                            <span class="stars">★★★★★</span>
+                            <span class="rating">4.9 (21k)</span>
                         </div>
-                        <p class="product-desc">Advanced health monitoring and always-on display.</p>
                         <div class="product-price">
-                            <span class="current-price">$399.00</span>
-                            <span class="original-price">$429.00</span>
-                            <span class="discount">Save $30</span>
+                            <span class="price">$399.00</span>
+                            <span class="old-price">$429.00</span>
                         </div>
                         <a href="https://www.amazon.com/dp/B0CHX3J5QY/?tag=storecamvaz-20" 
                            target="_blank" 
-                           class="btn-buy-amazon">
+                           class="btn btn-amazon">
                             <i class="fab fa-amazon"></i> View on Amazon
                         </a>
                     </div>
@@ -130,28 +112,24 @@
 
                 <!-- Product 3 -->
                 <div class="product-card">
-                    <div class="product-badge">Great Value</div>
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Kindle Paperwhite">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Kindle" loading="lazy">
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Kindle Paperwhite (11th Gen)</h3>
+                    <div class="product-info">
+                        <h3>Kindle Paperwhite</h3>
+                        <p class="product-desc">6.8" display, waterproof, 32GB</p>
                         <div class="product-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                            </div>
-                            <span class="rating-count">8,942 reviews</span>
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating">4.8 (8.9k)</span>
                         </div>
-                        <p class="product-desc">6.8" display, waterproof, adjustable warm light.</p>
                         <div class="product-price">
-                            <span class="current-price">$139.99</span>
-                            <span class="original-price">$149.99</span>
-                            <span class="discount">Save 7%</span>
+                            <span class="price">$139.99</span>
+                            <span class="old-price">$149.99</span>
                         </div>
                         <a href="https://www.amazon.com/dp/B08N38XPWX/?tag=storecamvaz-20" 
                            target="_blank" 
-                           class="btn-buy-amazon">
+                           class="btn btn-amazon">
                             <i class="fab fa-amazon"></i> View on Amazon
                         </a>
                     </div>
@@ -159,159 +137,24 @@
 
                 <!-- Product 4 -->
                 <div class="product-card">
-                    <div class="product-badge">Smart Home</div>
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Robot Vacuum">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Robot Vacuum" loading="lazy">
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Xiaomi Robot Vacuum</h3>
+                    <div class="product-info">
+                        <h3>Xiaomi Robot Vacuum</h3>
+                        <p class="product-desc">Laser navigation, app control, 2.5h runtime</p>
                         <div class="product-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <span class="rating-count">6,789 reviews</span>
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating">4.5 (6.8k)</span>
                         </div>
-                        <p class="product-desc">Laser navigation, app control, 2.5 hours runtime.</p>
                         <div class="product-price">
-                            <span class="current-price">$329.99</span>
-                            <span class="original-price">$399.99</span>
-                            <span class="discount">Save 18%</span>
+                            <span class="price">$329.99</span>
+                            <span class="old-price">$399.99</span>
                         </div>
                         <a href="https://www.amazon.com/dp/B07S3C5JQP/?tag=storecamvaz-20" 
                            target="_blank" 
-                           class="btn-buy-amazon">
-                            <i class="fab fa-amazon"></i> View on Amazon
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Best Sellers -->
-    <section class="best-sellers" id="best-sellers">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-crown"></i>
-                    Amazon Best Sellers
-                </h2>
-                <p class="section-subtitle">Most popular products right now</p>
-            </div>
-            
-            <div class="products-grid">
-                <!-- Product 5 -->
-                <div class="product-card">
-                    <div class="product-badge">Hot Deal</div>
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="GoPro Camera">
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">GoPro HERO11 Black</h3>
-                        <div class="product-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <span class="rating-count">9,876 reviews</span>
-                        </div>
-                        <p class="product-desc">5.3K video, HyperSmooth 5.0, waterproof to 10m.</p>
-                        <div class="product-price">
-                            <span class="current-price">$399.99</span>
-                            <span class="original-price">$499.99</span>
-                            <span class="discount">Save 20%</span>
-                        </div>
-                        <a href="https://www.amazon.com/dp/B0BD291WP7/?tag=storecamvaz-20" 
-                           target="_blank" 
-                           class="btn-buy-amazon">
-                            <i class="fab fa-amazon"></i> View on Amazon
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Product 6 -->
-                <div class="product-card">
-                    <div class="product-badge">Office Essential</div>
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Ergonomic Chair">
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Ergonomic Office Chair</h3>
-                        <div class="product-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                            </div>
-                            <span class="rating-count">4,567 reviews</span>
-                        </div>
-                        <p class="product-desc">Adjustable lumbar support, breathable mesh back.</p>
-                        <div class="product-price">
-                            <span class="current-price">$229.99</span>
-                            <span class="original-price">$299.99</span>
-                            <span class="discount">Save 23%</span>
-                        </div>
-                        <a href="https://www.amazon.com/dp/B08B3G8M7R/?tag=storecamvaz-20" 
-                           target="_blank" 
-                           class="btn-buy-amazon">
-                            <i class="fab fa-amazon"></i> View on Amazon
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Product 7 -->
-                <div class="product-card">
-                    <div class="product-badge">Fitness</div>
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Exercise Bike">
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Foldable Exercise Bike</h3>
-                        <div class="product-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <span class="rating-count">3,245 reviews</span>
-                        </div>
-                        <p class="product-desc">8 resistance levels, LCD monitor, silent operation.</p>
-                        <div class="product-price">
-                            <span class="current-price">$189.99</span>
-                            <span class="original-price">$249.99</span>
-                            <span class="discount">Save 24%</span>
-                        </div>
-                        <a href="https://www.amazon.com/dp/B08F7Q4F7W/?tag=storecamvaz-20" 
-                           target="_blank" 
-                           class="btn-buy-amazon">
-                            <i class="fab fa-amazon"></i> View on Amazon
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Product 8 -->
-                <div class="product-card">
-                    <div class="product-badge">Kitchen</div>
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Cookware Set">
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Non-Stick Cookware Set</h3>
-                        <div class="product-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                            </div>
-                            <span class="rating-count">5,432 reviews</span>
-                        </div>
-                        <p class="product-desc">10-piece set, ceramic coating, induction compatible.</p>
-                        <div class="product-price">
-                            <span class="current-price">$89.99</span>
-                            <span class="original-price">$129.99</span>
-                            <span class="discount">Save 31%</span>
-                        </div>
-                        <a href="https://www.amazon.com/dp/B08M5X5R8W/?tag=storecamvaz-20" 
-                           target="_blank" 
-                           class="btn-buy-amazon">
+                           class="btn btn-amazon">
                             <i class="fab fa-amazon"></i> View on Amazon
                         </a>
                     </div>
@@ -321,70 +164,65 @@
     </section>
 
     <!-- Hot Deals -->
-    <section class="hot-deals" id="deals">
+    <section class="deals-section" id="deals">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-fire"></i>
-                    Today's Hot Deals
-                </h2>
-                <p class="section-subtitle">Limited time offers and discounts</p>
-            </div>
+            <h2 class="section-title">Today's Hot Deals</h2>
+            <p class="section-subtitle">Limited time offers</p>
             
             <div class="deals-grid">
                 <div class="deal-card">
-                    <div class="deal-badge">-40% OFF</div>
-                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Smart Watch">
+                    <div class="deal-badge">-30%</div>
+                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         alt="Smart Watch" loading="lazy">
                     <div class="deal-content">
-                        <h3>Smart Watch Fitness Tracker</h3>
-                        <p>Heart rate monitor, sleep tracking, waterproof</p>
+                        <h3>Smart Watch</h3>
+                        <p>Heart rate, fitness tracker</p>
                         <div class="deal-price">
-                            <span class="price">$59.99</span>
-                            <span class="old-price">$99.99</span>
+                            <span>$59.99</span>
+                            <small>$99.99</small>
                         </div>
-                        <a href="https://www.amazon.com/s?k=smart+watch+fitness+tracker&tag=storecamvaz-20" 
+                        <a href="https://www.amazon.com/s?k=smart+watch+fitness&tag=storecamvaz-20" 
                            target="_blank" 
-                           class="btn-deal">
-                            Shop Now
+                           class="btn btn-small">
+                            Shop Deal
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="deal-card">
-                    <div class="deal-badge">-35% OFF</div>
-                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Bluetooth Speaker">
+                    <div class="deal-badge">-40%</div>
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         alt="Bluetooth Speaker" loading="lazy">
                     <div class="deal-content">
                         <h3>Bluetooth Speaker</h3>
-                        <p>360° sound, waterproof, 24h battery</p>
+                        <p>Waterproof, 24h battery</p>
                         <div class="deal-price">
-                            <span class="price">$49.99</span>
-                            <span class="old-price">$79.99</span>
+                            <span>$49.99</span>
+                            <small>$79.99</small>
                         </div>
-                        <a href="https://www.amazon.com/s?k=bluetooth+speaker&tag=storecamvaz-20" 
+                        <a href="https://www.amazon.com/s?k=bluetooth+speaker+waterproof&tag=storecamvaz-20" 
                            target="_blank" 
-                           class="btn-deal">
-                            Shop Now
+                           class="btn btn-small">
+                            Shop Deal
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="deal-card">
-                    <div class="deal-badge">-50% OFF</div>
-                    <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Wireless Earbuds">
+                    <div class="deal-badge">-50%</div>
+                    <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         alt="Wireless Earbuds" loading="lazy">
                     <div class="deal-content">
                         <h3>Wireless Earbuds</h3>
-                        <p>Noise cancelling, 30h battery, charging case</p>
+                        <p>Noise cancelling, 30h battery</p>
                         <div class="deal-price">
-                            <span class="price">$79.99</span>
-                            <span class="old-price">$159.99</span>
+                            <span>$79.99</span>
+                            <small>$159.99</small>
                         </div>
-                        <a href="https://www.amazon.com/s?k=wireless+earbuds&tag=storecamvaz-20" 
+                        <a href="https://www.amazon.com/s?k=wireless+earbuds+noise+cancelling&tag=storecamvaz-20" 
                            target="_blank" 
-                           class="btn-deal">
-                            Shop Now
+                           class="btn btn-small">
+                            Shop Deal
                         </a>
                     </div>
                 </div>
@@ -393,77 +231,66 @@
     </section>
 
     <!-- Categories -->
-    <section class="product-categories" id="categories">
+    <section class="categories-section" id="categories">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-th-large"></i>
-                    Shop Categories
-                </h2>
-                <p class="section-subtitle">Browse by product category</p>
-            </div>
+            <h2 class="section-title">Shop Categories</h2>
+            <p class="section-subtitle">Browse by category</p>
             
             <div class="categories-grid">
-                <a href="https://www.amazon.com/s?k=laptops&tag=storecamvaz-20" class="category-item" target="_blank">
+                <a href="https://www.amazon.com/s?k=laptops&tag=storecamvaz-20" 
+                   class="category-card" 
+                   target="_blank">
                     <i class="fas fa-laptop"></i>
-                    <h3>Laptops</h3>
-                    <p>From $599</p>
+                    <span>Laptops</span>
                 </a>
                 
-                <a href="https://www.amazon.com/s?k=smartphones&tag=storecamvaz-20" class="category-item" target="_blank">
+                <a href="https://www.amazon.com/s?k=smartphones&tag=storecamvaz-20" 
+                   class="category-card" 
+                   target="_blank">
                     <i class="fas fa-mobile-alt"></i>
-                    <h3>Smartphones</h3>
-                    <p>From $399</p>
+                    <span>Phones</span>
                 </a>
                 
-                <a href="https://www.amazon.com/s?k=tablets&tag=storecamvaz-20" class="category-item" target="_blank">
-                    <i class="fas fa-tablet-alt"></i>
-                    <h3>Tablets</h3>
-                    <p>From $299</p>
+                <a href="https://www.amazon.com/s?k=headphones&tag=storecamvaz-20" 
+                   class="category-card" 
+                   target="_blank">
+                    <i class="fas fa-headphones"></i>
+                    <span>Audio</span>
                 </a>
                 
-                <a href="https://www.amazon.com/s?k=gaming+consoles&tag=storecamvaz-20" class="category-item" target="_blank">
+                <a href="https://www.amazon.com/s?k=smart+home&tag=storecamvaz-20" 
+                   class="category-card" 
+                   target="_blank">
+                    <i class="fas fa-home"></i>
+                    <span>Smart Home</span>
+                </a>
+                
+                <a href="https://www.amazon.com/s?k=gaming&tag=storecamvaz-20" 
+                   class="category-card" 
+                   target="_blank">
                     <i class="fas fa-gamepad"></i>
-                    <h3>Gaming</h3>
-                    <p>From $299</p>
+                    <span>Gaming</span>
                 </a>
                 
-                <a href="https://www.amazon.com/s?k=televisions&tag=storecamvaz-20" class="category-item" target="_blank">
-                    <i class="fas fa-tv"></i>
-                    <h3>TVs</h3>
-                    <p>From $299</p>
-                </a>
-                
-                <a href="https://www.amazon.com/s?k=kitchen+appliances&tag=storecamvaz-20" class="category-item" target="_blank">
-                    <i class="fas fa-blender"></i>
-                    <h3>Kitchen</h3>
-                    <p>From $49</p>
-                </a>
-                
-                <a href="https://www.amazon.com/s?k=fitness+equipment&tag=storecamvaz-20" class="category-item" target="_blank">
-                    <i class="fas fa-dumbbell"></i>
-                    <h3>Fitness</h3>
-                    <p>From $99</p>
-                </a>
-                
-                <a href="https://www.amazon.com/s?k=home+decor&tag=storecamvaz-20" class="category-item" target="_blank">
-                    <i class="fas fa-couch"></i>
-                    <h3>Home Decor</h3>
-                    <p>From $29</p>
+                <a href="https://www.amazon.com/s?k=watches&tag=storecamvaz-20" 
+                   class="category-card" 
+                   target="_blank">
+                    <i class="fas fa-watch"></i>
+                    <span>Watches</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- CTA -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Shop Thousands of Products on Amazon</h2>
-                <p>Free shipping, easy returns, and competitive prices on millions of items.</p>
+                <h2>Shop Millions of Products</h2>
+                <p>Free shipping on eligible items. Easy returns.</p>
                 <a href="https://www.amazon.com/?tag=storecamvaz-20" 
                    target="_blank" 
-                   class="cta-button">
+                   class="btn btn-large">
                     <i class="fab fa-amazon"></i> Visit Amazon Store
                 </a>
             </div>
@@ -475,50 +302,96 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <i class="fab fa-amazon"></i>
-                        <span>Tech</span>Deals
-                    </a>
-                    <p>Your trusted source for product recommendations and Amazon deals.</p>
+                    <div class="logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>ShopTop</span>
+                    </div>
+                    <p>Curated Amazon product recommendations.</p>
                 </div>
                 
                 <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Shop</h4>
-                        <a href="#featured">Featured Products</a>
-                        <a href="#best-sellers">Best Sellers</a>
-                        <a href="#deals">Today's Deals</a>
-                        <a href="#categories">Categories</a>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Amazon</h4>
-                        <a href="https://www.amazon.com/gp/bestsellers/?tag=storecamvaz-20" target="_blank">Best Sellers</a>
-                        <a href="https://www.amazon.com/gp/new-releases/?tag=storecamvaz-20" target="_blank">New Releases</a>
-                        <a href="https://www.amazon.com/gp/movers-and-shakers/?tag=storecamvaz-20" target="_blank">Movers & Shakers</a>
-                        <a href="https://www.amazon.com/gp/most-wished-for/?tag=storecamvaz-20" target="_blank">Most Wished For</a>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Information</h4>
-                        <a href="#">About Us</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Contact</a>
-                    </div>
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#deals">Deals</a>
+                    <a href="#categories">Categories</a>
+                </div>
+                
+                <div class="footer-amazon">
+                    <a href="https://www.amazon.com/?tag=storecamvaz-20" 
+                       target="_blank" 
+                       class="amazon-link">
+                        <i class="fab fa-amazon"></i> Shop on Amazon
+                    </a>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 TechDeals. All product links are affiliate links to Amazon.com.</p>
-                <p class="affiliate-disclaimer">
-                    As an Amazon Associate I earn from qualifying purchases. Product prices and availability are subject to change.
-                </p>
+                <p>&copy; 2024 ShopTop. Product links are affiliate links to Amazon.</p>
+                <p class="affiliate-note">As an Amazon Associate I earn from qualifying purchases.</p>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const header = document.querySelector('.header');
+        
+        menuToggle.addEventListener('click', () => {
+            header.classList.toggle('menu-open');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // Close mobile menu if open
+                    header.classList.remove('menu-open');
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add affiliate tag to Amazon links
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set current year
+            document.querySelector('.footer-bottom p').innerHTML = 
+                document.querySelector('.footer-bottom p').innerHTML.replace('2024', new Date().getFullYear());
+            
+            // Add tracking to all Amazon links
+            document.querySelectorAll('a[href*="amazon.com"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('Amazon affiliate click:', this.href);
+                    // Optional: Add Google Analytics here
+                });
+                
+                // Ensure affiliate tag is present
+                if(!link.href.includes('tag=storecamvaz-20')) {
+                    const url = new URL(link.href);
+                    url.searchParams.set('tag', 'storecamvaz-20');
+                    link.href = url.toString();
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
