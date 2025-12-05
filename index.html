@@ -3,239 +3,355 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechReviewPro - Las Mejores Reseñas de Tecnología</title>
-    <meta name="description" content="Reseñas honestas y comparativas de los mejores productos tecnológicos. Enlaces de afiliado a Amazon.">
-    
-    <!-- Preconnect para Amazon -->
-    <link rel="preconnect" href="https://www.amazon.com">
+    <title>TechDeals - Afiliado Amazon</title>
+    <meta name="description" content="Productos recomendados con enlaces de afiliado Amazon. Gana comisiones con tus compras.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     
-    <!-- Font Awesome para iconos -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Preconnect para Amazon -->
+    <link rel="preconnect" href="https://www.amazon.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
 </head>
 <body>
-    <!-- Barra de navegación -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-laptop"></i>
-                <span>TechReview</span>Pro
-            </a>
-            
-            <div class="nav-links">
-                <a href="index.html" class="active"><i class="fas fa-home"></i> Inicio</a>
-                <a href="reseñas.html"><i class="fas fa-star"></i> Reseñas</a>
-                <a href="comparativas.html"><i class="fas fa-balance-scale"></i> Comparativas</a>
-                <a href="guias.html"><i class="fas fa-book"></i> Guías</a>
-                <a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
-            </div>
-            
-            <button class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner">
+            <i class="fab fa-amazon"></i>
         </div>
-    </nav>
+    </div>
 
-    <!-- Hero Section -->
-    <header class="hero">
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <h1>Las Mejores Reseñas de Tecnología</h1>
-            <p class="subtitle">Análisis honestos, comparativas detalladas y recomendaciones verificadas</p>
-            <p class="disclaimer">
-                <i class="fas fa-exclamation-circle"></i>
-                <strong>Aviso de Afiliados:</strong> Este sitio contiene enlaces de afiliado Amazon. Como Afiliado de Amazon, gano por compras calificadas.
-            </p>
-            <a href="#reseñas-destacadas" class="cta-button">
-                Ver Reseñas Destacadas <i class="fas fa-arrow-down"></i>
-            </a>
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fab fa-amazon"></i>
+                    <span>Tech</span>Deals
+                </a>
+                
+                <div class="nav-menu" id="navMenu">
+                    <a href="#inicio" class="nav-link active"><i class="fas fa-home"></i> Inicio</a>
+                    <a href="#productos" class="nav-link"><i class="fas fa-box"></i> Productos</a>
+                    <a href="#categorias" class="nav-link"><i class="fas fa-tags"></i> Categorías</a>
+                    <a href="#ganancias" class="nav-link"><i class="fas fa-chart-line"></i> Ganancias</a>
+                    <a href="#contacto" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <div class="affiliate-badge">
+                        <i class="fas fa-id-card"></i>
+                        <span>ID: storecamvaz-20</span>
+                    </div>
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <!-- Sección de Afiliado -->
-    <section class="affiliate-info">
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
         <div class="container">
-            <div class="affiliate-card">
-                <div class="affiliate-icon">
-                    <i class="fab fa-amazon"></i>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="highlight">Gana Dinero</span> con Cada Compra en Amazon
+                </h1>
+                <p class="hero-subtitle">
+                    Productos seleccionados con los mejores precios y enlaces de afiliado.
+                    Cada compra genera comisiones para ti.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>+5,000</h3>
+                            <p>Clientes satisfechos</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div>
+                            <h3>+10,000</h3>
+                            <p>Productos vendidos</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <h3>4.8/5</h3>
+                            <p>Valoración promedio</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="affiliate-content">
-                    <h3><i class="fas fa-badge-check"></i> Afiliado Amazon Verificado</h3>
-                    <p>ID de afiliado: <code class="affiliate-id">storecamvaz-20</code></p>
-                    <p>Todas nuestras recomendaciones incluyen enlaces de afiliado. Al comprar a través de nuestros enlaces, nos apoyas sin costo adicional para ti.</p>
-                    <a href="https://www.amazon.com/?tag=storecamvaz-20" target="_blank" class="amazon-button">
-                        <i class="fab fa-amazon"></i> Ir a Amazon
+                
+                <div class="hero-cta">
+                    <a href="https://www.amazon.com/?tag=storecamvaz-20" 
+                       target="_blank" 
+                       class="btn-primary btn-large">
+                        <i class="fab fa-amazon"></i> Comprar en Amazon
+                    </a>
+                    <a href="#productos" class="btn-secondary btn-large">
+                        <i class="fas fa-arrow-down"></i> Ver Productos
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Reseñas Destacadas -->
-    <section id="reseñas-destacadas" class="featured-reviews">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-crown"></i> Productos Destacados</h2>
-            <p class="section-subtitle">Nuestras mejores recomendaciones del mes</p>
             
-            <div class="products-grid">
-                <!-- Producto 1 -->
-                <div class="product-card">
-                    <div class="product-badge">Mejor Elección</div>
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Audífonos Premium" class="product-img">
-                    <div class="product-content">
-                        <h3>Audífonos Inalámbricos Premium</h3>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span class="rating-text">4.5/5</span>
-                        </div>
-                        <p class="product-desc">Sonido de alta calidad, cancelación de ruido y 30 horas de batería.</p>
-                        <div class="product-price">
-                            <span class="price">$129.99</span>
-                            <span class="price-old">$179.99</span>
-                        </div>
-                        <a href="https://www.amazon.com/dp/B08N5WRWNW/?tag=storecamvaz-20" target="_blank" class="buy-button">
-                            <i class="fab fa-amazon"></i> Ver en Amazon
-                        </a>
-                    </div>
-                </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Productos Amazon" 
+                     loading="lazy"
+                     class="hero-img">
+            </div>
+        </div>
+    </section>
 
-                <!-- Producto 2 -->
-                <div class="product-card">
-                    <div class="product-badge">Gran Valor</div>
-                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Smartwatch" class="product-img">
-                    <div class="product-content">
-                        <h3>Smartwatch Deportivo 2024</h3>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <span class="rating-text">4.0/5</span>
-                        </div>
-                        <p class="product-desc">Monitoreo de salud, GPS integrado y resistencia al agua.</p>
-                        <div class="product-price">
-                            <span class="price">$89.99</span>
-                            <span class="price-old">$129.99</span>
-                        </div>
-                        <a href="https://www.amazon.com/dp/B09V3MN4XK/?tag=storecamvaz-20" target="_blank" class="buy-button">
-                            <i class="fab fa-amazon"></i> Ver en Amazon
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Producto 3 -->
-                <div class="product-card">
-                    <div class="product-badge">Recomendado</div>
-                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Altavoz Bluetooth" class="product-img">
-                    <div class="product-content">
-                        <h3>Altavoz Bluetooth Portátil</h3>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span class="rating-text">5.0/5</span>
-                        </div>
-                        <p class="product-desc">Sonido 360°, resistente al agua y 24 horas de batería.</p>
-                        <div class="product-price">
-                            <span class="price">$59.99</span>
-                            <span class="price-save">Ahorras 25%</span>
-                        </div>
-                        <a href="https://www.amazon.com/dp/B08C4Z5V6T/?tag=storecamvaz-20" target="_blank" class="buy-button">
-                            <i class="fab fa-amazon"></i> Ver en Amazon
-                        </a>
-                    </div>
+    <!-- Affiliate Notice -->
+    <section class="affiliate-notice">
+        <div class="container">
+            <div class="notice-content">
+                <i class="fas fa-exclamation-circle"></i>
+                <div>
+                    <h3>Aviso de Afiliados</h3>
+                    <p>Este sitio contiene enlaces de afiliado Amazon. Como Afiliado de Amazon, gano por compras calificadas. 
+                    Cualquier compra realizada dentro de 24 horas después de hacer clic genera una comisión.</p>
+                    <p class="affiliate-id"><strong>ID Afiliado:</strong> storecamvaz-20</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Newsletter -->
-    <section class="newsletter">
+    <!-- Productos Destacados -->
+    <section class="products-section" id="productos">
         <div class="container">
-            <div class="newsletter-content">
-                <i class="fas fa-envelope-open-text newsletter-icon"></i>
-                <div>
-                    <h2>Recibe Ofertas Exclusivas</h2>
-                    <p>Suscríbete para recibir nuestras mejores recomendaciones y descuentos especiales.</p>
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-crown"></i>
+                    Productos Destacados
+                </h2>
+                <p class="section-subtitle">Los productos más populares con mejores comisiones</p>
+            </div>
+            
+            <div class="products-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="tecnologia">Tecnología</button>
+                <button class="filter-btn" data-filter="hogar">Hogar</button>
+                <button class="filter-btn" data-filter="deportes">Deportes</button>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se cargan dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías Populares -->
+    <section class="categories-section" id="categorias">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-tags"></i>
+                    Categorías Populares
+                </h2>
+                <p class="section-subtitle">Explora por categorías con alta tasa de comisión</p>
+            </div>
+            
+            <div class="categories-grid">
+                <a href="https://www.amazon.com/s?k=televisores+4k&tag=storecamvaz-20" 
+                   class="category-card" 
+                   target="_blank">
+                    <div class="category-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3>Televisores</h3>
+                    <p>Hasta 4% de comisión</p>
+                    <span class="category-link">Ver productos <i class="fas fa-arrow-right"></i></span>
+                </a>
+                
+                <a href="https://www.amazon.com/s?k=laptops+gaming&tag=storecamvaz-20" 
+                   class="category-card" 
+                   target="_blank">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Laptops</h3>
+                    <p>Hasta 3% de comisión</p>
+                    <span class="category-link">Ver productos <i class="fas fa-arrow-right"></i></span>
+                </a>
+                
+                <a href="https://www.amazon.com/s?k=smartphones&tag=storecamvaz-20" 
+                   class="category-card" 
+                   target="_blank">
+                    <div class="category-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Smartphones</h3>
+                    <p>Hasta 2% de comisión</p>
+                    <span class="category-link">Ver productos <i class="fas fa-arrow-right"></i></span>
+                </a>
+                
+                <a href="https://www.amazon.com/s?k=audifonos+inalambricos&tag=storecamvaz-20" 
+                   class="category-card" 
+                   target="_blank">
+                    <div class="category-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Audífonos</h3>
+                    <p>Hasta 6% de comisión</p>
+                    <span class="category-link">Ver productos <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Funciona -->
+    <section class="how-it-works" id="ganancias">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-chart-line"></i>
+                    Cómo Generas Ganancias
+                </h2>
+                <p class="section-subtitle">4 pasos simples para empezar a ganar</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <h3>Haz Clic</h3>
+                    <p>Click en cualquier producto o categoría</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fab fa-amazon"></i>
+                    </div>
+                    <h3>Visita Amazon</h3>
+                    <p>Te redirigimos a Amazon con tu ID de afiliado</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Compra</h3>
+                    <p>Compra cualquier producto en 24 horas</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Gana Comisión</h3>
+                    <p>Recibe hasta 10% del valor de la compra</p>
                 </div>
             </div>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit">Suscribirse <i class="fas fa-paper-plane"></i></button>
-            </form>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¡Empieza a Generar Ganancias Hoy!</h2>
+                <p>Cada compra realizada a través de nuestros enlaces te genera ingresos pasivos.</p>
+                <a href="https://www.amazon.com/?tag=storecamvaz-20" 
+                   target="_blank" 
+                   class="btn-primary btn-cta">
+                    <i class="fab fa-amazon"></i> Comprar Ahora en Amazon
+                    <span class="commission-badge">Hasta 10% comisión</span>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contacto">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3><i class="fas fa-laptop"></i> TechReviewPro</h3>
-                    <p>Reseñas honestas de productos tecnológicos. Enlaces de afiliado Amazon.</p>
+                    <h3 class="footer-logo">
+                        <i class="fab fa-amazon"></i>
+                        <span>Tech</span>Deals
+                    </h3>
+                    <p>Tu portal de confianza para compras en Amazon con enlaces de afiliado.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-
+                
                 <div class="footer-col">
                     <h3>Enlaces Rápidos</h3>
                     <ul>
-                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
-                        <li><a href="reseñas.html"><i class="fas fa-chevron-right"></i> Reseñas</a></li>
-                        <li><a href="comparativas.html"><i class="fas fa-chevron-right"></i> Comparativas</a></li>
-                        <li><a href="guias.html"><i class="fas fa-chevron-right"></i> Guías de Compra</a></li>
+                        <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#productos"><i class="fas fa-chevron-right"></i> Productos</a></li>
+                        <li><a href="#categorias"><i class="fas fa-chevron-right"></i> Categorías</a></li>
+                        <li><a href="#ganancias"><i class="fas fa-chevron-right"></i> Cómo Ganar</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="footer-col">
-                    <h3>Legal</h3>
+                    <h3>Información Legal</h3>
                     <ul>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Aviso de Afiliados</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Política de Privacidad</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Términos y Condiciones</a></li>
-                        <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contacto</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="footer-col">
                     <h3>Amazon Afiliado</h3>
-                    <p>ID: <strong>storecamvaz-20</strong></p>
-                    <p>Este sitio participa en el Programa de Afiliados de Amazon.</p>
-                    <a href="https://www.amazon.com/?tag=storecamvaz-20" target="_blank" class="footer-amazon">
-                        <i class="fab fa-amazon"></i> Comprar en Amazon
-                    </a>
+                    <div class="affiliate-info">
+                        <p><strong>ID Afiliado:</strong></p>
+                        <code class="affiliate-code">storecamvaz-20</code>
+                        <p>Participante del Programa de Afiliados de Amazon Services LLC</p>
+                        <a href="https://www.amazon.com/?tag=storecamvaz-20" 
+                           target="_blank" 
+                           class="btn-amazon">
+                            <i class="fab fa-amazon"></i> Ir a Amazon
+                        </a>
+                    </div>
                 </div>
             </div>
-
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 TechReviewPro. Todos los derechos reservados.</p>
-                <p class="affiliate-disclaimer">
+                <p>&copy; <span id="currentYear"></span> TechDeals. Todos los derechos reservados.</p>
+                <p class="disclaimer-text">
                     <i class="fas fa-info-circle"></i>
-                    TechReviewPro es un participante en el Programa de Afiliados de Amazon Services LLC, un programa publicitario de afiliados diseñado para proporcionar un medio para que los sitios ganen tarifas de publicidad mediante publicidad y enlaces a Amazon.com.
+                    Este sitio es un participante en el Programa de Afiliados de Amazon Services LLC.
                 </p>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
