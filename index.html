@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Affiliate - Best Product Deals</title>
-    <meta name="description" content="Recommended products with Amazon affiliate links. Earn commissions with your purchases.">
+    <title>Amazon Affiliate - Best Product Deals | ID: storecamvaz-20</title>
+    <meta name="description" content="Recommended products with Amazon affiliate links. Earn commissions with your purchases. Affiliate ID: storecamvaz-20">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -19,60 +19,28 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     
-    <!-- Preconnect -->
+    <!-- Amazon Tracking -->
     <link rel="preconnect" href="https://www.amazon.com">
-    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://fls-na.amazon.com">
     
-    <!-- Critical CSS for Mobile -->
+    <!-- Critical Mobile CSS -->
     <style>
-        /* Critical mobile styles */
         @media (max-width: 768px) {
-            .container {
-                padding: 0 15px !important;
-            }
-            
-            .navbar {
-                padding: 10px 0 !important;
-            }
-            
-            .hero {
-                padding: 100px 0 40px !important;
-            }
-            
-            .hero .container {
-                grid-template-columns: 1fr !important;
-                gap: 30px !important;
-            }
-            
-            .hero-title {
-                font-size: 2rem !important;
-                text-align: center !important;
-            }
-            
-            .hero-subtitle {
-                text-align: center !important;
-                font-size: 1rem !important;
-            }
-            
-            .hero-stats {
-                flex-direction: column !important;
-                gap: 20px !important;
-            }
-            
-            .stat {
-                text-align: center !important;
-            }
-            
-            .hero-cta {
-                flex-direction: column !important;
-                align-items: center !important;
-            }
-            
-            .btn-primary,
-            .btn-secondary {
-                width: 100% !important;
-                max-width: 300px !important;
-            }
+            .container { padding: 0 15px !important; }
+            .navbar { padding: 12px 0 !important; }
+            .hero { padding: 100px 0 40px !important; }
+            .hero .container { grid-template-columns: 1fr !important; gap: 30px !important; }
+            .hero-title { font-size: 2rem !important; text-align: center !important; }
+            .hero-subtitle { text-align: center !important; font-size: 1rem !important; }
+            .hero-stats { flex-direction: column !important; gap: 20px !important; }
+            .stat { text-align: center !important; }
+            .hero-cta { flex-direction: column !important; align-items: center !important; }
+            .btn-primary, .btn-secondary { width: 100% !important; max-width: 300px !important; }
+        }
+        
+        /* Amazon pixel tracking placeholder */
+        .amazon-pixel {
+            display: none;
         }
     </style>
 </head>
@@ -82,7 +50,14 @@
         <div class="spinner">
             <i class="fab fa-amazon"></i>
         </div>
+        <p class="loading-text">Loading your affiliate store...</p>
     </div>
+
+    <!-- Amazon Tracking Pixel (Hidden) -->
+    <img src="https://fls-na.amazon.com/1/batch/1/OP/A1EVAM02EL8SFB:storecamvaz-20:storecamvaz-20" 
+         class="amazon-pixel" 
+         alt="Amazon Tracking"
+         loading="lazy">
 
     <!-- Header -->
     <header class="header">
@@ -90,7 +65,7 @@
             <nav class="navbar">
                 <a href="index.html" class="logo">
                     <i class="fab fa-amazon"></i>
-                    <span>Affiliate</span>Deals
+                    <span>Affiliate</span>Store
                 </a>
                 
                 <div class="nav-menu" id="navMenu">
@@ -103,7 +78,7 @@
                 
                 <div class="nav-actions">
                     <div class="affiliate-badge">
-                        <i class="fas fa-id-card"></i>
+                        <i class="fas fa-id-badge"></i>
                         <span>ID: storecamvaz-20</span>
                     </div>
                     <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
@@ -119,33 +94,35 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="highlight">Earn Money</span> with Every Amazon Purchase
+                    <span class="highlight">Earn Commission</span> with Every Amazon Purchase
                 </h1>
                 <p class="hero-subtitle">
-                    Carefully selected products with the best prices and affiliate links.
-                    Every purchase generates commissions for you.
+                    Your affiliate ID: <strong class="affiliate-highlight">storecamvaz-20</strong>
+                </p>
+                <p class="hero-description">
+                    Carefully selected products with the best prices. Every purchase through your links generates commissions.
                 </p>
                 
                 <div class="hero-stats">
                     <div class="stat">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-tag"></i>
                         <div>
-                            <h3>+5,000</h3>
-                            <p>Satisfied Customers</p>
+                            <h3>storecamvaz-20</h3>
+                            <p>Your Affiliate ID</p>
                         </div>
                     </div>
                     <div class="stat">
-                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-percentage"></i>
                         <div>
-                            <h3>+10,000</h3>
-                            <p>Products Sold</p>
+                            <h3>1-10%</h3>
+                            <p>Commission Rate</p>
                         </div>
                     </div>
                     <div class="stat">
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-clock"></i>
                         <div>
-                            <h3>4.8/5</h3>
-                            <p>Average Rating</p>
+                            <h3>24h</h3>
+                            <p>Cookie Duration</p>
                         </div>
                     </div>
                 </div>
@@ -153,12 +130,18 @@
                 <div class="hero-cta">
                     <a href="https://www.amazon.com/?tag=storecamvaz-20" 
                        target="_blank" 
-                       class="btn-primary btn-large">
+                       class="btn-primary btn-large"
+                       data-affiliate="storecamvaz-20">
                         <i class="fab fa-amazon"></i> Shop on Amazon
                     </a>
                     <a href="#products" class="btn-secondary btn-large">
-                        <i class="fas fa-arrow-down"></i> View Products
+                        <i class="fas fa-gift"></i> View Top Products
                     </a>
+                </div>
+                
+                <div class="commission-notice">
+                    <i class="fas fa-info-circle"></i>
+                    <p><strong>How it works:</strong> Click any link → Shop on Amazon → Earn commission on ALL purchases within 24 hours</p>
                 </div>
             </div>
             
@@ -167,20 +150,39 @@
                      alt="Amazon Products" 
                      loading="lazy"
                      class="hero-img">
+                <div class="image-badge">
+                    <i class="fab fa-amazon"></i>
+                    <span>Affiliate Partner</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Affiliate Notice -->
-    <section class="affiliate-notice">
+    <!-- Affiliate Disclosure -->
+    <section class="affiliate-disclosure">
         <div class="container">
-            <div class="notice-content">
-                <i class="fas fa-exclamation-circle"></i>
-                <div>
-                    <h3>Affiliate Disclosure</h3>
-                    <p>This site contains Amazon affiliate links. As an Amazon Associate, I earn from qualifying purchases. 
-                    Any purchase made within 24 hours after clicking generates a commission.</p>
-                    <p class="affiliate-id"><strong>Affiliate ID:</strong> storecamvaz-20</p>
+            <div class="disclosure-content">
+                <div class="disclosure-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Amazon Affiliate Disclosure</h3>
+                </div>
+                <div class="disclosure-body">
+                    <p><strong>Affiliate ID:</strong> <code class="affiliate-code">storecamvaz-20</code></p>
+                    <p>As an Amazon Associate, I earn from qualifying purchases. When you click on any product link and make a purchase on Amazon within 24 hours, I receive a commission at no extra cost to you.</p>
+                    <div class="commission-types">
+                        <div class="commission-type">
+                            <i class="fas fa-laptop"></i>
+                            <span>Electronics: 1-4%</span>
+                        </div>
+                        <div class="commission-type">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Fashion: 4-10%</span>
+                        </div>
+                        <div class="commission-type">
+                            <i class="fas fa-home"></i>
+                            <span>Home: 3-8%</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -191,147 +193,159 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">
-                    <i class="fas fa-crown"></i>
-                    Featured Products
+                    <i class="fas fa-star"></i>
+                    Top Earning Products
                 </h2>
-                <p class="section-subtitle">Most popular products with highest commissions</p>
+                <p class="section-subtitle">High commission products with your ID: <strong>storecamvaz-20</strong></p>
             </div>
             
             <div class="products-filter">
                 <button class="filter-btn active" data-filter="all">All Products</button>
-                <button class="filter-btn" data-filter="technology">Technology</button>
-                <button class="filter-btn" data-filter="home">Home & Kitchen</button>
-                <button class="filter-btn" data-filter="sports">Sports & Outdoors</button>
+                <button class="filter-btn" data-filter="high-commission">High Commission</button>
+                <button class="filter-btn" data-filter="bestsellers">Best Sellers</button>
+                <button class="filter-btn" data-filter="deals">Today's Deals</button>
             </div>
             
             <div class="products-grid" id="productsGrid">
-                <!-- Products loaded dynamically with JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Popular Categories -->
-    <section class="categories-section" id="categories">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-tags"></i>
-                    Popular Categories
-                </h2>
-                <p class="section-subtitle">Explore categories with high commission rates</p>
+                <!-- Products loaded via JavaScript -->
             </div>
             
-            <div class="categories-grid">
-                <a href="https://www.amazon.com/s?k=4k+televisions&tag=storecamvaz-20" 
-                   class="category-card" 
-                   target="_blank">
-                    <div class="category-icon">
-                        <i class="fas fa-tv"></i>
-                    </div>
-                    <h3>Televisions</h3>
-                    <p>Up to 4% commission</p>
-                    <span class="category-link">View products <i class="fas fa-arrow-right"></i></span>
-                </a>
-                
-                <a href="https://www.amazon.com/s?k=gaming+laptops&tag=storecamvaz-20" 
-                   class="category-card" 
-                   target="_blank">
-                    <div class="category-icon">
-                        <i class="fas fa-laptop"></i>
-                    </div>
-                    <h3>Laptops</h3>
-                    <p>Up to 3% commission</p>
-                    <span class="category-link">View products <i class="fas fa-arrow-right"></i></span>
-                </a>
-                
-                <a href="https://www.amazon.com/s?k=smartphones&tag=storecamvaz-20" 
-                   class="category-card" 
-                   target="_blank">
-                    <div class="category-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Smartphones</h3>
-                    <p>Up to 2% commission</p>
-                    <span class="category-link">View products <i class="fas fa-arrow-right"></i></span>
-                </a>
-                
-                <a href="https://www.amazon.com/s?k=wireless+headphones&tag=storecamvaz-20" 
-                   class="category-card" 
-                   target="_blank">
-                    <div class="category-icon">
-                        <i class="fas fa-headphones"></i>
-                    </div>
-                    <h3>Headphones</h3>
-                    <p>Up to 6% commission</p>
-                    <span class="category-link">View products <i class="fas fa-arrow-right"></i></span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="how-it-works" id="earnings">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-chart-line"></i>
-                    How You Earn Money
-                </h2>
-                <p class="section-subtitle">4 simple steps to start earning</p>
-            </div>
-            
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">
-                        <i class="fas fa-mouse-pointer"></i>
-                    </div>
-                    <h3>Click</h3>
-                    <p>Click on any product or category link</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <i class="fab fa-amazon"></i>
-                    </div>
-                    <h3>Visit Amazon</h3>
-                    <p>We redirect you to Amazon with your affiliate ID</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3>Purchase</h3>
-                    <p>Buy any product within 24 hours</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <div class="step-icon">
-                        <i class="fas fa-money-bill-wave"></i>
-                    </div>
-                    <h3>Earn Commission</h3>
-                    <p>Receive up to 10% of the purchase value</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Start Generating Earnings Today!</h2>
-                <p>Every purchase made through our links generates passive income for you.</p>
-                <a href="https://www.amazon.com/?tag=storecamvaz-20" 
+            <div class="view-all">
+                <a href="https://www.amazon.com/gp/bestsellers/?tag=storecamvaz-20" 
                    target="_blank" 
-                   class="btn-primary btn-cta">
-                    <i class="fab fa-amazon"></i> Shop Now on Amazon
-                    <span class="commission-badge">Up to 10% commission</span>
+                   class="btn-secondary">
+                    <i class="fas fa-th-list"></i> View All Amazon Best Sellers
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-bolt"></i>
+                    Quick Amazon Links
+                </h2>
+                <p class="section-subtitle">Direct links to popular Amazon categories with your affiliate ID</p>
+            </div>
+            
+            <div class="links-grid">
+                <a href="https://www.amazon.com/gp/bestsellers/electronics/?tag=storecamvaz-20" class="link-card" target="_blank">
+                    <i class="fas fa-tv"></i>
+                    <h4>Electronics</h4>
+                    <p>Up to 4% commission</p>
+                    <span class="link-arrow"><i class="fas fa-external-link-alt"></i></span>
+                </a>
+                
+                <a href="https://www.amazon.com/gp/bestsellers/home-garden/?tag=storecamvaz-20" class="link-card" target="_blank">
+                    <i class="fas fa-home"></i>
+                    <h4>Home & Kitchen</h4>
+                    <p>Up to 8% commission</p>
+                    <span class="link-arrow"><i class="fas fa-external-link-alt"></i></span>
+                </a>
+                
+                <a href="https://www.amazon.com/gp/bestsellers/fashion/?tag=storecamvaz-20" class="link-card" target="_blank">
+                    <i class="fas fa-tshirt"></i>
+                    <h4>Fashion</h4>
+                    <p>Up to 10% commission</p>
+                    <span class="link-arrow"><i class="fas fa-external-link-alt"></i></span>
+                </a>
+                
+                <a href="https://www.amazon.com/gp/bestsellers/beauty/?tag=storecamvaz-20" class="link-card" target="_blank">
+                    <i class="fas fa-spa"></i>
+                    <h4>Beauty</h4>
+                    <p>Up to 10% commission</p>
+                    <span class="link-arrow"><i class="fas fa-external-link-alt"></i></span>
+                </a>
+                
+                <a href="https://www.amazon.com/gp/bestsellers/books/?tag=storecamvaz-20" class="link-card" target="_blank">
+                    <i class="fas fa-book"></i>
+                    <h4>Books</h4>
+                    <p>Up to 4.5% commission</p>
+                    <span class="link-arrow"><i class="fas fa-external-link-alt"></i></span>
+                </a>
+                
+                <a href="https://www.amazon.com/gp/bestsellers/toys-games/?tag=storecamvaz-20" class="link-card" target="_blank">
+                    <i class="fas fa-gamepad"></i>
+                    <h4>Toys & Games</h4>
+                    <p>Up to 8% commission</p>
+                    <span class="link-arrow"><i class="fas fa-external-link-alt"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earnings Calculator -->
+    <section class="calculator-section" id="earnings">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-calculator"></i>
+                    Earnings Calculator
+                </h2>
+                <p class="section-subtitle">Estimate your potential earnings with affiliate ID: storecamvaz-20</p>
+            </div>
+            
+            <div class="calculator">
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label for="monthlyClicks">Monthly Clicks</label>
+                        <input type="range" id="monthlyClicks" min="100" max="10000" step="100" value="1000">
+                        <div class="input-value">
+                            <span id="clicksValue">1,000</span>
+                            <span>clicks/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="conversionRate">Conversion Rate</label>
+                        <input type="range" id="conversionRate" min="1" max="20" step="0.5" value="5">
+                        <div class="input-value">
+                            <span id="rateValue">5%</span>
+                            <span>of clicks convert</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="averageOrder">Average Order Value</label>
+                        <input type="range" id="averageOrder" min="20" max="500" step="10" value="100">
+                        <div class="input-value">
+                            <span id="orderValue">$100</span>
+                            <span>per order</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="commissionRate">Commission Rate</label>
+                        <input type="range" id="commissionRate" min="1" max="10" step="0.5" value="4">
+                        <div class="input-value">
+                            <span id="commissionValue">4%</span>
+                            <span>average commission</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculator-results">
+                    <div class="result-card">
+                        <h4>Monthly Sales</h4>
+                        <p id="monthlySales">$5,000</p>
+                    </div>
+                    <div class="result-card">
+                        <h4>Monthly Commission</h4>
+                        <p id="monthlyCommission">$200</p>
+                    </div>
+                    <div class="result-card">
+                        <h4>Yearly Commission</h4>
+                        <p id="yearlyCommission">$2,400</p>
+                    </div>
+                </div>
+                
+                <div class="calculator-note">
+                    <i class="fas fa-lightbulb"></i>
+                    <p><strong>Pro Tip:</strong> Focus on high-commission categories (Fashion, Home) to maximize earnings with your ID: storecamvaz-20</p>
+                </div>
             </div>
         </div>
     </section>
@@ -343,58 +357,67 @@
                 <div class="footer-col">
                     <h3 class="footer-logo">
                         <i class="fab fa-amazon"></i>
-                        <span>Affiliate</span>Deals
+                        <span>Affiliate</span>Store
                     </h3>
-                    <p>Your trusted portal for Amazon purchases with affiliate links.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <p>Amazon Affiliate Store with ID: <strong>storecamvaz-20</strong></p>
+                    <div class="affiliate-id-display">
+                        <i class="fas fa-qrcode"></i>
+                        <div>
+                            <small>Your Affiliate ID</small>
+                            <h4>storecamvaz-20</h4>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3>Amazon Links</h3>
                     <ul>
-                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Products</a></li>
-                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> Categories</a></li>
-                        <li><a href="#earnings"><i class="fas fa-chevron-right"></i> How to Earn</a></li>
+                        <li><a href="https://www.amazon.com/?tag=storecamvaz-20" target="_blank"><i class="fas fa-link"></i> Amazon Home</a></li>
+                        <li><a href="https://www.amazon.com/gp/bestsellers/?tag=storecamvaz-20" target="_blank"><i class="fas fa-trophy"></i> Best Sellers</a></li>
+                        <li><a href="https://www.amazon.com/gp/new-releases/?tag=storecamvaz-20" target="_blank"><i class="fas fa-fire"></i> New Releases</a></li>
+                        <li><a href="https://www.amazon.com/gp/movers-and-shakers/?tag=storecamvaz-20" target="_blank"><i class="fas fa-chart-line"></i> Movers & Shakers</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>Legal Information</h3>
+                    <h3>Legal</h3>
                     <ul>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Affiliate Disclosure</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Terms & Conditions</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="#"><i class="fas fa-file-contract"></i> Affiliate Disclosure</a></li>
+                        <li><a href="#"><i class="fas fa-user-shield"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-balance-scale"></i> Terms of Service</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>Amazon Affiliate</h3>
-                    <div class="affiliate-info">
-                        <p><strong>Affiliate ID:</strong></p>
-                        <code class="affiliate-code">storecamvaz-20</code>
-                        <p>Participant in the Amazon Services LLC Associates Program</p>
-                        <a href="https://www.amazon.com/?tag=storecamvaz-20" 
+                    <h3>Track Earnings</h3>
+                    <div class="tracking-info">
+                        <p><i class="fas fa-id-card"></i> <strong>Affiliate ID:</strong> storecamvaz-20</p>
+                        <p><i class="fas fa-cookie"></i> <strong>Cookie:</strong> 24 hours</p>
+                        <p><i class="fas fa-money-bill-wave"></i> <strong>Commission:</strong> 1-10%</p>
+                        <a href="https://affiliate-program.amazon.com/" 
                            target="_blank" 
-                           class="btn-amazon">
-                            <i class="fab fa-amazon"></i> Go to Amazon
+                           class="btn-amazon-small">
+                            <i class="fab fa-amazon"></i> View Earnings Dashboard
                         </a>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> AffiliateDeals. All rights reserved.</p>
-                <p class="disclaimer-text">
-                    <i class="fas fa-info-circle"></i>
-                    This site is a participant in the Amazon Services LLC Associates Program.
-                </p>
+                <div class="amazon-badge">
+                    <i class="fab fa-amazon"></i>
+                    <div>
+                        <p>Amazon Associates Program</p>
+                        <small>Affiliate ID: storecamvaz-20</small>
+                    </div>
+                </div>
+                
+                <div class="disclaimer">
+                    <p><i class="fas fa-exclamation-triangle"></i> <strong>Disclosure:</strong> This site contains Amazon affiliate links. As an Amazon Associate, I earn from qualifying purchases. Your ID: storecamvaz-20 is used in all links.</p>
+                </div>
+                
+                <p class="copyright">&copy; <span id="currentYear"></span> Amazon Affiliate Store. All rights reserved.</p>
             </div>
         </div>
     </footer>
