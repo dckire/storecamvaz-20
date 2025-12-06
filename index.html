@@ -11,16 +11,7 @@
     <meta property="og:title" content="Amazon Luxury Guide">
     <meta property="og:description" content="Official Amazon Luxury Stores affiliate guide. Shop authentic luxury watches, fine jewelry, and designer handbags">
     <meta property="og:type" content="website">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BYMJS3X12P');
-    </script>
-    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-   
+    
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -177,7 +168,7 @@
                             </div>
                             <span class="rating-count">(428 reviews)</span>
                         </div>
-                        <a href="https://amzn.to/48AyUrr" 
+                        <a href="https://www.amazon.com/dp/B08N5M6QHW/?tag=storecamvaz-20" 
                            class="amazon-button" 
                            target="_blank" 
                            rel="nofollow sponsored">
@@ -223,7 +214,7 @@
                             </div>
                             <span class="rating-count">(189 reviews)</span>
                         </div>
-                        <a href="https://amzn.to/4ay0sjS" 
+                        <a href="https://www.amazon.com/dp/B0CJHQ9X7G/?tag=storecamvaz-20" 
                            class="amazon-button" 
                            target="_blank" 
                            rel="nofollow sponsored">
@@ -269,7 +260,7 @@
                             </div>
                             <span class="rating-count">(342 reviews)</span>
                         </div>
-                        <a href="https://amzn.to/4pnug7y" 
+                        <a href="https://www.amazon.com/dp/B07ZPKN6YR/?tag=storecamvaz-20" 
                            class="amazon-button" 
                            target="_blank" 
                            rel="nofollow sponsored">
@@ -294,19 +285,19 @@
             </div>
             
             <div class="products-grid">
-                <!-- Product: House of Sillage -->
+                <!-- Product: Cartier Love Bracelet -->
                 <article class="product-card">
                     <div class="product-badge">HOLIDAY GIFT</div>
                     <div class="product-image">
-                        <img src="https://m.media-amazon.com/images/I/61Iz40fik4L._AC_SL1000_.jpg" 
-                             alt="House of Sillage" 
+                        <img src="https://m.media-amazon.com/images/I/61tVQSpHxJL._AC_SX695_.jpg" 
+                             alt="Cartier Love Bracelet" 
                              loading="lazy">
                     </div>
                     <div class="product-info">
-                        <h3 class="product-title">House of Sillage</h3>
-                        <p class="product-desc">Every destiny begins with a spark, bright, brave, and full of promise. A zesty burst of grapefruit, bergamot, and orange awakens the soul like the first light of fate, igniting the senses with energy and possibility.</p>
+                        <h3 class="product-title">Cartier Love Bracelet</h3>
+                        <p class="product-desc">Cartier Love Bracelet 18K Yellow Gold Small Model with Screwdriver</p>
                         <div class="product-price">
-                            <span class="price">$495</span>
+                            <span class="price">$7,150</span>
                             <span class="prime-badge"><i class="fas fa-crown"></i> Luxury Item</span>
                         </div>
                         <div class="product-rating">
@@ -315,7 +306,7 @@
                             </div>
                             <span class="rating-count">(156 reviews)</span>
                         </div>
-                        <a href="https://amzn.to/4iGDE3C" 
+                        <a href="https://www.amazon.com/dp/B08N5P3Q9M/?tag=storecamvaz-20" 
                            class="amazon-button" 
                            target="_blank" 
                            rel="nofollow sponsored">
@@ -361,7 +352,7 @@
             </div>
         </section>
 
-        <!-- WhatsApp Section - Reducida -->
+        <!-- WhatsApp Section -->
         <section class="whatsapp-section">
             <div class="whatsapp-container">
                 <div class="whatsapp-content">
@@ -423,8 +414,8 @@
             <div class="footer-section">
                 <h4>Legal</h4>
                 <ul>
-                    <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GGE5X8EV7VNVTK6R&ref_=footer_shiprates" target="_blank">Shipping Policies</a></li>
-                    <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM&ref_=footer_cou" target="_blank">Conditions of Use</a></li>   
+                    <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GGE5X8EV7VNVTK6R?tag=storecamvaz-20" target="_blank">Shipping Policies</a></li>
+                    <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM?tag=storecamvaz-20" target="_blank">Conditions of Use</a></li>   
                 </ul>
             </div>
             
@@ -449,7 +440,7 @@
                 <span class="logo-amazon">Amazon</span>
                 <span class="logo-luxury">Luxury Guide</span>
             </div>
-            <p class="copyright">© 2024 AmazonLuxuryGuide.com. All rights reserved. This site participates in the Amazon Services LLC Associates Program.</p>
+            <p class="copyright">© <span id="currentYear">2024</span> AmazonLuxuryGuide.com. All rights reserved. This site participates in the Amazon Services LLC Associates Program.</p>
             <div class="device-notice">
                 <p>Optimized for all devices: Mobile • Tablet • Desktop</p>
             </div>
@@ -503,7 +494,7 @@
         document.querySelector('.search-button').addEventListener('click', function() {
             const query = document.querySelector('.search-input').value.trim();
             if (query) {
-                const amazonSearchUrl = `https://www.amazon.com/s?k=${encodeURIComponent(query)}+luxury&tag=storecamvaz-20`;
+                const amazonSearchUrl = `https://www.amazon.com/s?k=${encodeURIComponent(query)}&tag=storecamvaz-20`;
                 window.open(amazonSearchUrl, '_blank');
             }
         });
@@ -562,77 +553,13 @@
             });
         }
 
-        // Touch Device Detection
-        function isTouchDevice() {
-            return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-        }
-
-        if (isTouchDevice()) {
-            document.body.classList.add('touch-device');
-            
-            // Add touch feedback for product cards
-            document.querySelectorAll('.product-card').forEach(card => {
-                card.addEventListener('touchstart', function() {
-                    this.classList.add('touch-active');
-                });
-                
-                card.addEventListener('touchend', function() {
-                    this.classList.remove('touch-active');
-                });
-            });
-        }
-
-        // Product Card Hover Effects
-        document.querySelectorAll('.product-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px)';
-                this.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
-            });
-        });
-
-        // Back to Top Button
-        const backToTop = document.createElement('button');
-        backToTop.className = 'back-to-top';
-        backToTop.innerHTML = '<i class="fas fa-chevron-up"></i>';
-        backToTop.setAttribute('aria-label', 'Back to top');
-        document.body.appendChild(backToTop);
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        });
+        // Update current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
         // Initialize
         window.addEventListener('DOMContentLoaded', () => {
             console.log('Amazon Luxury Guide loaded successfully');
-            console.log('Total products: 4');
-            
-            // Set current year in footer
-            const currentYear = new Date().getFullYear();
-            const yearElement = document.querySelector('.copyright');
-            if (yearElement) {
-                yearElement.innerHTML = yearElement.innerHTML.replace('2024', currentYear);
-            }
-        });
-
-        // Track affiliate link clicks
-        document.querySelectorAll('a[rel*="sponsored"]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                const productName = this.closest('.product-card')?.querySelector('.product-title')?.textContent || 'Unknown Product';
-                console.log(`Affiliate link clicked: ${productName}`);
-            });
+            console.log('All affiliate links include: ?tag=storecamvaz-20');
         });
     </script>
 
@@ -757,7 +684,7 @@
             transform: translateY(0);
         }
 
-        /* Products Grid - 1 producto por fila en móvil */
+        /* Products Grid */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -768,118 +695,17 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .header-container {
-                flex-wrap: wrap;
-                padding: 10px;
-            }
-            
-            .search-section {
-                order: 3;
-                width: 100%;
-                margin-top: 10px;
-            }
-            
-            .mobile-menu-toggle {
-                display: block;
-                background: none;
-                border: none;
-                color: white;
-                font-size: 1.5rem;
-                cursor: pointer;
-                margin-left: auto;
-            }
-            
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #000;
-                flex-direction: column;
-                padding: 20px;
-                z-index: 1000;
-            }
-            
-            .nav-menu.mobile-active {
-                display: flex;
-            }
-            
             .products-grid {
                 grid-template-columns: 1fr;
                 max-width: 100%;
                 padding: 0 20px;
             }
             
-            .hero-title {
-                font-size: 2rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-            
-            .brands-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
             .whatsapp-section {
                 margin: 30px 20px;
                 padding: 25px 15px;
             }
-            
-            .whatsapp-features {
-                gap: 10px;
-            }
-            
-            .whatsapp-features span {
-                padding: 6px 12px;
-                font-size: 0.85rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero-buttons {
-                flex-direction: column;
-            }
-            
-            .hero-btn {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .whatsapp-header {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .whatsapp-header h3 {
-                font-size: 1.3rem;
-            }
-        }
-        
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .products-grid {
-                max-width: 500px;
-            }
-            
-            .header-container {
-                padding: 0 20px;
-            }
-        }
-        
-        /* Touch device styles */
-        .touch-device .product-card {
-            cursor: pointer;
-        }
-        
-        .touch-device .product-card.touch-active {
-            transform: scale(0.98);
         }
     </style>
 </body>
-</html>
+                            </html>
