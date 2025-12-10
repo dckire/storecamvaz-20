@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Amazon Flash Deals | Limited-Time Price Drops & Daily Steals</title>
-    <meta name="description" content="Amazon Official Flash Deals: $2 Steals, Gifts Under $25, Premium Finds, Holiday Deals & Small Business Favorites. Prices dropping every hour!">
-    <meta name="robots" content="index, follow">
-
-    <!-- Google tag (gtag.js) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Deals | Themed Premium Offers</title>
+    <meta name="description" content="Space-themed Amazon flash deals with cosmic savings. Premium products floating in digital space.">
+    
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -15,1003 +14,1220 @@
       gtag('js', new Date());
       gtag('config', 'G-BYMJS3X12P');
     </script>
-    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Amazon Flash Deals - Daily Steals & Limited-Time Offers">
-    <meta property="og:description" content="Official Amazon Flash Deals. Shop $2 deals, gifts under $25, premium finds and holiday specials">
-    <meta property="og:type" content="website">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Amazon+Ember:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://www.amazon.com/favicon.ico">
-    
-    <!-- PWA Metadata -->
-    <meta name="theme-color" content="#FF9900">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Amazon Deals">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
     <style>
-        /* RESET & BASE STYLES */
+        /* K2 Space Exact Design with Black Background */
+        :root {
+            --space-dark: #000000;
+            --space-darker: #0A0A0A;
+            --space-light: #1A1A1A;
+            --space-accent: #00A3FF;
+            --space-accent-secondary: #FF6B00;
+            --text-primary: #FFFFFF;
+            --text-secondary: #CCCCCC;
+            --text-muted: #888888;
+            --border-space: rgba(255, 255, 255, 0.1);
+            --glow-blue: rgba(0, 163, 255, 0.3);
+            --glow-orange: rgba(255, 107, 0, 0.3);
+            --section-spacing: 120px;
+            --container-width: 1200px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
-        :root {
-            --amazon-orange: #FF9900;
-            --amazon-blue: #146EB4;
-            --amazon-dark: #131921;
-            --amazon-light: #232F3E;
-            --amazon-gray: #EAEDED;
-            --text-dark: #0F1111;
-            --text-light: #565959;
-            --white: #FFFFFF;
-            --success: #007600;
-            --deal-red: #CC0C39;
-            --shadow: 0 2px 5px rgba(15,17,17,.15);
-            --shadow-hover: 0 5px 15px rgba(15,17,17,.25);
-            --border-radius: 8px;
-            --border-radius-sm: 4px;
-            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        html {
+            scroll-behavior: smooth;
+            background: var(--space-dark);
         }
         
         body {
-            font-family: 'Amazon Ember', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--amazon-gray);
-            color: var(--text-dark);
-            line-height: 1.5;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--space-dark);
             overflow-x: hidden;
-            max-width: 100vw;
-            padding-bottom: 60px; /* For bottom nav */
+            position: relative;
         }
         
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        ul {
-            list-style: none;
-        }
-        
-        button {
-            font-family: inherit;
-            cursor: pointer;
-        }
-        
-        /* AMAZON TOP BAR */
-        .amazon-top-bar {
-            background: var(--amazon-dark);
-            color: white;
-            padding: 0.5rem 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 0.9rem;
-        }
-        
-        .amazon-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-        
-        .amazon-logo .logo-icon {
-            color: var(--amazon-orange);
-            font-size: 1.5rem;
-        }
-        
-        .amazon-logo .logo-text {
-            font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: -0.5px;
-        }
-        
-        .official-badge {
-            background: var(--amazon-blue);
-            padding: 0.25rem 0.5rem;
-            border-radius: 3px;
-            font-size: 0.7rem;
-            font-weight: 600;
-        }
-        
-        /* MAIN HEADER */
-        .main-header {
-            background: var(--white);
-            padding: 0.75rem 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #ddd;
-            position: sticky;
+        /* Space Background Effects */
+        .space-bg {
+            position: fixed;
             top: 0;
-            z-index: 1000;
-        }
-        
-        .page-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .page-title i {
-            color: var(--deal-red);
-        }
-        
-        .header-actions {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-        
-        .icon-btn {
-            background: none;
-            border: none;
-            font-size: 1.25rem;
-            color: var(--text-dark);
-            position: relative;
-            padding: 0.5rem;
-        }
-        
-        .notification-badge {
-            position: absolute;
-            top: 2px;
-            right: 2px;
-            background: var(--deal-red);
-            color: white;
-            font-size: 0.65rem;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-        }
-        
-        /* AMAZON STYLE BANNER */
-        .amazon-banner {
-            background: linear-gradient(to right, var(--amazon-dark), var(--amazon-light));
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            position: relative;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
             overflow: hidden;
         }
         
-        .amazon-banner::before {
-            content: '';
+        .star {
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
         }
         
-        .banner-content {
+        .star:nth-child(odd) {
+            animation-delay: 1s;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+        
+        .nebula {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.05;
+            background: radial-gradient(circle, var(--space-accent), transparent);
+        }
+        
+        .nebula:nth-child(2) {
+            background: radial-gradient(circle, var(--space-accent-secondary), transparent);
+            opacity: 0.03;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
             position: relative;
             z-index: 1;
         }
         
-        .banner-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+        /* Header - Space Style */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-space);
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+        
+        .header-container {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-        
-        .banner-subtitle {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 1rem;
-        }
-        
-        /* COUNTDOWN SECTION */
-        .countdown-section {
-            background: var(--white);
-            padding: 1rem;
-            margin: 0.5rem 1rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            border: 2px solid var(--amazon-orange);
-        }
-        
-        .countdown-header {
-            display: flex;
-            align-items: center;
             justify-content: space-between;
-            margin-bottom: 1rem;
+            align-items: center;
         }
         
-        .countdown-label {
-            font-weight: 700;
-            color: var(--deal-red);
-            font-size: 1.1rem;
-        }
-        
-        .countdown-timer {
+        .logo {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            background: var(--amazon-dark);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
+            gap: 12px;
+            text-decoration: none;
             font-weight: 700;
+            font-size: 24px;
+            color: var(--text-primary);
+            position: relative;
         }
         
-        .timer-part {
-            background: var(--white);
-            color: var(--amazon-dark);
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            min-width: 25px;
-            text-align: center;
-            font-size: 1.1rem;
+        .logo-icon {
+            color: var(--space-accent);
+            font-size: 28px;
+            filter: drop-shadow(0 0 8px var(--glow-blue));
         }
         
-        /* HERO FLASH DEAL */
-        .hero-flash {
-            background: linear-gradient(135deg, #ffd814, #febd69);
-            padding: 1.5rem 1rem;
-            margin: 0 1rem 1rem;
-            border-radius: var(--border-radius);
+        .logo-text {
+            position: relative;
+        }
+        
+        .logo-glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--space-accent), var(--space-accent-secondary));
+            filter: blur(15px);
+            opacity: 0.3;
+            z-index: -1;
+        }
+        
+        .main-nav {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            position: relative;
+            padding: 8px 0;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+        
+        .nav-link.active {
+            color: var(--space-accent);
+        }
+        
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--space-accent), var(--space-accent-secondary));
+            border-radius: 2px;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .space-button {
+            background: linear-gradient(135deg, var(--space-accent), #0088CC);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: var(--transition);
             position: relative;
             overflow: hidden;
-            border: 3px solid var(--amazon-orange);
+            box-shadow: 0 4px 20px rgba(0, 163, 255, 0.2);
         }
         
-        .hero-flash::after {
-            content: 'FLASH DEAL';
+        .space-button::before {
+            content: '';
             position: absolute;
-            top: 10px;
-            right: -30px;
-            background: var(--deal-red);
-            color: white;
-            padding: 0.25rem 2rem;
-            transform: rotate(45deg);
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-        
-        .flash-price-section {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        
-        .flash-price {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--deal-red);
-            line-height: 1;
-            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
-        }
-        
-        .flash-old-price {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            text-decoration: line-through;
-            margin-left: 0.5rem;
-        }
-        
-        .flash-savings {
-            background: var(--deal-red);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: 700;
-            display: inline-block;
-            margin-top: 0.5rem;
-        }
-        
-        .amazon-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            background: var(--amazon-orange);
-            color: var(--text-dark);
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--border-radius-sm);
-            font-weight: 700;
-            font-size: 1rem;
+            top: 0;
+            left: -100%;
             width: 100%;
-            margin-top: 1rem;
-            transition: var(--transition);
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
         }
         
-        .amazon-btn:hover {
-            background: #ff8c00;
+        .space-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 163, 255, 0.4);
         }
         
-        /* CATEGORIES NAV */
-        .categories-nav {
+        .space-button:hover::before {
+            left: 100%;
+        }
+        
+        /* Hero Section - Space Style */
+        .hero-section {
+            padding-top: 180px;
+            padding-bottom: var(--section-spacing);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-title {
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 32px;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--space-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+        
+        .hero-subtitle {
+            font-size: 22px;
+            color: var(--text-secondary);
+            margin-bottom: 48px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-actions {
             display: flex;
-            gap: 0.75rem;
-            padding: 1rem;
-            overflow-x: auto;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            background: var(--white);
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #ddd;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 100px;
         }
         
-        .categories-nav::-webkit-scrollbar {
-            display: none;
-        }
-        
-        .category-tab {
-            background: var(--amazon-gray);
-            padding: 0.75rem 1.25rem;
-            border-radius: 20px;
+        .button-secondary-space {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-space);
+            padding: 12px 28px;
+            border-radius: 8px;
             font-weight: 600;
-            font-size: 0.85rem;
-            white-space: nowrap;
-            border: 2px solid transparent;
+            font-size: 15px;
+            cursor: pointer;
             transition: var(--transition);
+            position: relative;
+            overflow: hidden;
         }
         
-        .category-tab.active {
-            background: var(--amazon-dark);
-            color: white;
-            border-color: var(--amazon-orange);
+        .button-secondary-space:hover {
+            border-color: var(--space-accent);
+            color: var(--space-accent);
+            box-shadow: 0 4px 20px rgba(0, 163, 255, 0.1);
         }
         
-        .category-tab i {
-            margin-right: 0.5rem;
+        /* Stats Grid - Floating in Space */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            background: rgba(26, 26, 26, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid var(--border-space);
+            position: relative;
         }
         
-        /* PRODUCTS GRID */
+        .stats-grid::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            background: linear-gradient(45deg, var(--space-accent), transparent, var(--space-accent-secondary));
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--space-accent);
+            margin-bottom: 12px;
+            text-shadow: 0 0 20px var(--glow-blue);
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* Products Section */
+        .section {
+            padding: var(--section-spacing) 0;
+            position: relative;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+            color: var(--text-primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--space-accent), var(--space-accent-secondary));
+            border-radius: 3px;
+        }
+        
+        .section-description {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Products Grid - Floating Cards in Space */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            padding: 0 1rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 80px;
         }
         
         .product-card {
-            background: var(--white);
-            border-radius: var(--border-radius);
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-space);
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: var(--shadow);
             transition: var(--transition);
             position: relative;
         }
         
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-        
-        .amazon-choice {
+        .product-card::before {
+            content: '';
             position: absolute;
-            top: 10px;
-            left: 0;
-            background: #007600;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.7rem;
-            font-weight: 700;
-            border-top-right-radius: 3px;
-            border-bottom-right-radius: 3px;
-            z-index: 2;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            background: linear-gradient(45deg, var(--space-accent), transparent, var(--space-accent-secondary));
+            border-radius: 16px;
+            z-index: -1;
+            opacity: 0;
+            transition: var(--transition);
         }
         
-        .product-image {
-            aspect-ratio: 1/1;
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: transparent;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .product-card:hover::before {
+            opacity: 0.3;
+        }
+        
+        .product-image-container {
+            height: 300px;
             overflow: hidden;
-            background: #f7f7f7;
+            background: rgba(0, 0, 0, 0.5);
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 1rem;
+            padding: 40px;
+            position: relative;
         }
         
-        .product-info {
-            padding: 1rem;
+        .product-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.6s ease;
+            filter: drop-shadow(0 0 10px rgba(0, 163, 255, 0.2));
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+        
+        .product-content {
+            padding: 32px;
+        }
+        
+        .product-category {
+            font-size: 12px;
+            color: var(--space-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            display: block;
+            font-weight: 600;
         }
         
         .product-title {
-            font-size: 0.95rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            height: 2.8rem;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+        
+        .product-description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .product-price {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--space-accent);
+            text-shadow: 0 0 10px var(--glow-blue);
+        }
+        
+        .product-old-price {
+            font-size: 18px;
+            color: var(--text-muted);
+            text-decoration: line-through;
+            margin-left: 8px;
         }
         
         .product-rating {
             display: flex;
             align-items: center;
-            gap: 0.25rem;
-            margin-bottom: 0.5rem;
+            gap: 6px;
+            color: var(--space-accent-secondary);
         }
         
-        .stars {
-            color: var(--amazon-orange);
-            font-size: 0.9rem;
-        }
-        
-        .rating-count {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-        
-        .product-price {
-            margin-bottom: 0.75rem;
-        }
-        
-        .current-price {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--deal-red);
-        }
-        
-        .old-price {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            text-decoration: line-through;
-            margin-left: 0.5rem;
-        }
-        
-        .prime-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
-            color: var(--amazon-blue);
-            font-size: 0.8rem;
+        .card-button-space {
+            width: 100%;
+            background: linear-gradient(135deg, var(--space-accent), #0088CC);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
             font-weight: 600;
-            margin-top: 0.25rem;
-        }
-        
-        .buy-now-btn {
+            font-size: 16px;
+            cursor: pointer;
+            transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
-            background: var(--amazon-orange);
-            color: var(--text-dark);
-            border: none;
-            padding: 0.75rem;
-            border-radius: var(--border-radius-sm);
-            font-weight: 600;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-button-space::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
             width: 100%;
-            font-size: 0.9rem;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .card-button-space:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 163, 255, 0.4);
+        }
+        
+        .card-button-space:hover::before {
+            left: 100%;
+        }
+        
+        /* Featured Section - Space Style */
+        .featured-section {
+            padding: var(--section-spacing) 0;
+            position: relative;
+        }
+        
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .featured-image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        
+        .featured-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            filter: drop-shadow(0 0 30px rgba(0, 163, 255, 0.2));
+        }
+        
+        .featured-content h2 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 32px;
+            letter-spacing: -0.5px;
+            color: var(--text-primary);
+            line-height: 1.2;
+        }
+        
+        .featured-content p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+        
+        /* Deal Timer - Space Style */
+        .deal-timer {
+            background: linear-gradient(135deg, rgba(0, 163, 255, 0.1), rgba(255, 107, 0, 0.1));
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid var(--border-space);
+            border-bottom: 1px solid var(--border-space);
+        }
+        
+        .deal-timer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(0, 163, 255, 0.1) 0%, transparent 70%);
+        }
+        
+        .timer-title {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 60px;
+            color: var(--text-primary);
+            position: relative;
+        }
+        
+        .timer-display {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .timer-unit {
+            text-align: center;
+            position: relative;
+        }
+        
+        .timer-value {
+            font-size: 80px;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 16px;
+            color: var(--space-accent);
+            text-shadow: 0 0 30px var(--glow-blue);
+        }
+        
+        .timer-label {
+            font-size: 16px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* Newsletter - Space Style */
+        .newsletter-section {
+            padding: var(--section-spacing) 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .newsletter-form {
+            max-width: 600px;
+            margin: 60px auto 0;
+            display: flex;
+            gap: 16px;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 18px 24px;
+            background: rgba(26, 26, 26, 0.7);
+            border: 1px solid var(--border-space);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 16px;
+            color: var(--text-primary);
             transition: var(--transition);
         }
         
-        .buy-now-btn:hover {
-            background: #ff8c00;
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--space-accent);
+            box-shadow: 0 0 0 3px rgba(0, 163, 255, 0.2);
         }
         
-        /* SECTIONS */
-        .deal-section {
-            margin: 2rem 1rem;
-        }
-        
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .section-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--text-dark);
+        /* Footer - Space Style */
+        .site-footer {
+            background: rgba(10, 10, 10, 0.95);
+            padding: 100px 0 50px;
+            border-top: 1px solid var(--border-space);
             position: relative;
-            padding-left: 0.75rem;
         }
         
-        .section-title::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 4px;
-            background: var(--amazon-orange);
-            border-radius: 2px;
-        }
-        
-        .view-all-link {
-            color: var(--amazon-blue);
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-        
-        /* SMALL BUSINESS SECTION */
-        .small-business-section {
-            background: linear-gradient(135deg, #232F3E, #37475A);
-            color: white;
-            padding: 1.5rem;
-            margin: 1rem;
-            border-radius: var(--border-radius);
-            text-align: center;
-        }
-        
-        .support-local {
-            font-size: 0.8rem;
-            opacity: 0.9;
-            margin-top: 0.5rem;
-        }
-        
-        /* AMAZON FOOTER */
-        .amazon-footer {
-            background: var(--amazon-dark);
-            color: white;
-            padding: 2rem 1rem 5rem;
-            margin-top: 2rem;
-        }
-        
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-links {
+        .footer-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 80px;
+            margin-bottom: 80px;
         }
         
         .footer-column h4 {
-            font-size: 1rem;
-            margin-bottom: 0.75rem;
-            color: var(--amazon-gray);
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            color: var(--text-primary);
+            position: relative;
+            padding-bottom: 12px;
         }
         
-        .footer-column ul li {
-            margin-bottom: 0.5rem;
-            font-size: 0.85rem;
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--space-accent), var(--space-accent-secondary));
+            border-radius: 2px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 16px;
         }
         
         .footer-column a {
-            color: #ddd;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 16px;
             transition: var(--transition);
         }
         
         .footer-column a:hover {
-            color: var(--amazon-orange);
-            text-decoration: underline;
+            color: var(--space-accent);
+            padding-left: 8px;
         }
         
-        .footer-disclaimer {
-            background: rgba(255,255,255,0.1);
-            padding: 1rem;
-            border-radius: var(--border-radius-sm);
-            font-size: 0.8rem;
-            line-height: 1.4;
-            margin-top: 1.5rem;
-        }
-        
-        /* BOTTOM NAV (Amazon Style) */
-        .bottom-nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--amazon-light);
+        .footer-bottom {
+            padding-top: 50px;
+            border-top: 1px solid var(--border-space);
             display: flex;
-            justify-content: space-around;
-            padding: 0.5rem 0;
-            z-index: 1000;
-            border-top: 1px solid var(--amazon-dark);
-        }
-        
-        .nav-item {
-            display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            padding: 0.5rem;
-            color: #ddd;
-            font-size: 0.75rem;
-            flex: 1;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 24px;
+        }
+        
+        .social-link {
+            color: var(--text-secondary);
+            font-size: 20px;
             transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(26, 26, 26, 0.7);
+            border: 1px solid var(--border-space);
         }
         
-        .nav-item.active {
-            color: var(--amazon-orange);
+        .social-link:hover {
+            color: var(--space-accent);
+            background: rgba(0, 163, 255, 0.1);
+            border-color: var(--space-accent);
+            transform: translateY(-2px);
         }
         
-        .nav-item i {
-            font-size: 1.2rem;
-            margin-bottom: 0.25rem;
-        }
-        
-        /* ANIMATIONS */
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes priceDrop {
-            0% { transform: translateY(-10px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-        }
-        
-        .price-drop {
-            animation: priceDrop 0.3s ease-out;
-        }
-        
-        /* RESPONSIVE */
-        @media (min-width: 768px) {
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: 60px;
+            }
+            
             .products-grid {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .featured-grid {
+                gap: 60px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 48px;
+            }
+            
+            .section-title {
+                font-size: 40px;
+            }
+            
+            .featured-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 60px;
+            }
+            
+            .timer-display {
+                gap: 40px;
+            }
+            
+            .timer-value {
+                font-size: 60px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 40px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title, .featured-content h2 {
+                font-size: 32px;
+            }
+            
+            .timer-display {
+                gap: 20px;
+                flex-direction: column;
+            }
+            
+            .timer-value {
+                font-size: 48px;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
             }
         }
         
         @media (max-width: 480px) {
-            .flash-price {
-                font-size: 2.8rem;
+            .hero-title {
+                font-size: 32px;
             }
             
-            .section-title {
-                font-size: 1.2rem;
+            .section {
+                padding: 80px 0;
             }
+            
+            .featured-section {
+                padding: 80px 0;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+        }
+        
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
         }
     </style>
 </head>
 <body>
-    <!-- AMAZON TOP BAR -->
-    <div class="amazon-top-bar">
-        <div class="amazon-logo">
-            <i class="fab fa-amazon logo-icon"></i>
-            <span class="logo-text">Amazon</span>
-        </div>
-        <div class="official-badge">OFFICIAL DEALS</div>
-    </div>
-
-    <!-- MAIN HEADER -->
-    <header class="main-header">
-        <div class="page-title">
-            <i class="fas fa-bolt"></i>
-            Flash Deals
-        </div>
-        <div class="header-actions">
-            <button class="icon-btn" aria-label="Search">
-                <i class="fas fa-search"></i>
-            </button>
-            <button class="icon-btn" aria-label="Notifications">
-                <i class="fas fa-bell"></i>
-                <span class="notification-badge">12</span>
-            </button>
-            <button class="icon-btn" aria-label="Cart">
-                <i class="fas fa-shopping-cart"></i>
-            </button>
+    <!-- Space Background -->
+    <div class="space-bg" id="space-bg"></div>
+    
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fab fa-amazon logo-icon floating"></i>
+                <div class="logo-text">
+                    amazon afiliado
+                    <div class="logo-glow"></div>
+                </div>
+            </a>
+            
+            <nav class="main-nav">
+                <a href="https://amzn.to/4rM7HuT" class="nav-link active">Home</a>
+                <a href="https://amzn.to/4iOyl28" class="nav-link">Flash Deals</a>
+                <a href="https://amzn.to/4aEqUIC" class="nav-link">books</a>
+                <a href="https://amzn.to/4aMFxcS" class="nav-link">Hot New Releases</a>
+                <a href="https://amzn.to/3Yp9V5H" class="nav-link">Gift Guide</a>
+                
+            </nav>
+            
+            <div class="header-actions">
+                <button class="space-button floating">
+                    <i class="fas fa-rocket"></i> Launch Deals
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- AMAZON BANNER -->
-    <section class="amazon-banner">
-        <div class="banner-content">
-            <h1 class="banner-title">
-                <i class="fab fa-amazon"></i> Amazon Best Deals
-            </h1>
-            <p class="banner-subtitle">Limited-time offers with prices dropping </p>
-        </div>
-    </section>
-
-    <!-- COUNTDOWN SECTION -->
-    <section class="countdown-section">
-        <div class="countdown-header">
-            <span class="countdown-label">⏰ DEAL ENDS IN:</span>
-            <div class="countdown-timer">
-                <span class="timer-part" id="hours">02</span>:
-                <span class="timer-part" id="minutes">18</span>:
-                <span class="timer-part" id="seconds">34</span>
-            </div>
-        </div>
-        <p style="font-size: 0.9rem; color: var(--text-light);">
-            <i class="fas fa-exclamation-circle"></i> These prices won't last! Refresh for new drops
-        </p>
-    </section>
-
-    <!-- HERO FLASH DEAL -->
-    <section class="hero-flash">
-        <div class="flash-price-section">
-            <div>
-                <span class="flash-price">$1.99</span>
-                <span class="flash-old-price">$24.99</span>
-            </div>
-            <div class="flash-savings">
-                Save 92% • Today Only
-            </div>
-        </div>
-        <p style="text-align: center; margin-bottom: 1rem; font-weight: 600;">
-            Wireless Earbuds & Amazon Best Sellers
-        </p>
-        <button class="amazon-btn">
-            <i class="fab fa-amazon"></i>
-            Shop This Flash Deal
-        </button>
-    </section>
-
-    <!-- CATEGORIES NAVIGATION -->
-    <nav class="categories-nav">
-        <button class="category-tab active">
-            <i class="fas fa-bolt"></i> Flash Deals
-        </button>
-        <button class="category-tab">
-            <i class="fas fa-gift"></i> Under $25
-        </button>
-        <button class="category-tab">
-            <i class="fas fa-heart"></i> For Her
-        </button>
-        <button class="category-tab">
-            <i class="fas fa-crown"></i> Premium
-        </button>
-        <button class="category-tab">
-            <i class="fas fa-store"></i> Small Business
-        </button>
-        <button class="category-tab">
-            <i class="fas fa-holiday"></i> Holiday
-        </button>
-    </nav>
-
-    <!-- AMAZON HAUL SECTION -->
-    <section class="deal-section">
-        <div class="section-header">
-            <h2 class="section-title">🔥 AMAZON HAUL</h2>
-            <a href="https://amzn.to/3Y2h4ZT" class="view-all-link">
-                View all <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="amazon-choice">Amazon's Choice</div>
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/61nujxnsPdL._AC_SL1500_.jpg" alt="Wireless Earbuds, Bluetooth 5.4 " loading="lazy">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Amazon Deals in 
+                    <span style="background: linear-gradient(135deg, var(--space-accent), var(--space-accent-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        Digital Space
+                    </span>
+                </h1>
+                <p class="hero-subtitle">
+                    Discover premium Amazon products.
+                </p>
+                
+                <div class="hero-actions">
+                    <button class="space-button floating">
+                        <i class="fas fa-rocket"></i> Explore The Deals
+                    </button>
+                    <button class="button-secondary-space">
+                        <i class="fas fa-satellite"></i> Orbit Premium
+                    </button>
                 </div>
-                <div class="product-info">
-                    <h3 class="product-title">Wireless Earbuds, Bluetooth 5.3 Headphones</h3>
-                    <div class="product-rating">
-                        <span class="stars">★★★★☆</span>
-                        <span class="rating-count">4,287</span>
+                
+                <div class="stats-grid floating">
+                    <div class="stat-item">
+                        <div class="stat-number" id="stat1">0</div>
+                        <div class="stat-label">Active Deals</div>
                     </div>
-                    <div class="product-price">
-                        <span class="current-price price-drop">$19.79</span>
-                        <span class="old-price">$32.99</span>
-                        <div class="prime-badge">
-                            <i class="fas fa-shipping-fast"></i> FREE Delivery
+                    <div class="stat-item">
+                        <div class="stat-number" id="stat2">0%</div>
+                        <div class="stat-label">Savings</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="stat3">24/7</div>
+                        <div class="stat-label">Updates</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Deals -->
+    <section class="section" id="deals">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Celestial Flash Deals</h2>
+                <p class="section-description">
+                    Limited-time offers. Prices update.
+                </p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card floating" style="animation-delay: 0s;">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/71CHmL6xZqL._AC_SX679_.jpg" 
+                             alt="Premium Slim Wallet" 
+                             class="product-image"
+                             loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Space Fashion</span>
+                        <h3 class="product-title">RUNBOX Slim RFID Wallet</h3>
+                        <p class="product-description">
+                            Premium leather wallet with RFID protection, minimalist space-age design.
+                        </p>
+                        <div class="product-meta">
+                            <div>
+                                <span class="product-price">$19.99</span>
+                                <span class="product-old-price">$49.99</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.5</span>
+                            </div>
                         </div>
+                        <button class="card-button-space">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
                     </div>
-                    <button class="buy-now-btn">
-                        <i class="fab fa-amazon"></i> Buy Now
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card floating" style="animation-delay: 0.2s;">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/81gwIs9730L._AC_SX679_.jpg" 
+                             alt="Gaming Mouse Pad" 
+                             class="product-image"
+                             loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Space Tech</span>
+                        <h3 class="product-title">RGB Space Gaming Pad</h3>
+                        <p class="product-description">
+                            Extended mouse pad with wireless charging, customizable RGB nebula lighting.
+                        </p>
+                        <div class="product-meta">
+                            <div>
+                                <span class="product-price">$42.99</span>
+                                <span class="product-old-price">$59.99</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <button class="card-button-space">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card floating" style="animation-delay: 0.4s;">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/71oT5kwLtQL._AC_SL1500_.jpg" 
+                             alt="Luxury Scented Candles" 
+                             class="product-image"
+                             loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Space Home</span>
+                        <h3 class="product-title">Nebula Scented Candle Set</h3>
+                        <p class="product-description">
+                            Premium soy candles with scents.
+                        </p>
+                        <div class="product-meta">
+                            <div>
+                                <span class="product-price">$24.99</span>
+                                <span class="product-old-price">$39.99</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <button class="card-button-space">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured-section" id="premium">
+        <div class="container">
+            <div class="featured-grid">
+                <div class="featured-image-container floating" style="animation-delay: 0.3s;">
+                    <img src="https://m.media-amazon.com/images/I/71p3-v2aywL._AC_SL1500_.jpg" 
+                         alt="Smart Watch" 
+                         class="featured-image"
+                         loading="lazy">
+                </div>
+                <div class="featured-content">
+                    <h2>Premium Collection</h2>
+                    <p>
+                        Our premium collection features Amazon's highest-rated products. 
+                        Each item is a exceptional quality and design.
+                    </p>
+                    <p>
+                        From home goods to electronics, we focus on products that offer value 
+                        rather than just temporary discounts.
+                    </p>
+                    <button class="space-button floating" style="margin-top: 20px; animation-delay: 0.5s;">
+                        <i class="fas fa-user-astronaut"></i> Explore Premium
                     </button>
                 </div>
             </div>
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/71p3-v2aywL._AC_SL1500_.jpg" alt="Smart Watch" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Deal Timer -->
+    <section class="deal-timer">
+        <div class="container">
+            <h2 class="timer-title">Deal Ends In</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 18px;">
+                These prices reset at midnight. Refresh for new deals.
+            </p>
+            
+            <div class="timer-display">
+                <div class="timer-unit floating" style="animation-delay: 0s;">
+                    <div class="timer-value" id="timer-hours">02</div>
+                    <div class="timer-label">hours </div>
                 </div>
-                <div class="product-info">
-                    <h3 class="product-title">Smart Watch for Men Women</h3>
-                    <div class="product-rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">8,901</span>
-                    </div>
-                    <div class="product-price">
-                        <span class="current-price">$14.99</span>
-                        <span class="old-price">$69.99</span>
-                        <div class="prime-badge">
-                            <i class="fas fa-shipping-fast"></i> Prime
-                        </div>
-                    </div>
-                    <button class="buy-now-btn">
-                        <i class="fab fa-amazon"></i> Add to Cart
-                    </button>
+                <div class="timer-unit floating" style="animation-delay: 0.2s;">
+                    <div class="timer-value" id="timer-minutes">18</div>
+                    <div class="timer-label">minutes</div>
+                </div>
+                <div class="timer-unit floating" style="animation-delay: 0.4s;">
+                    <div class="timer-value" id="timer-seconds">34</div>
+                    <div class="timer-label">seconds</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- GIFTS FOR HIM UNDER $25 -->
-    <section class="deal-section">
-        <div class="section-header">
-            <h2 class="section-title">🎁 GIFTS FOR HIM UNDER $25</h2>
-            <a href="https://amzn.to/3MnRifW" class="view-all-link">
-                Shop all <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="amazon-choice">Amazon's Choice</div>
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/71CHmL6xZqL._AC_SX679_.jpg" alt="RUNBOX Wallet " loading="lazy">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">RUNBOX Wallet for Men Slim Rfid Leather 2 ID Window With Gift Box</h3>
-                    <div class="product-rating">
-                        <span class="stars">★★★★☆</span>
-                        <span class="rating-count">12,456</span>
+    <!-- More Products -->
+    <section class="section" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Categories</h2>
+                <p class="section-description">
+                    Explore deals categories with savings.
+                </p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 4 -->
+                <div class="product-card floating" style="animation-delay: 0s;">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/71p3-v2aywL._AC_SL1500_.jpg" 
+                             alt="Smart Watch" 
+                             class="product-image"
+                             loading="lazy">
                     </div>
-                    <div class="product-price">
-                        <span class="current-price">$19.99</span>
-                        <div class="prime-badge">
+                    <div class="product-content">
+                        <span class="product-category">Wearables</span>
+                        <h3 class="product-title">Smart Watch</h3>
+                        <p class="product-description">
+                            Advanced health monitoring, 7-day battery life, waterproof design.
+                        </p>
+                        <div class="product-meta">
+                            <div>
+                                <span class="product-price">$89.99</span>
+                                <span class="product-old-price">$129.99</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <button class="card-button-space">
                             <i class="fas fa-bolt"></i> Deal
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card floating" style="animation-delay: 0.2s;">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/712HdjTSU-L._AC_SX679_.jpg" 
+                             alt="Coffee Mugs" 
+                             class="product-image"
+                             loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Kitchen</span>
+                        <h3 class="product-title">Coffee Mug Set</h3>
+                        <p class="product-description">
+                            4-piece matte ceramic mug set, dishwasher safe.
+                        </p>
+                        <div class="product-meta">
+                            <div>
+                                <span class="product-price">$16.99</span>
+                                <span class="product-old-price">$29.99</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
                         </div>
+                        <button class="card-button-space">
+                            <i class="fas fa-meteor"></i> Deal
+                        </button>
                     </div>
-                    <button class="buy-now-btn">
-                        <i class="fas fa-cart-plus"></i> Add to Cart
-                    </button>
                 </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/81-kDG+xArL._SL1500_.jpg" alt="Grooming Kit" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Beard Grooming Kit - Premium Beard Care Set</h3>
-                    <div class="product-rating">
-                        <span class="stars">★★★★☆</span>
-                        <span class="rating-count">3,789</span>
+                
+                <!-- Product 6 -->
+                <div class="product-card floating" style="animation-delay: 0.4s;">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/61nujxnsPdL._AC_SL1500_.jpg" 
+                             alt="Wireless Earbuds" 
+                             class="product-image"
+                             loading="lazy">
                     </div>
-                    <div class="product-price">
-                        <span class="current-price">$13.99</span>
-                        <div class="prime-badge">
-                            <i class="fas fa-shipping-fast"></i> Prime
+                    <div class="product-content">
+                        <span class="product-category">Audio</span>
+                        <h3 class="product-title">Noise-Canceling Buds</h3>
+                        <p class="product-description">
+                            True wireless with black hole noise cancellation, 30-hour battery.
+                        </p>
+                        <div class="product-meta">
+                            <div>
+                                <span class="product-price">$79.99</span>
+                                <span class="product-old-price">$129.99</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.4</span>
+                            </div>
                         </div>
+                        <button class="card-button-space">
+                            <i class="fas fa-satellite-dish"></i> Deal
+                        </button>
                     </div>
-                    <button class="buy-now-btn">
-                        <i class="fas fa-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXCLUSIVE GIFTS SHE WILL LOVE -->
-    <section class="deal-section">
-        <div class="section-header">
-            <h2 class="section-title">💝 EXCLUSIVE GIFTS SHE WILL LOVE</h2>
-            <a href="https://amzn.to/4pVZi6a" class="view-all-link">
-                View all <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/71PLZrNOIcL._AC_SY300_SX300_QL70_ML2_.jpg" alt="Necklace" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">GLAMCARAT Birthstone Necklace for Women</h3>
-                    <div class="product-rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">7,432</span>
-                    </div>
-                    <div class="product-price">
-                        <span class="current-price">$78.00</span>
-                        <div class="prime-badge">
-                            <i class="fas fa-gem"></i> Luxury
-                        </div>
-                    </div>
-                    <button class="buy-now-btn">
-                        <i class="fab fa-amazon"></i> Buy Now
-                    </button>
-                </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="amazon-choice">Amazon's Choice</div>
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/71oT5kwLtQL._AC_SL1500_.jpg" alt="Scented Candle" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Luxury Scented Candle Set - 3 Pack Home Decor</h3>
-                    <div class="product-rating">
-                        <span class="stars">★★★★☆</span>
-                        <span class="rating-count">5,678</span>
-                    </div>
-                    <div class="product-price">
-                        <span class="current-price">$11.99</span>
-                        <div class="prime-badge">
-                            <i class="fas fa-shipping-fast"></i> Prime
-                        </div>
-                    </div>
-                    <button class="buy-now-btn">
-                        <i class="fas fa-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PREMIUM GIFTS UNDER $10 -->
-    <section class="deal-section">
-        <div class="section-header">
-            <h2 class="section-title">⭐ PREMIUM GIFTS UNDER $10</h2>
-            <a href="https://amzn.to/3MoMfMe" class="view-all-link">
-                Shop deals <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/71CddTqtXJL._AC_SX679_.jpg" alt="Phone Accessory" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">WRJ Magnetic Clear Case for iPhone</h3>
-                    <div class="product-rating">
-                        <span class="stars">★★★★☆</span>
-                        <span class="rating-count">9,123</span>
-                    </div>
-                    <div class="product-price">
-                        <span class="current-price">$8.99</span>
-                        <div class="prime-badge">
-                            <i class="fas fa-bolt"></i> Limited Time
-                        </div>
-                    </div>
-                    <button class="buy-now-btn">
-                        <i class="fas fa-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="amazon-choice">Amazon's Choice</div>
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/712HdjTSU-L._AC_SX679_.jpg" alt="Coffee Mug" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">DeeCoo Matte White Coffee Mugs Set of 4, </h3>
-                    <div class="product-rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">14,567</span>
-                    </div>
-                    <div class="product-price">
-                        <span class="current-price">$16.99</span>
-                        <div class="prime-badge">
-                            <i class="fas fa-shipping-fast"></i> FREE Delivery
-                        </div>
-                    </div>
-                    <button class="buy-now-btn">
-                        <i class="fab fa-amazon"></i> Buy Now
-                    </button>
                 </div>
             </div>
         </div>
@@ -1019,178 +1235,88 @@
 
     
 
-    <!-- SHOP EXCLUSIVE GIFTS HE WILL LOVE -->
-    <section class="deal-section">
-        <div class="section-header">
-            <h2 class="section-title">🎯 EXCLUSIVE GIFTS HE WILL LOVE</h2>
-            <a href="https://amzn.to/4pS4OGX" class="view-all-link">
-                Discover <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/71tlisOmQWL._AC_SL1500_.jpg" alt="Tech Gadget" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Multitool Knife 17 in 1Fire Starting Sticks,</h3>
-                    <div class="product-rating">
-                        <span class="stars">★★★★☆</span>
-                        <span class="rating-count">6,543</span>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Amazon Deals</h4>
+                    <p style="color: var(--text-secondary); margin-top: 24px; line-height: 1.6; font-size: 16px;">
+                        Curated selection of premium Amazon deals. 
+                        Independent affiliate.
+                    </p>
+                    <div style="margin-top: 32px;">
+                        <button class="space-button">
+                            <i class="fab fa-amazon"></i> Amazon
+                        </button>
                     </div>
-                    <div class="product-price">
-                        <span class="current-price">$19.97</span>
-                        <div class="prime-badge">
-                            <i class="fas fa-gift"></i> Great Gift
-                        </div>
-                    </div>
-                    <button class="buy-now-btn">
-                        <i class="fas fa-cart-plus"></i> Add to Cart
-                    </button>
                 </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="amazon-choice">Amazon's Choice</div>
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/81gwIs9730L._AC_SX679_.jpg" alt="Gaming" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">ToLuLu Wireless Charging RGB Gaming Mouse Pad,</h3>
-                    <div class="product-rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">10,234</span>
-                    </div>
-                    <div class="product-price">
-                        <span class="current-price">$42.99</span>
-                        <div class="prime-badge">
-                            <i class="fas fa-bolt"></i> Flash Deal
-                        </div>
-                    </div>
-                    <button class="buy-now-btn">
-                        <i class="fab fa-amazon"></i> Buy Now
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SHOP PREMIUM HOLIDAY FINDS -->
-    <section class="deal-section">
-        <div class="section-header">
-            <h2 class="section-title">🎄 SHOP PREMIUM HOLIDAY FINDS</h2>
-            <a href="https://amzn.to/48rWt7h" class="view-all-link">
-                Holiday shop <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/81KeLtR6PUL._AC_SX679_.jpg" alt="Christmas Blanket" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Christmas Throw Blanket Cozy Fleece Winter</h3>
-                    <div class="product-rating">
-                        <span class="stars">★★★★☆</span>
-                        <span class="rating-count">3,456</span>
-                    </div>
-                    <div class="product-price">
-                        <span class="current-price">$39.99</span>
-                        <div class="prime-badge">
-                            <i class="fas fa-holly-berry"></i> Holiday
-                        </div>
-                    </div>
-                    <button class="buy-now-btn">
-                        <i class="fas fa-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="amazon-choice">Amazon's Choice</div>
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/91qT7eEEmnL._AC_SL1500_.jpg" alt="Ornaments" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Christmas Ornaments Mini Bulk Decorative</h3>
-                    <div class="product-rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">7,890</span>
-                    </div>
-                    <div class="product-price">
-                        <span class="current-price">$23.99</span>
-                        <div class="prime-badge">
-                            <i class="fas fa-shipping-fast"></i> Prime
-                        </div>
-                    </div>
-                    <button class="buy-now-btn">
-                        <i class="fab fa-amazon"></i> Buy Now
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AMAZON FOOTER -->
-    <footer class="amazon-footer">
-        <div class="footer-logo">
-            <i class="fab fa-amazon" style="font-size: 2rem; color: var(--amazon-orange);"></i>
-            <span style="font-size: 1.2rem; font-weight: 700;">Amazon Flash Deals</span>
-        </div>
-        
-        <div class="footer-links">
-            <div class="footer-column">
-                <h4>Get to Know Us</h4>
-                <ul>
-                    <li><a href="#">About Amazon</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press Releases</a></li>
-                    <li><a href="#">Amazon Science</a></li>
-                </ul>
+                
+                <div class="footer-column">
+                    <h4>Space Categories</h4>
+                    <ul>
+                        <li><a href="https://amzn.to/3MtfUUD">Electronics</a></li>
+                        <li><a href="https://amzn.to/44hQmQl">Home</a></li>
+                        <li><a href="https://amzn.to/3Kody8Z">Luxuri</a></li>
+                        <li><a href="https://amzn.to/3YjIZ7u">Beauty</a></li>
+                        <li><a href="https://amzn.to/48Pc6Ve">Books</a></li>
+                    </ul>
+                </div>    
             </div>
             
-            
-            <div class="footer-column">
-                <h4>Let Us Help You</h4>
-                <ul>
-                    <li><a href="#">Your Account</a></li>
-                    <li><a href="#">Your Orders</a></li>
-                    <li><a href="#">Shipping Rates & Policies</a></li>
-                    <li><a href="#">Returns & Replacements</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <div>
+                    © 2024 Amazon Deals. All product names, logos, and brands are property of their respective owners.
+                    Amazon and the Amazon logo are trademarks of Amazon.com, Inc.
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-X"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-        
-        <div class="footer-disclaimer">
-            <p><strong>Important:</strong> This is an independent Amazon affiliate page. As an Amazon Associate we earn from qualifying purchases. Product prices and availability are subject to change. All trademarks are property of their respective owners.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.75rem;">Amazon Associates ID: storecamvaz-20</p>
         </div>
     </footer>
 
-    <!-- BOTTOM NAVIGATION -->
-    <nav class="bottom-nav">
-        <a href="https://amzn.to/48M8HX7" class="nav-item active">
-            <i class="fas fa-home"></i>
-            <span>Home</span>
-        </a>
-        <a href="https://amzn.to/48M8Mdn" class="nav-item">
-            <i class="fas fa-bolt"></i>
-            <span>Deals</span>
-        </a>
-        <a href="https://amzn.to/48IHCnC" class="nav-item">
-        
-            <i class="fas fa-gift"></i>
-            <span>Gifts</span>
-        </a>
-        
-    </nav>
-
-    <!-- JAVASCRIPT -->
     <script>
+        // Create Space Background
+        function createSpaceBackground() {
+            const spaceBg = document.getElementById('space-bg');
+            
+            // Create stars
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                spaceBg.appendChild(star);
+            }
+            
+            // Create nebulas
+            const nebula1 = document.createElement('div');
+            nebula1.className = 'nebula';
+            nebula1.style.left = '10%';
+            nebula1.style.top = '20%';
+            spaceBg.appendChild(nebula1);
+            
+            const nebula2 = document.createElement('div');
+            nebula2.className = 'nebula';
+            nebula2.style.right = '15%';
+            nebula2.style.bottom = '30%';
+            spaceBg.appendChild(nebula2);
+        }
+        
         // Countdown Timer
-        function updateCountdown() {
+        function updateTimer() {
             const now = new Date();
             const endOfDay = new Date();
             endOfDay.setHours(23, 59, 59, 999);
@@ -1201,173 +1327,182 @@
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
             
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            document.getElementById('timer-hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('timer-minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('timer-seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            // Add pulsing effect
+            if (seconds % 2 === 0) {
+                document.querySelectorAll('.timer-value').forEach(el => {
+                    el.style.textShadow = '0 0 40px rgba(0, 163, 255, 0.8)';
+                });
+            } else {
+                document.querySelectorAll('.timer-value').forEach(el => {
+                    el.style.textShadow = '0 0 30px rgba(0, 163, 255, 0.6)';
+                });
+            }
         }
         
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        // Animate stats
+        function animateStats() {
+            const stat1 = document.getElementById('stat1');
+            const stat2 = document.getElementById('stat2');
+            const stat3 = document.getElementById('stat3');
+            
+            animateNumber(stat1, 2458, 1500);
+            animateNumber(stat2, 68, 2000);
+        }
         
-        // Category Tabs
-        document.querySelectorAll('.category-tab').forEach(tab => {
-            tab.addEventListener('click', function() {
-                document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-                
-                // Simulate loading
-                const cards = document.querySelectorAll('.product-card');
-                cards.forEach(card => {
-                    card.style.opacity = '0.5';
-                    setTimeout(() => card.style.opacity = '1', 300);
-                });
-            });
-        });
+        function animateNumber(element, target, duration) {
+            if (element.id === 'stat2') {
+                let current = 0;
+                const increment = target / (duration / 16);
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    element.textContent = Math.floor(current) + '%';
+                }, 16);
+            } else {
+                element.textContent = target + '+';
+            }
+        }
         
-        // Add to Cart/Buy Now buttons
-        document.querySelectorAll('.buy-now-btn, .amazon-btn').forEach(button => {
+        // Product card interactions
+        document.querySelectorAll('.card-button-space').forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
+                const productCard = this.closest('.product-card');
+                const productTitle = productCard.querySelector('.product-title').textContent;
+                
+                // Create space effect
+                const spaceship = document.createElement('div');
+                spaceship.innerHTML = '🚀';
+                spaceship.style.position = 'fixed';
+                spaceship.style.fontSize = '40px';
+                spaceship.style.zIndex = '10000';
+                spaceship.style.pointerEvents = 'none';
+                spaceship.style.left = button.getBoundingClientRect().left + 'px';
+                spaceship.style.top = button.getBoundingClientRect().top + 'px';
+                document.body.appendChild(spaceship);
                 
                 // Animation
-                const originalHTML = this.innerHTML;
-                this.innerHTML = '<i class="fas fa-check"></i> Added!';
-                this.style.background = 'var(--success)';
-                this.style.color = 'white';
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Launching...';
+                this.disabled = true;
                 
-                // Update cart notification
-                const badge = document.querySelector('.notification-badge');
-                let count = parseInt(badge.textContent) || 0;
-                badge.textContent = count + 1;
+                // Animate spaceship
+                const startX = parseFloat(spaceship.style.left);
+                const startY = parseFloat(spaceship.style.top);
+                let progress = 0;
+                const duration = 1500;
                 
-                // Price drop animation
-                document.querySelectorAll('.price-drop').forEach(price => {
-                    price.style.animation = 'none';
-                    setTimeout(() => {
-                        price.style.animation = 'priceDrop 0.3s ease-out';
-                    }, 10);
-                });
+                const animateSpaceship = () => {
+                    progress += 16;
+                    const percent = Math.min(progress / duration, 1);
+                    
+                    // Bezier curve for rocket path
+                    const x = startX + (window.innerWidth - startX) * percent;
+                    const y = startY - 200 * Math.sin(Math.PI * percent) * (1 - percent);
+                    
+                    spaceship.style.left = x + 'px';
+                    spaceship.style.top = y + 'px';
+                    spaceship.style.opacity = 1 - percent;
+                    
+                    if (percent < 1) {
+                        requestAnimationFrame(animateSpaceship);
+                    } else {
+                        spaceship.remove();
+                    }
+                };
                 
-                // Reset button after 2 seconds
+                animateSpaceship();
+                
                 setTimeout(() => {
-                    this.innerHTML = originalHTML;
-                    this.style.background = '';
-                    this.style.color = '';
-                }, 2000);
+                    this.innerHTML = originalText;
+                    this.disabled = false;
+                    
+                    // Simulate Amazon redirect
+                    alert(`🚀 Launching "${productTitle}" to Amazon.com\n(Amazon Associates ID: storecamvaz-20)`);
+                }, 1500);
             });
         });
         
-        // Search functionality
-        document.querySelector('.fa-search').closest('.icon-btn').addEventListener('click', function() {
-            const searchTerm = prompt('What are you looking for?');
-            if (searchTerm) {
-                alert(`Searching Amazon for: ${searchTerm}\n(Redirecting to Amazon.com)`);
-                // In real implementation: window.open(`https://www.amazon.com/s?k=${encodeURIComponent(searchTerm)}&tag=storecamvaz-20`);
-            }
-        });
-        
-        // Flash Deal Updates
-        function updateFlashDeals() {
-            const prices = [1.99, 2.49, 1.75, 2.99, 1.49];
-            const randomPrice = prices[Math.floor(Math.random() * prices.length)];
-            const flashPrice = document.querySelector('.flash-price');
-            
-            if (flashPrice) {
-                flashPrice.textContent = `$${randomPrice}`;
-                flashPrice.style.animation = 'priceDrop 0.5s ease-out';
+        // Newsletter form
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if(newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const emailInput = this.querySelector('.newsletter-input');
+                const submitButton = this.querySelector('.space-button');
                 
-                // Show notification
-                if (Math.random() > 0.5) {
-                    const badge = document.querySelector('.notification-badge');
-                    let count = parseInt(badge.textContent) || 0;
-                    badge.textContent = count + 1;
+                if(emailInput.value && emailInput.value.includes('@')) {
+                    const originalText = submitButton.innerHTML;
+                    submitButton.innerHTML = '<i class="fas fa-check"></i> Mission Accepted!';
+                    submitButton.style.background = 'linear-gradient(135deg, #00A67E, #0088CC)';
                     
-                    // Optional: Play sound
-                    try {
-                        const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3');
-                        audio.volume = 0.3;
-                        audio.play();
-                    } catch (e) {}
+                    // Create stars around button
+                    for (let i = 0; i < 10; i++) {
+                        const star = document.createElement('div');
+                        star.innerHTML = '⭐';
+                        star.style.position = 'absolute';
+                        star.style.fontSize = '20px';
+                        star.style.zIndex = '1000';
+                        star.style.pointerEvents = 'none';
+                        star.style.left = (submitButton.getBoundingClientRect().left + Math.random() * 100 - 50) + 'px';
+                        star.style.top = (submitButton.getBoundingClientRect().top + Math.random() * 100 - 50) + 'px';
+                        star.style.animation = 'float 2s ease-in-out forwards';
+                        document.body.appendChild(star);
+                        
+                        setTimeout(() => star.remove(), 2000);
+                    }
+                    
+                    setTimeout(() => {
+                        submitButton.innerHTML = originalText;
+                        submitButton.style.background = '';
+                        emailInput.value = '';
+                        alert('🎯 Mission accomplished! You will receive cosmic deal alerts!');
+                    }, 3000);
                 }
-            }
+            });
         }
         
-        // Update prices every 30 seconds
-        setInterval(updateFlashDeals, 30000);
-        
-        // Scroll to top when clicking Amazon logo
-        document.querySelector('.amazon-logo').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        
-        // Simulate new deals loading
-        let dealCount = 0;
+        // Header scroll effect
         window.addEventListener('scroll', function() {
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200) {
-                if (dealCount < 2) {
-                    dealCount++;
-                    
-                    // Show loading indicator
-                    const loading = document.createElement('div');
-                    loading.style.textAlign = 'center';
-                    loading.style.padding = '2rem';
-                    loading.style.color = 'var(--text-light)';
-                    loading.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading more deals...';
-                    
-                    document.body.insertBefore(loading, document.querySelector('.amazon-footer'));
-                    
-                    // Simulate API call
-                    setTimeout(() => {
-                        loading.remove();
-                        alert('✨ 12 new flash deals loaded! Check them out above.');
-                    }, 1500);
-                }
+            const header = document.querySelector('.site-header');
+            if(window.scrollY > 50) {
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
+                header.style.boxShadow = '0 2px 30px rgba(0, 163, 255, 0.1)';
+            } else {
+                header.style.background = 'rgba(10, 10, 10, 0.9)';
+                header.style.boxShadow = 'none';
             }
         });
         
-        // Initialize tooltips
-        document.querySelectorAll('.prime-badge').forEach(badge => {
-            badge.addEventListener('mouseenter', function() {
-                const tooltip = document.createElement('div');
-                tooltip.style.position = 'absolute';
-                tooltip.style.background = 'var(--amazon-dark)';
-                tooltip.style.color = 'white';
-                tooltip.style.padding = '0.5rem';
-                tooltip.style.borderRadius = '4px';
-                tooltip.style.fontSize = '0.8rem';
-                tooltip.style.zIndex = '10000';
-                tooltip.textContent = 'Prime members get FREE delivery';
-                
-                const rect = this.getBoundingClientRect();
-                tooltip.style.top = (rect.top - 40) + 'px';
-                tooltip.style.left = rect.left + 'px';
-                
-                tooltip.id = 'tooltip';
-                document.body.appendChild(tooltip);
-            });
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', function() {
+            createSpaceBackground();
+            setInterval(updateTimer, 1000);
+            updateTimer();
             
-            badge.addEventListener('mouseleave', function() {
-                const tooltip = document.getElementById('tooltip');
-                if (tooltip) tooltip.remove();
-            });
-        });
-        
-        // PWA Installation Prompt
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
+            // Animate stats when visible
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        animateStats();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
             
-            // Show install prompt after 20 seconds
-            setTimeout(() => {
-                if (confirm('📱 Install Amazon Flash Deals app for instant notifications on price drops?')) {
-                    e.prompt();
-                    e.userChoice.then((choiceResult) => {
-                        if (choiceResult.outcome === 'accepted') {
-                            console.log('Amazon Flash Deals app installed');
-                        }
-                    });
-                }
-            }, 20000);
+            observer.observe(document.querySelector('.stats-grid'));
+            
+            // Add random floating animation delays
+            document.querySelectorAll('.floating').forEach((el, index) => {
+                el.style.animationDelay = (index * 0.1) + 's';
+            });
         });
     </script>
 </body>
