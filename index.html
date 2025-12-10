@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Deals | Themed Premium Offers</title>
-    <meta name="description" content="Space-themed Amazon flash deals with cosmic savings. Premium products floating in digital space.">
+    <title>Amazon Deals | Premium Offers</title>
+    <meta name="description" content="Best Amazon deals with significant savings. Premium products curated daily.">
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
@@ -22,22 +22,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* K2 Space Exact Design with Black Background */
+        /* Clean Minimalist Design */
         :root {
-            --space-dark: #000000;
-            --space-darker: #0A0A0A;
-            --space-light: #1A1A1A;
-            --space-accent: #00A3FF;
-            --space-accent-secondary: #FF6B00;
-            --text-primary: #FFFFFF;
-            --text-secondary: #CCCCCC;
+            --dark-bg: #000000;
+            --darker-bg: #0A0A0A;
+            --light-bg: #1A1A1A;
+            --accent-blue: #00A3FF;
+            --accent-orange: #FF6B00;
+            --text-white: #FFFFFF;
+            --text-gray: #CCCCCC;
             --text-muted: #888888;
-            --border-space: rgba(255, 255, 255, 0.1);
-            --glow-blue: rgba(0, 163, 255, 0.3);
-            --glow-orange: rgba(255, 107, 0, 0.3);
-            --section-spacing: 120px;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --section-spacing: 100px;
             --container-width: 1200px;
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition: all 0.3s ease;
         }
         
         * {
@@ -48,60 +46,17 @@
         
         html {
             scroll-behavior: smooth;
-            background: var(--space-dark);
+            background: var(--dark-bg);
         }
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-weight: 400;
             line-height: 1.6;
-            color: var(--text-primary);
-            background: var(--space-dark);
+            color: var(--text-white);
+            background: var(--dark-bg);
             overflow-x: hidden;
             position: relative;
-        }
-        
-        /* Space Background Effects */
-        .space-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-            overflow: hidden;
-        }
-        
-        .star {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            animation: twinkle 5s infinite;
-        }
-        
-        .star:nth-child(odd) {
-            animation-delay: 1s;
-        }
-        
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.2; }
-            50% { opacity: 1; }
-        }
-        
-        .nebula {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.05;
-            background: radial-gradient(circle, var(--space-accent), transparent);
-        }
-        
-        .nebula:nth-child(2) {
-            background: radial-gradient(circle, var(--space-accent-secondary), transparent);
-            opacity: 0.03;
         }
         
         .container {
@@ -109,22 +64,19 @@
             max-width: var(--container-width);
             margin: 0 auto;
             padding: 0 20px;
-            position: relative;
-            z-index: 1;
         }
         
-        /* Header - Space Style */
+        /* Header */
         .site-header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(10, 10, 10, 0.9);
+            background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-space);
+            border-bottom: 1px solid var(--border-color);
             z-index: 1000;
             padding: 20px 0;
-            transition: var(--transition);
         }
         
         .header-container {
@@ -140,30 +92,15 @@
             text-decoration: none;
             font-weight: 700;
             font-size: 24px;
-            color: var(--text-primary);
-            position: relative;
+            color: var(--text-white);
         }
         
         .logo-icon {
-            color: var(--space-accent);
+            color: var(--accent-blue);
             font-size: 28px;
-            filter: drop-shadow(0 0 8px var(--glow-blue));
         }
         
-        .logo-text {
-            position: relative;
-        }
-        
-        .logo-glow {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, var(--space-accent), var(--space-accent-secondary));
-            filter: blur(15px);
-            opacity: 0.3;
-            z-index: -1;
-        }
-        
+        /* Navigation */
         .main-nav {
             display: flex;
             gap: 40px;
@@ -173,40 +110,22 @@
         .nav-link {
             font-size: 15px;
             font-weight: 500;
-            color: var(--text-secondary);
+            color: var(--text-gray);
             text-decoration: none;
-            position: relative;
             padding: 8px 0;
             transition: var(--transition);
         }
         
         .nav-link:hover {
-            color: var(--text-primary);
+            color: var(--text-white);
         }
         
         .nav-link.active {
-            color: var(--space-accent);
+            color: var(--accent-blue);
         }
         
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--space-accent), var(--space-accent-secondary));
-            border-radius: 2px;
-        }
-        
-        .header-actions {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-        
-        .space-button {
-            background: linear-gradient(135deg, var(--space-accent), #0088CC);
+        .main-button {
+            background: linear-gradient(135deg, var(--accent-blue), #0088CC);
             color: white;
             border: none;
             padding: 12px 28px;
@@ -215,235 +134,105 @@
             font-size: 15px;
             cursor: pointer;
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 163, 255, 0.2);
+            text-decoration: none;
+            display: inline-block;
         }
         
-        .space-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
-        }
-        
-        .space-button:hover {
+        .main-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(0, 163, 255, 0.4);
         }
         
-        .space-button:hover::before {
-            left: 100%;
-        }
-        
-        /* Hero Section - Space Style */
+        /* Hero Section */
         .hero-section {
             padding-top: 180px;
             padding-bottom: var(--section-spacing);
-            position: relative;
-            overflow: hidden;
+            text-align: center;
         }
         
         .hero-content {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            text-align: center;
-            position: relative;
         }
         
         .hero-title {
-            font-size: 72px;
+            font-size: 60px;
             font-weight: 800;
-            line-height: 1;
-            margin-bottom: 32px;
-            letter-spacing: -1px;
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--space-accent) 100%);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--text-white) 0%, var(--accent-blue) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            position: relative;
         }
         
         .hero-subtitle {
-            font-size: 22px;
-            color: var(--text-secondary);
+            font-size: 20px;
+            color: var(--text-gray);
             margin-bottom: 48px;
             line-height: 1.6;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
         }
         
         .hero-actions {
             display: flex;
             gap: 20px;
             justify-content: center;
-            margin-bottom: 100px;
+            margin-bottom: 80px;
         }
         
-        .button-secondary-space {
-            background: transparent;
-            color: var(--text-primary);
-            border: 1px solid var(--border-space);
-            padding: 12px 28px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 15px;
-            cursor: pointer;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .button-secondary-space:hover {
-            border-color: var(--space-accent);
-            color: var(--space-accent);
-            box-shadow: 0 4px 20px rgba(0, 163, 255, 0.1);
-        }
-        
-        /* Stats Grid - Floating in Space */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 60px;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px;
-            background: rgba(26, 26, 26, 0.5);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid var(--border-space);
-            position: relative;
-        }
-        
-        .stats-grid::before {
-            content: '';
-            position: absolute;
-            top: -1px;
-            left: -1px;
-            right: -1px;
-            bottom: -1px;
-            background: linear-gradient(45deg, var(--space-accent), transparent, var(--space-accent-secondary));
-            border-radius: 20px;
-            z-index: -1;
-            opacity: 0.3;
-        }
-        
-        .stat-item {
-            text-align: center;
-            position: relative;
-        }
-        
-        .stat-number {
-            font-size: 48px;
-            font-weight: 800;
-            color: var(--space-accent);
-            margin-bottom: 12px;
-            text-shadow: 0 0 20px var(--glow-blue);
-        }
-        
-        .stat-label {
-            font-size: 14px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        /* Products Section */
+        /* Products Grid */
         .section {
             padding: var(--section-spacing) 0;
-            position: relative;
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
         
         .section-title {
-            font-size: 48px;
+            font-size: 40px;
             font-weight: 800;
-            margin-bottom: 24px;
-            letter-spacing: -0.5px;
-            color: var(--text-primary);
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--space-accent), var(--space-accent-secondary));
-            border-radius: 3px;
+            margin-bottom: 16px;
+            color: var(--text-white);
         }
         
         .section-description {
-            font-size: 20px;
-            color: var(--text-secondary);
-            max-width: 700px;
+            font-size: 18px;
+            color: var(--text-gray);
+            max-width: 600px;
             margin: 0 auto;
         }
         
-        /* Products Grid - Floating Cards in Space */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-bottom: 80px;
+            gap: 30px;
+            margin-bottom: 60px;
         }
         
         .product-card {
             background: rgba(26, 26, 26, 0.7);
             backdrop-filter: blur(10px);
-            border: 1px solid var(--border-space);
-            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
             overflow: hidden;
-            transition: var(--transition);
-            position: relative;
-        }
-        
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: -1px;
-            left: -1px;
-            right: -1px;
-            bottom: -1px;
-            background: linear-gradient(45deg, var(--space-accent), transparent, var(--space-accent-secondary));
-            border-radius: 16px;
-            z-index: -1;
-            opacity: 0;
             transition: var(--transition);
         }
         
         .product-card:hover {
-            transform: translateY(-10px);
-            border-color: transparent;
+            transform: translateY(-8px);
+            border-color: var(--accent-blue);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
         
-        .product-card:hover::before {
-            opacity: 0.3;
-        }
-        
         .product-image-container {
-            height: 300px;
+            height: 250px;
             overflow: hidden;
             background: rgba(0, 0, 0, 0.5);
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 40px;
-            position: relative;
+            padding: 30px;
         }
         
         .product-image {
@@ -451,58 +240,54 @@
             max-height: 100%;
             object-fit: contain;
             transition: transform 0.6s ease;
-            filter: drop-shadow(0 0 10px rgba(0, 163, 255, 0.2));
         }
         
         .product-card:hover .product-image {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
         
         .product-content {
-            padding: 32px;
+            padding: 24px;
         }
         
         .product-category {
             font-size: 12px;
-            color: var(--space-accent);
+            color: var(--accent-blue);
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 16px;
-            display: block;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
             font-weight: 600;
         }
         
         .product-title {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
             line-height: 1.4;
-            color: var(--text-primary);
         }
         
         .product-description {
-            font-size: 16px;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-            line-height: 1.6;
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
         
         .product-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
         
         .product-price {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--space-accent);
-            text-shadow: 0 0 10px var(--glow-blue);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-blue);
         }
         
         .product-old-price {
-            font-size: 18px;
+            font-size: 16px;
             color: var(--text-muted);
             text-decoration: line-through;
             margin-left: 8px;
@@ -511,213 +296,92 @@
         .product-rating {
             display: flex;
             align-items: center;
-            gap: 6px;
-            color: var(--space-accent-secondary);
+            gap: 4px;
+            color: var(--accent-orange);
         }
         
-        .card-button-space {
+        .cart-button {
             width: 100%;
-            background: linear-gradient(135deg, var(--space-accent), #0088CC);
+            background: linear-gradient(135deg, var(--accent-blue), #0088CC);
             color: white;
             border: none;
-            padding: 16px;
+            padding: 14px;
             border-radius: 8px;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 15px;
             cursor: pointer;
             transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            position: relative;
-            overflow: hidden;
+            gap: 8px;
+            text-decoration: none;
         }
         
-        .card-button-space::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
-        }
-        
-        .card-button-space:hover {
+        .cart-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(0, 163, 255, 0.4);
         }
         
-        .card-button-space:hover::before {
-            left: 100%;
-        }
-        
-        /* Featured Section - Space Style */
-        .featured-section {
-            padding: var(--section-spacing) 0;
-            position: relative;
-        }
-        
-        .featured-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-        
-        .featured-image-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-        }
-        
-        .featured-image {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-            filter: drop-shadow(0 0 30px rgba(0, 163, 255, 0.2));
-        }
-        
-        .featured-content h2 {
-            font-size: 48px;
-            font-weight: 800;
-            margin-bottom: 32px;
-            letter-spacing: -0.5px;
-            color: var(--text-primary);
-            line-height: 1.2;
-        }
-        
-        .featured-content p {
-            font-size: 20px;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
-        
-        /* Deal Timer - Space Style */
+        /* Deal Timer */
         .deal-timer {
             background: linear-gradient(135deg, rgba(0, 163, 255, 0.1), rgba(255, 107, 0, 0.1));
-            padding: 100px 0;
+            padding: 80px 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-            border-top: 1px solid var(--border-space);
-            border-bottom: 1px solid var(--border-space);
-        }
-        
-        .deal-timer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, rgba(0, 163, 255, 0.1) 0%, transparent 70%);
+            margin: 60px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }
         
         .timer-title {
-            font-size: 40px;
-            font-weight: 800;
-            margin-bottom: 60px;
-            color: var(--text-primary);
-            position: relative;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
         }
         
         .timer-display {
             display: flex;
             justify-content: center;
-            gap: 60px;
-            margin-bottom: 40px;
+            gap: 40px;
+            margin-bottom: 30px;
         }
         
         .timer-unit {
             text-align: center;
-            position: relative;
         }
         
         .timer-value {
-            font-size: 80px;
+            font-size: 48px;
             font-weight: 800;
-            line-height: 1;
-            margin-bottom: 16px;
-            color: var(--space-accent);
-            text-shadow: 0 0 30px var(--glow-blue);
+            color: var(--accent-blue);
+            margin-bottom: 8px;
         }
         
         .timer-label {
-            font-size: 16px;
-            color: var(--text-secondary);
+            font-size: 14px;
+            color: var(--text-gray);
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
         
-        /* Newsletter - Space Style */
-        .newsletter-section {
-            padding: var(--section-spacing) 0;
-            text-align: center;
-            position: relative;
-        }
-        
-        .newsletter-form {
-            max-width: 600px;
-            margin: 60px auto 0;
-            display: flex;
-            gap: 16px;
-        }
-        
-        .newsletter-input {
-            flex: 1;
-            padding: 18px 24px;
-            background: rgba(26, 26, 26, 0.7);
-            border: 1px solid var(--border-space);
-            border-radius: 10px;
-            font-family: inherit;
-            font-size: 16px;
-            color: var(--text-primary);
-            transition: var(--transition);
-        }
-        
-        .newsletter-input:focus {
-            outline: none;
-            border-color: var(--space-accent);
-            box-shadow: 0 0 0 3px rgba(0, 163, 255, 0.2);
-        }
-        
-        /* Footer - Space Style */
+        /* Footer */
         .site-footer {
             background: rgba(10, 10, 10, 0.95);
-            padding: 100px 0 50px;
-            border-top: 1px solid var(--border-space);
-            position: relative;
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--border-color);
         }
         
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 80px;
-            margin-bottom: 80px;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
         }
         
         .footer-column h4 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 32px;
-            color: var(--text-primary);
-            position: relative;
-            padding-bottom: 12px;
-        }
-        
-        .footer-column h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background: linear-gradient(90deg, var(--space-accent), var(--space-accent-secondary));
-            border-radius: 2px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--text-white);
         }
         
         .footer-column ul {
@@ -725,24 +389,23 @@
         }
         
         .footer-column li {
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
         
         .footer-column a {
-            color: var(--text-secondary);
+            color: var(--text-gray);
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px;
             transition: var(--transition);
         }
         
         .footer-column a:hover {
-            color: var(--space-accent);
-            padding-left: 8px;
+            color: var(--accent-blue);
         }
         
         .footer-bottom {
-            padding-top: 50px;
-            border-top: 1px solid var(--border-space);
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -750,72 +413,18 @@
             color: var(--text-muted);
         }
         
-        .social-links {
-            display: flex;
-            gap: 24px;
-        }
-        
-        .social-link {
-            color: var(--text-secondary);
-            font-size: 20px;
-            transition: var(--transition);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(26, 26, 26, 0.7);
-            border: 1px solid var(--border-space);
-        }
-        
-        .social-link:hover {
-            color: var(--space-accent);
-            background: rgba(0, 163, 255, 0.1);
-            border-color: var(--space-accent);
-            transform: translateY(-2px);
-        }
-        
         /* Responsive Design */
-        @media (max-width: 1200px) {
+        @media (max-width: 1024px) {
             .hero-title {
-                font-size: 60px;
+                font-size: 48px;
             }
             
             .products-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
-            .featured-grid {
-                gap: 60px;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .hero-title {
-                font-size: 48px;
-            }
-            
-            .section-title {
-                font-size: 40px;
-            }
-            
-            .featured-grid {
-                grid-template-columns: 1fr;
-                gap: 60px;
-            }
-            
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 60px;
-            }
-            
-            .timer-display {
-                gap: 40px;
-            }
-            
-            .timer-value {
-                font-size: 60px;
             }
         }
         
@@ -825,7 +434,7 @@
             }
             
             .hero-title {
-                font-size: 40px;
+                font-size: 36px;
             }
             
             .hero-subtitle {
@@ -837,44 +446,20 @@
                 align-items: center;
             }
             
-            .stats-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
             .products-grid {
                 grid-template-columns: 1fr;
             }
             
-            .section-title, .featured-content h2 {
+            .section-title {
                 font-size: 32px;
             }
             
             .timer-display {
                 gap: 20px;
-                flex-direction: column;
             }
             
             .timer-value {
-                font-size: 48px;
-            }
-            
-            .newsletter-form {
-                flex-direction: column;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 32px;
-            }
-            
-            .section {
-                padding: 80px 0;
-            }
-            
-            .featured-section {
-                padding: 80px 0;
+                font-size: 36px;
             }
             
             .footer-grid {
@@ -883,51 +468,42 @@
             
             .footer-bottom {
                 flex-direction: column;
-                gap: 30px;
+                gap: 20px;
                 text-align: center;
             }
         }
         
-        /* Floating Animation */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .floating {
-            animation: float 6s ease-in-out infinite;
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 28px;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Space Background -->
-    <div class="space-bg" id="space-bg"></div>
-    
     <!-- Header -->
     <header class="site-header">
         <div class="container header-container">
-            <a href="#" class="logo">
-                <i class="fab fa-amazon logo-icon floating"></i>
-                <div class="logo-text">
-                    amazon afiliado
-                    <div class="logo-glow"></div>
-                </div>
+            <a href="https://amzn.to/4rM7HuT" class="logo">
+                <i class="fab fa-amazon logo-icon"></i>
+                <span>amazon afiliado</span>
             </a>
             
             <nav class="main-nav">
                 <a href="https://amzn.to/4rM7HuT" class="nav-link active">Home</a>
                 <a href="https://amzn.to/4iOyl28" class="nav-link">Flash Deals</a>
-                <a href="https://amzn.to/4aEqUIC" class="nav-link">books</a>
+                <a href="https://amzn.to/4aEqUIC" class="nav-link">Books</a>
                 <a href="https://amzn.to/4aMFxcS" class="nav-link">Hot New Releases</a>
                 <a href="https://amzn.to/3Yp9V5H" class="nav-link">Gift Guide</a>
-                
             </nav>
             
-            <div class="header-actions">
-                <button class="space-button floating">
-                    <i class="fas fa-rocket"></i> Launch Deals
-                </button>
-            </div>
+            <a href="https://amzn.to/4rM7HuT" class="main-button">
+                Shop Deals
+            </a>
         </div>
     </header>
 
@@ -936,66 +512,49 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Amazon Deals in 
-                    <span style="background: linear-gradient(135deg, var(--space-accent), var(--space-accent-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                        Digital Space
-                    </span>
+                    Best Amazon Deals
                 </h1>
                 <p class="hero-subtitle">
-                    Discover premium Amazon products.
+                    Discover premium Amazon products with significant savings. 
+                    Curated selection updated daily.
                 </p>
                 
                 <div class="hero-actions">
-                    <button class="space-button floating">
-                        <i class="fas fa-rocket"></i> Explore The Deals
-                    </button>
-                    <button class="button-secondary-space">
-                        <i class="fas fa-satellite"></i> Orbit Premium
-                    </button>
-                </div>
-                
-                <div class="stats-grid floating">
-                    <div class="stat-item">
-                        <div class="stat-number" id="stat1">0</div>
-                        <div class="stat-label">Active Deals</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" id="stat2">0%</div>
-                        <div class="stat-label">Savings</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" id="stat3">24/7</div>
-                        <div class="stat-label">Updates</div>
-                    </div>
+                    <a href="https://amzn.to/4rM7HuT" class="main-button">
+                        Explore All Deals
+                    </a>
+                    <a href="https://amzn.to/4aEqUIC" class="main-button" style="background: transparent; border: 1px solid var(--border-color);">
+                        View Books
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Featured Deals -->
-    <section class="section" id="deals">
+    <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Celestial Flash Deals</h2>
+                <h2 class="section-title">Flash Deals</h2>
                 <p class="section-description">
-                    Limited-time offers. Prices update.
+                    Limited-time offers with best prices
                 </p>
             </div>
             
             <div class="products-grid">
                 <!-- Product 1 -->
-                <div class="product-card floating" style="animation-delay: 0s;">
+                <div class="product-card">
                     <div class="product-image-container">
                         <img src="https://m.media-amazon.com/images/I/71CHmL6xZqL._AC_SX679_.jpg" 
-                             alt="Premium Slim Wallet" 
+                             alt="RUNBOX Slim RFID Wallet" 
                              class="product-image"
                              loading="lazy">
                     </div>
                     <div class="product-content">
-                        <span class="product-category">Space Fashion</span>
+                        <span class="product-category">Fashion</span>
                         <h3 class="product-title">RUNBOX Slim RFID Wallet</h3>
                         <p class="product-description">
-                            Premium leather wallet with RFID protection, minimalist space-age design.
+                            Premium leather wallet with RFID protection, minimalist design.
                         </p>
                         <div class="product-meta">
                             <div>
@@ -1007,25 +566,25 @@
                                 <span>4.5</span>
                             </div>
                         </div>
-                        <button class="card-button-space">
+                        <a href="https://amzn.to/44hSasB" class="cart-button" target="_blank">
                             <i class="fas fa-shopping-cart"></i> Add to Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
                 
                 <!-- Product 2 -->
-                <div class="product-card floating" style="animation-delay: 0.2s;">
+                <div class="product-card">
                     <div class="product-image-container">
                         <img src="https://m.media-amazon.com/images/I/81gwIs9730L._AC_SX679_.jpg" 
-                             alt="Gaming Mouse Pad" 
+                             alt="RGB Gaming Mouse Pad" 
                              class="product-image"
                              loading="lazy">
                     </div>
                     <div class="product-content">
-                        <span class="product-category">Space Tech</span>
-                        <h3 class="product-title">RGB Space Gaming Pad</h3>
+                        <span class="product-category">Gaming</span>
+                        <h3 class="product-title">RGB Gaming Mouse Pad</h3>
                         <p class="product-description">
-                            Extended mouse pad with wireless charging, customizable RGB nebula lighting.
+                            Extended mouse pad with wireless charging, customizable RGB lighting.
                         </p>
                         <div class="product-meta">
                             <div>
@@ -1037,25 +596,25 @@
                                 <span>4.8</span>
                             </div>
                         </div>
-                        <button class="card-button-space">
+                        <a href="https://amzn.to/4rP5EpE" class="cart-button" target="_blank">
                             <i class="fas fa-shopping-cart"></i> Add to Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
                 
                 <!-- Product 3 -->
-                <div class="product-card floating" style="animation-delay: 0.4s;">
+                <div class="product-card">
                     <div class="product-image-container">
                         <img src="https://m.media-amazon.com/images/I/71oT5kwLtQL._AC_SL1500_.jpg" 
-                             alt="Luxury Scented Candles" 
+                             alt="Scented Candle Set" 
                              class="product-image"
                              loading="lazy">
                     </div>
                     <div class="product-content">
-                        <span class="product-category">Space Home</span>
-                        <h3 class="product-title">Nebula Scented Candle Set</h3>
+                        <span class="product-category">Home</span>
+                        <h3 class="product-title">Scented Candle Set</h3>
                         <p class="product-description">
-                            Premium soy candles with scents.
+                            Premium soy candles with natural essential oils.
                         </p>
                         <div class="product-meta">
                             <div>
@@ -1067,38 +626,10 @@
                                 <span>4.7</span>
                             </div>
                         </div>
-                        <button class="card-button-space">
+                        <a href="https://amzn.to/48uCxk7" class="cart-button" target="_blank">
                             <i class="fas fa-shopping-cart"></i> Add to Cart
-                        </button>
+                        </a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Section -->
-    <section class="featured-section" id="premium">
-        <div class="container">
-            <div class="featured-grid">
-                <div class="featured-image-container floating" style="animation-delay: 0.3s;">
-                    <img src="https://m.media-amazon.com/images/I/71p3-v2aywL._AC_SL1500_.jpg" 
-                         alt="Smart Watch" 
-                         class="featured-image"
-                         loading="lazy">
-                </div>
-                <div class="featured-content">
-                    <h2>Premium Collection</h2>
-                    <p>
-                        Our premium collection features Amazon's highest-rated products. 
-                        Each item is a exceptional quality and design.
-                    </p>
-                    <p>
-                        From home goods to electronics, we focus on products that offer value 
-                        rather than just temporary discounts.
-                    </p>
-                    <button class="space-button floating" style="margin-top: 20px; animation-delay: 0.5s;">
-                        <i class="fas fa-user-astronaut"></i> Explore Premium
-                    </button>
                 </div>
             </div>
         </div>
@@ -1108,40 +639,40 @@
     <section class="deal-timer">
         <div class="container">
             <h2 class="timer-title">Deal Ends In</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 18px;">
+            <p style="color: var(--text-gray); margin-bottom: 30px;">
                 These prices reset at midnight. Refresh for new deals.
             </p>
             
             <div class="timer-display">
-                <div class="timer-unit floating" style="animation-delay: 0s;">
+                <div class="timer-unit">
                     <div class="timer-value" id="timer-hours">02</div>
-                    <div class="timer-label">hours </div>
+                    <div class="timer-label">Hours</div>
                 </div>
-                <div class="timer-unit floating" style="animation-delay: 0.2s;">
+                <div class="timer-unit">
                     <div class="timer-value" id="timer-minutes">18</div>
-                    <div class="timer-label">minutes</div>
+                    <div class="timer-label">Minutes</div>
                 </div>
-                <div class="timer-unit floating" style="animation-delay: 0.4s;">
+                <div class="timer-unit">
                     <div class="timer-value" id="timer-seconds">34</div>
-                    <div class="timer-label">seconds</div>
+                    <div class="timer-label">Seconds</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- More Products -->
-    <section class="section" id="categories">
+    <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Categories</h2>
+                <h2 class="section-title">Premium Products</h2>
                 <p class="section-description">
-                    Explore deals categories with savings.
+                    High-quality products with exceptional value
                 </p>
             </div>
             
             <div class="products-grid">
                 <!-- Product 4 -->
-                <div class="product-card floating" style="animation-delay: 0s;">
+                <div class="product-card">
                     <div class="product-image-container">
                         <img src="https://m.media-amazon.com/images/I/71p3-v2aywL._AC_SL1500_.jpg" 
                              alt="Smart Watch" 
@@ -1152,7 +683,7 @@
                         <span class="product-category">Wearables</span>
                         <h3 class="product-title">Smart Watch</h3>
                         <p class="product-description">
-                            Advanced health monitoring, 7-day battery life, waterproof design.
+                            Advanced health monitoring, 7-day battery life, waterproof.
                         </p>
                         <div class="product-meta">
                             <div>
@@ -1164,14 +695,14 @@
                                 <span>4.6</span>
                             </div>
                         </div>
-                        <button class="card-button-space">
-                            <i class="fas fa-bolt"></i> Deal
-                        </button>
+                        <a href="https://amzn.to/4pqxU0h" class="cart-button" target="_blank">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </a>
                     </div>
                 </div>
                 
                 <!-- Product 5 -->
-                <div class="product-card floating" style="animation-delay: 0.2s;">
+                <div class="product-card">
                     <div class="product-image-container">
                         <img src="https://m.media-amazon.com/images/I/712HdjTSU-L._AC_SX679_.jpg" 
                              alt="Coffee Mugs" 
@@ -1194,14 +725,14 @@
                                 <span>4.9</span>
                             </div>
                         </div>
-                        <button class="card-button-space">
-                            <i class="fas fa-meteor"></i> Deal
-                        </button>
+                        <a href="https://amzn.to/4pnGP2A" class="cart-button" target="_blank">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </a>
                     </div>
                 </div>
                 
                 <!-- Product 6 -->
-                <div class="product-card floating" style="animation-delay: 0.4s;">
+                <div class="product-card">
                     <div class="product-image-container">
                         <img src="https://m.media-amazon.com/images/I/61nujxnsPdL._AC_SL1500_.jpg" 
                              alt="Wireless Earbuds" 
@@ -1210,9 +741,9 @@
                     </div>
                     <div class="product-content">
                         <span class="product-category">Audio</span>
-                        <h3 class="product-title">Noise-Canceling Buds</h3>
+                        <h3 class="product-title">Wireless Earbuds</h3>
                         <p class="product-description">
-                            True wireless with black hole noise cancellation, 30-hour battery.
+                            True wireless with noise cancellation, 30-hour battery.
                         </p>
                         <div class="product-meta">
                             <div>
@@ -1224,16 +755,14 @@
                                 <span>4.4</span>
                             </div>
                         </div>
-                        <button class="card-button-space">
-                            <i class="fas fa-satellite-dish"></i> Deal
-                        </button>
+                        <a href="https://amzn.to/4a3pgjC" class="cart-button" target="_blank">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -1241,27 +770,33 @@
             <div class="footer-grid">
                 <div class="footer-column">
                     <h4>Amazon Deals</h4>
-                    <p style="color: var(--text-secondary); margin-top: 24px; line-height: 1.6; font-size: 16px;">
+                    <p style="color: var(--text-gray); margin-top: 16px; line-height: 1.6;">
                         Curated selection of premium Amazon deals. 
-                        Independent affiliate.
+                        Independent affiliate showcasing quality products.
                     </p>
-                    <div style="margin-top: 32px;">
-                        <button class="space-button">
-                            <i class="fab fa-amazon"></i> Amazon
-                        </button>
-                    </div>
                 </div>
                 
                 <div class="footer-column">
-                    <h4>Space Categories</h4>
+                    <h4>Categories</h4>
                     <ul>
-                        <li><a href="https://amzn.to/3MtfUUD">Electronics</a></li>
-                        <li><a href="https://amzn.to/44hQmQl">Home</a></li>
-                        <li><a href="https://amzn.to/3Kody8Z">Luxuri</a></li>
-                        <li><a href="https://amzn.to/3YjIZ7u">Beauty</a></li>
-                        <li><a href="https://amzn.to/48Pc6Ve">Books</a></li>
+                        <li><a href="https://amzn.to/3MtfUUD" target="_blank">Electronics</a></li>
+                        <li><a href="https://amzn.to/44hQmQl" target="_blank">Home & Kitchen</a></li>
+                        <li><a href="https://amzn.to/3Kody8Z" target="_blank">Fashion</a></li>
+                        <li><a href="https://amzn.to/3YjIZ7u" target="_blank">Beauty</a></li>
+                        <li><a href="https://amzn.to/48Pc6Ve" target="_blank">Books</a></li>
                     </ul>
-                </div>    
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="https://amzn.to/4rM7HuT" target="_blank">Home</a></li>
+                        <li><a href="https://amzn.to/4iOyl28" target="_blank">Flash Deals</a></li>
+                        <li><a href="https://amzn.to/4aEqUIC" target="_blank">Books</a></li>
+                        <li><a href="https://amzn.to/4aMFxcS" target="_blank">New Releases</a></li>
+                        <li><a href="https://amzn.to/3Yp9V5H" target="_blank">Gift Guide</a></li>
+                    </ul>
+                </div>
             </div>
             
             <div class="footer-bottom">
@@ -1269,52 +804,11 @@
                     © 2024 Amazon Deals. All product names, logos, and brands are property of their respective owners.
                     Amazon and the Amazon logo are trademarks of Amazon.com, Inc.
                 </div>
-                <div class="social-links">
-                    <a href="#" class="social-link">
-                        <i class="fab fa-X"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Create Space Background
-        function createSpaceBackground() {
-            const spaceBg = document.getElementById('space-bg');
-            
-            // Create stars
-            for (let i = 0; i < 150; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.width = Math.random() * 3 + 'px';
-                star.style.height = star.style.width;
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 5 + 's';
-                spaceBg.appendChild(star);
-            }
-            
-            // Create nebulas
-            const nebula1 = document.createElement('div');
-            nebula1.className = 'nebula';
-            nebula1.style.left = '10%';
-            nebula1.style.top = '20%';
-            spaceBg.appendChild(nebula1);
-            
-            const nebula2 = document.createElement('div');
-            nebula2.className = 'nebula';
-            nebula2.style.right = '15%';
-            nebula2.style.bottom = '30%';
-            spaceBg.appendChild(nebula2);
-        }
-        
         // Countdown Timer
         function updateTimer() {
             const now = new Date();
@@ -1330,178 +824,26 @@
             document.getElementById('timer-hours').textContent = hours.toString().padStart(2, '0');
             document.getElementById('timer-minutes').textContent = minutes.toString().padStart(2, '0');
             document.getElementById('timer-seconds').textContent = seconds.toString().padStart(2, '0');
-            
-            // Add pulsing effect
-            if (seconds % 2 === 0) {
-                document.querySelectorAll('.timer-value').forEach(el => {
-                    el.style.textShadow = '0 0 40px rgba(0, 163, 255, 0.8)';
-                });
-            } else {
-                document.querySelectorAll('.timer-value').forEach(el => {
-                    el.style.textShadow = '0 0 30px rgba(0, 163, 255, 0.6)';
-                });
-            }
         }
         
-        // Animate stats
-        function animateStats() {
-            const stat1 = document.getElementById('stat1');
-            const stat2 = document.getElementById('stat2');
-            const stat3 = document.getElementById('stat3');
-            
-            animateNumber(stat1, 2458, 1500);
-            animateNumber(stat2, 68, 2000);
-        }
-        
-        function animateNumber(element, target, duration) {
-            if (element.id === 'stat2') {
-                let current = 0;
-                const increment = target / (duration / 16);
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        current = target;
-                        clearInterval(timer);
-                    }
-                    element.textContent = Math.floor(current) + '%';
-                }, 16);
-            } else {
-                element.textContent = target + '+';
-            }
-        }
-        
-        // Product card interactions
-        document.querySelectorAll('.card-button-space').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const productCard = this.closest('.product-card');
-                const productTitle = productCard.querySelector('.product-title').textContent;
-                
-                // Create space effect
-                const spaceship = document.createElement('div');
-                spaceship.innerHTML = '🚀';
-                spaceship.style.position = 'fixed';
-                spaceship.style.fontSize = '40px';
-                spaceship.style.zIndex = '10000';
-                spaceship.style.pointerEvents = 'none';
-                spaceship.style.left = button.getBoundingClientRect().left + 'px';
-                spaceship.style.top = button.getBoundingClientRect().top + 'px';
-                document.body.appendChild(spaceship);
-                
-                // Animation
-                const originalText = this.innerHTML;
-                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Launching...';
-                this.disabled = true;
-                
-                // Animate spaceship
-                const startX = parseFloat(spaceship.style.left);
-                const startY = parseFloat(spaceship.style.top);
-                let progress = 0;
-                const duration = 1500;
-                
-                const animateSpaceship = () => {
-                    progress += 16;
-                    const percent = Math.min(progress / duration, 1);
-                    
-                    // Bezier curve for rocket path
-                    const x = startX + (window.innerWidth - startX) * percent;
-                    const y = startY - 200 * Math.sin(Math.PI * percent) * (1 - percent);
-                    
-                    spaceship.style.left = x + 'px';
-                    spaceship.style.top = y + 'px';
-                    spaceship.style.opacity = 1 - percent;
-                    
-                    if (percent < 1) {
-                        requestAnimationFrame(animateSpaceship);
-                    } else {
-                        spaceship.remove();
-                    }
-                };
-                
-                animateSpaceship();
-                
-                setTimeout(() => {
-                    this.innerHTML = originalText;
-                    this.disabled = false;
-                    
-                    // Simulate Amazon redirect
-                    alert(`🚀 Launching "${productTitle}" to Amazon.com\n(Amazon Associates ID: storecamvaz-20)`);
-                }, 1500);
-            });
-        });
-        
-        // Newsletter form
-        const newsletterForm = document.querySelector('.newsletter-form');
-        if(newsletterForm) {
-            newsletterForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const emailInput = this.querySelector('.newsletter-input');
-                const submitButton = this.querySelector('.space-button');
-                
-                if(emailInput.value && emailInput.value.includes('@')) {
-                    const originalText = submitButton.innerHTML;
-                    submitButton.innerHTML = '<i class="fas fa-check"></i> Mission Accepted!';
-                    submitButton.style.background = 'linear-gradient(135deg, #00A67E, #0088CC)';
-                    
-                    // Create stars around button
-                    for (let i = 0; i < 10; i++) {
-                        const star = document.createElement('div');
-                        star.innerHTML = '⭐';
-                        star.style.position = 'absolute';
-                        star.style.fontSize = '20px';
-                        star.style.zIndex = '1000';
-                        star.style.pointerEvents = 'none';
-                        star.style.left = (submitButton.getBoundingClientRect().left + Math.random() * 100 - 50) + 'px';
-                        star.style.top = (submitButton.getBoundingClientRect().top + Math.random() * 100 - 50) + 'px';
-                        star.style.animation = 'float 2s ease-in-out forwards';
-                        document.body.appendChild(star);
-                        
-                        setTimeout(() => star.remove(), 2000);
-                    }
-                    
-                    setTimeout(() => {
-                        submitButton.innerHTML = originalText;
-                        submitButton.style.background = '';
-                        emailInput.value = '';
-                        alert('🎯 Mission accomplished! You will receive cosmic deal alerts!');
-                    }, 3000);
-                }
-            });
-        }
+        setInterval(updateTimer, 1000);
+        updateTimer();
         
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.site-header');
             if(window.scrollY > 50) {
-                header.style.background = 'rgba(10, 10, 10, 0.95)';
-                header.style.boxShadow = '0 2px 30px rgba(0, 163, 255, 0.1)';
+                header.style.background = 'rgba(10, 10, 10, 0.98)';
             } else {
-                header.style.background = 'rgba(10, 10, 10, 0.9)';
-                header.style.boxShadow = 'none';
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
             }
         });
         
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', function() {
-            createSpaceBackground();
-            setInterval(updateTimer, 1000);
-            updateTimer();
-            
-            // Animate stats when visible
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting) {
-                        animateStats();
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-            
-            observer.observe(document.querySelector('.stats-grid'));
-            
-            // Add random floating animation delays
-            document.querySelectorAll('.floating').forEach((el, index) => {
-                el.style.animationDelay = (index * 0.1) + 's';
+        // Add click tracking for affiliate links
+        document.querySelectorAll('a[href*="amzn.to"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // You can add analytics tracking here
+                console.log('Affiliate link clicked:', this.href);
             });
         });
     </script>
