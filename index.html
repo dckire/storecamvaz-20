@@ -1,32 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html amp lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Deals | Premium Offers</title>
-    <meta name="description" content="Best Amazon deals with significant savings. Premium products curated daily.">
-
-    <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-    </script>
+    <title>Amazon Deals | Premium Offers & Discounts</title>
+    <meta name="description" content="Best Amazon deals with significant savings. Premium products curated daily with affiliate links.">
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BYMJS3X12P');
-    </script>
+    <!-- 🔥 AMP RUNTIME (OBLIGATORIO) -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
     
-    <!-- Fonts -->
+    <!-- AMP COMPONENTS -->
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    
+    <!-- GOOGLE ANALYTICS (AMP-Compatible) -->
+    <amp-analytics type="googleanalytics">
+        <script type="application/json">
+        {
+            "vars": {
+                "account": "G-BYMJS3X12P"
+            },
+            "triggers": {
+                "trackPageview": {
+                    "on": "visible",
+                    "request": "pageview"
+                }
+            }
+        }
+        </script>
+    </amp-analytics>
+    
+    <!-- FONTS (AMP-Compatible) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <style>
-        /* Clean Minimalist Design */
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="https://www.amazon.com/favicon.ico">
+    
+    <!-- AMP BOILERPLATE -->
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    
+    <!-- CUSTOM STYLES -->
+    <style amp-custom>
         :root {
             --dark-bg: #000000;
             --darker-bg: #0A0A0A;
@@ -39,7 +57,6 @@
             --border-color: rgba(255, 255, 255, 0.1);
             --section-spacing: 100px;
             --container-width: 1200px;
-            --transition: all 0.3s ease;
         }
         
         * {
@@ -49,8 +66,8 @@
         }
         
         html {
-            scroll-behavior: smooth;
             background: var(--dark-bg);
+            scroll-behavior: smooth;
         }
         
         body {
@@ -60,7 +77,6 @@
             color: var(--text-white);
             background: var(--dark-bg);
             overflow-x: hidden;
-            position: relative;
         }
         
         .container {
@@ -70,13 +86,13 @@
             padding: 0 20px;
         }
         
-        /* Header */
+        /* HEADER */
         .site-header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(10, 10, 10, 0.98);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-color);
             z-index: 1000;
@@ -104,7 +120,7 @@
             font-size: 28px;
         }
         
-        /* Navigation */
+        /* NAVIGATION */
         .main-nav {
             display: flex;
             gap: 40px;
@@ -117,7 +133,7 @@
             color: var(--text-gray);
             text-decoration: none;
             padding: 8px 0;
-            transition: var(--transition);
+            position: relative;
         }
         
         .nav-link:hover {
@@ -137,7 +153,7 @@
             font-weight: 600;
             font-size: 15px;
             cursor: pointer;
-            transition: var(--transition);
+            transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
         }
@@ -147,7 +163,7 @@
             box-shadow: 0 8px 30px rgba(0, 163, 255, 0.4);
         }
         
-        /* Hero Section */
+        /* HERO SECTION */
         .hero-section {
             padding-top: 180px;
             padding-bottom: var(--section-spacing);
@@ -183,7 +199,47 @@
             margin-bottom: 80px;
         }
         
-        /* Products Grid */
+        /* DEAL TIMER */
+        .deal-timer {
+            background: linear-gradient(135deg, rgba(0, 163, 255, 0.1), rgba(255, 107, 0, 0.1));
+            padding: 80px 0;
+            text-align: center;
+            margin: 60px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .timer-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        
+        .timer-display {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .timer-unit {
+            text-align: center;
+        }
+        
+        .timer-value {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--accent-blue);
+            margin-bottom: 8px;
+        }
+        
+        .timer-label {
+            font-size: 14px;
+            color: var(--text-gray);
+            text-transform: uppercase;
+        }
+        
+        /* PRODUCTS GRID */
         .section {
             padding: var(--section-spacing) 0;
         }
@@ -220,7 +276,7 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             overflow: hidden;
-            transition: var(--transition);
+            transition: all 0.3s ease;
         }
         
         .product-card:hover {
@@ -243,11 +299,6 @@
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
-            transition: transform 0.6s ease;
-        }
-        
-        .product-card:hover .product-image {
-            transform: scale(1.05);
         }
         
         .product-content {
@@ -314,7 +365,7 @@
             font-weight: 600;
             font-size: 15px;
             cursor: pointer;
-            transition: var(--transition);
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -327,47 +378,7 @@
             box-shadow: 0 8px 25px rgba(0, 163, 255, 0.4);
         }
         
-        /* Deal Timer */
-        .deal-timer {
-            background: linear-gradient(135deg, rgba(0, 163, 255, 0.1), rgba(255, 107, 0, 0.1));
-            padding: 80px 0;
-            text-align: center;
-            margin: 60px 0;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .timer-title {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 40px;
-        }
-        
-        .timer-display {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 30px;
-        }
-        
-        .timer-unit {
-            text-align: center;
-        }
-        
-        .timer-value {
-            font-size: 48px;
-            font-weight: 800;
-            color: var(--accent-blue);
-            margin-bottom: 8px;
-        }
-        
-        .timer-label {
-            font-size: 14px;
-            color: var(--text-gray);
-            text-transform: uppercase;
-        }
-        
-        /* Footer */
+        /* FOOTER */
         .site-footer {
             background: rgba(10, 10, 10, 0.95);
             padding: 80px 0 40px;
@@ -400,7 +411,7 @@
             color: var(--text-gray);
             text-decoration: none;
             font-size: 14px;
-            transition: var(--transition);
+            transition: color 0.3s ease;
         }
         
         .footer-column a:hover {
@@ -417,7 +428,36 @@
             color: var(--text-muted);
         }
         
-        /* Responsive Design */
+        /* AFFILIATE DISCLAIMER BAR */
+        .affiliate-disclaimer-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #111;
+            color: #fff;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #333;
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .affiliate-disclaimer-bar button {
+            background: #555;
+            color: white;
+            border: none;
+            padding: 4px 12px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        
+        /* RESPONSIVE DESIGN */
         @media (max-width: 1024px) {
             .hero-title {
                 font-size: 48px;
@@ -475,6 +515,12 @@
                 gap: 20px;
                 text-align: center;
             }
+            
+            .affiliate-disclaimer-bar {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -485,27 +531,31 @@
             .section {
                 padding: 60px 0;
             }
+            
+            .container {
+                padding: 0 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-2057826590229162">
-</amp-auto-ads>
-    <!-- Header -->
+    <!-- AMP AUTO ADS -->
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-2057826590229162"></amp-auto-ads>
+    
+    <!-- HEADER -->
     <header class="site-header">
         <div class="container header-container">
             <a href="https://amzn.to/4rM7HuT" class="logo">
-                <i class="fab fa-amazon logo-icon"></i>
-                <span>amazon afiliado</span>
+                <span class="logo-icon">🛒</span>
+                <span>Amazon Deals</span>
             </a>
             
             <nav class="main-nav">
-                <a href="https://amzn.to/4rM7HuT" class="nav-link active">Home</a>
-                <a href="https://amzn.to/4iOyl28" class="nav-link">Flash Deals</a>
-                <a href="https://amzn.to/4aEqUIC" class="nav-link">Books</a>
-                <a href="https://amzn.to/4aMFxcS" class="nav-link">Hot New Releases</a>
-                <a href="https://amzn.to/3Yp9V5H" class="nav-link">Gift Guide</a>
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#flash-deals" class="nav-link">Flash Deals</a>
+                <a href="#featured" class="nav-link">Featured</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#gifts" class="nav-link">Gift Guide</a>
             </nav>
             
             <a href="https://amzn.to/4rM7HuT" class="main-button">
@@ -514,26 +564,71 @@
         </div>
     </header>
 
-    
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Premium Amazon Deals</h1>
+                <p class="hero-subtitle">
+                    Discover handpicked products with incredible discounts. 
+                    We test and verify every deal so you get the best value for your money.
+                </p>
+                <div class="hero-actions">
+                    <a href="#flash-deals" class="main-button">
+                        <span>View Flash Deals</span>
+                    </a>
+                    <a href="#featured" class="main-button" style="background: linear-gradient(135deg, var(--accent-orange), #E55A00);">
+                        <span>Featured Products</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Featured Deals -->
-    <section class="section">
+    <!-- DEAL TIMER -->
+    <section class="deal-timer">
+        <div class="container">
+            <h2 class="timer-title">Flash Deals End In:</h2>
+            <div class="timer-display">
+                <div class="timer-unit">
+                    <div class="timer-value" id="timer-hours">23</div>
+                    <div class="timer-label">Hours</div>
+                </div>
+                <div class="timer-unit">
+                    <div class="timer-value" id="timer-minutes">59</div>
+                    <div class="timer-label">Minutes</div>
+                </div>
+                <div class="timer-unit">
+                    <div class="timer-value" id="timer-seconds">59</div>
+                    <div class="timer-label">Seconds</div>
+                </div>
+            </div>
+            <a href="https://amzn.to/4iOyl28" class="main-button">
+                Shop Before Deals Expire
+            </a>
+        </div>
+    </section>
+
+    <!-- FLASH DEALS -->
+    <section class="section" id="flash-deals">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Flash Deals</h2>
                 <p class="section-description">
-                    Limited-time offers with best prices
+                    Limited-time offers with best prices. These deals won't last long!
                 </p>
             </div>
             
             <div class="products-grid">
-                <!-- Product 1 -->
+                <!-- PRODUCT 1 -->
                 <div class="product-card">
                     <div class="product-image-container">
-                        <img src="https://m.media-amazon.com/images/I/71CHmL6xZqL._AC_SX679_.jpg" 
-                             alt="RUNBOX Slim RFID Wallet" 
-                             class="product-image"
-                             loading="lazy">
+                        <amp-img src="https://m.media-amazon.com/images/I/71CHmL6xZqL._AC_SX679_.jpg" 
+                                alt="RUNBOX Slim RFID Wallet" 
+                                width="300" 
+                                height="200"
+                                layout="responsive">
+                        </amp-img>
                     </div>
                     <div class="product-content">
                         <span class="product-category">Fashion</span>
@@ -547,23 +642,25 @@
                                 <span class="product-old-price">$49.99</span>
                             </div>
                             <div class="product-rating">
-                                <i class="fas fa-star"></i>
+                                <span>★</span>
                                 <span>4.5</span>
                             </div>
                         </div>
-                        <a href="https://amzn.to/44hSasB" class="cart-button" target="_blank">
-                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        <a href="https://amzn.to/44hSasB" class="cart-button" target="_blank" rel="nofollow sponsored">
+                            <span>🛒 Add to Cart</span>
                         </a>
                     </div>
                 </div>
                 
-                <!-- Product 2 -->
+                <!-- PRODUCT 2 -->
                 <div class="product-card">
                     <div class="product-image-container">
-                        <img src="https://m.media-amazon.com/images/I/81gwIs9730L._AC_SX679_.jpg" 
-                             alt="RGB Gaming Mouse Pad" 
-                             class="product-image"
-                             loading="lazy">
+                        <amp-img src="https://m.media-amazon.com/images/I/81gwIs9730L._AC_SX679_.jpg" 
+                                alt="RGB Gaming Mouse Pad" 
+                                width="300" 
+                                height="200"
+                                layout="responsive">
+                        </amp-img>
                     </div>
                     <div class="product-content">
                         <span class="product-category">Gaming</span>
@@ -577,23 +674,25 @@
                                 <span class="product-old-price">$59.99</span>
                             </div>
                             <div class="product-rating">
-                                <i class="fas fa-star"></i>
+                                <span>★</span>
                                 <span>4.8</span>
                             </div>
                         </div>
-                        <a href="https://amzn.to/4rP5EpE" class="cart-button" target="_blank">
-                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        <a href="https://amzn.to/4rP5EpE" class="cart-button" target="_blank" rel="nofollow sponsored">
+                            <span>🛒 Add to Cart</span>
                         </a>
                     </div>
                 </div>
                 
-                <!-- Product 3 -->
+                <!-- PRODUCT 3 -->
                 <div class="product-card">
                     <div class="product-image-container">
-                        <img src="https://m.media-amazon.com/images/I/71oT5kwLtQL._AC_SL1500_.jpg" 
-                             alt="Scented Candle Set" 
-                             class="product-image"
-                             loading="lazy">
+                        <amp-img src="https://m.media-amazon.com/images/I/71oT5kwLtQL._AC_SL1500_.jpg" 
+                                alt="Scented Candle Set" 
+                                width="300" 
+                                height="200"
+                                layout="responsive">
+                        </amp-img>
                     </div>
                     <div class="product-content">
                         <span class="product-category">Home</span>
@@ -607,12 +706,12 @@
                                 <span class="product-old-price">$39.99</span>
                             </div>
                             <div class="product-rating">
-                                <i class="fas fa-star"></i>
+                                <span>★</span>
                                 <span>4.7</span>
                             </div>
                         </div>
-                        <a href="https://amzn.to/48uCxk7" class="cart-button" target="_blank">
-                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        <a href="https://amzn.to/48uCxk7" class="cart-button" target="_blank" rel="nofollow sponsored">
+                            <span>🛒 Add to Cart</span>
                         </a>
                     </div>
                 </div>
@@ -620,18 +719,26 @@
         </div>
     </section>
 
-    
-
-
+    <!-- FEATURED PRODUCTS -->
+    <section class="section" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-description">
+                    Our top picks with the best reviews and value.
+                </p>
+            </div>
             
             <div class="products-grid">
-                <!-- Product 4 -->
+                <!-- PRODUCT 4 -->
                 <div class="product-card">
                     <div class="product-image-container">
-                        <img src="https://m.media-amazon.com/images/I/71p3-v2aywL._AC_SL1500_.jpg" 
-                             alt="Smart Watch" 
-                             class="product-image"
-                             loading="lazy">
+                        <amp-img src="https://m.media-amazon.com/images/I/71p3-v2aywL._AC_SL1500_.jpg" 
+                                alt="Smart Watch" 
+                                width="300" 
+                                height="200"
+                                layout="responsive">
+                        </amp-img>
                     </div>
                     <div class="product-content">
                         <span class="product-category">Wearables</span>
@@ -645,23 +752,25 @@
                                 <span class="product-old-price">$129.99</span>
                             </div>
                             <div class="product-rating">
-                                <i class="fas fa-star"></i>
+                                <span>★</span>
                                 <span>4.6</span>
                             </div>
                         </div>
-                        <a href="https://amzn.to/4pqxU0h" class="cart-button" target="_blank">
-                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        <a href="https://amzn.to/4pqxU0h" class="cart-button" target="_blank" rel="nofollow sponsored">
+                            <span>🛒 Add to Cart</span>
                         </a>
                     </div>
                 </div>
                 
-                <!-- Product 5 -->
+                <!-- PRODUCT 5 -->
                 <div class="product-card">
                     <div class="product-image-container">
-                        <img src="https://m.media-amazon.com/images/I/712HdjTSU-L._AC_SX679_.jpg" 
-                             alt="Coffee Mugs" 
-                             class="product-image"
-                             loading="lazy">
+                        <amp-img src="https://m.media-amazon.com/images/I/712HdjTSU-L._AC_SX679_.jpg" 
+                                alt="Coffee Mugs" 
+                                width="300" 
+                                height="200"
+                                layout="responsive">
+                        </amp-img>
                     </div>
                     <div class="product-content">
                         <span class="product-category">Kitchen</span>
@@ -675,23 +784,25 @@
                                 <span class="product-old-price">$29.99</span>
                             </div>
                             <div class="product-rating">
-                                <i class="fas fa-star"></i>
+                                <span>★</span>
                                 <span>4.9</span>
                             </div>
                         </div>
-                        <a href="https://amzn.to/4pnGP2A" class="cart-button" target="_blank">
-                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        <a href="https://amzn.to/4pnGP2A" class="cart-button" target="_blank" rel="nofollow sponsored">
+                            <span>🛒 Add to Cart</span>
                         </a>
                     </div>
                 </div>
                 
-                <!-- Product 6 -->
+                <!-- PRODUCT 6 -->
                 <div class="product-card">
                     <div class="product-image-container">
-                        <img src="https://m.media-amazon.com/images/I/61nujxnsPdL._AC_SL1500_.jpg" 
-                             alt="Wireless Earbuds" 
-                             class="product-image"
-                             loading="lazy">
+                        <amp-img src="https://m.media-amazon.com/images/I/61nujxnsPdL._AC_SL1500_.jpg" 
+                                alt="Wireless Earbuds" 
+                                width="300" 
+                                height="200"
+                                layout="responsive">
+                        </amp-img>
                     </div>
                     <div class="product-content">
                         <span class="product-category">Audio</span>
@@ -705,12 +816,12 @@
                                 <span class="product-old-price">$129.99</span>
                             </div>
                             <div class="product-rating">
-                                <i class="fas fa-star"></i>
+                                <span>★</span>
                                 <span>4.4</span>
                             </div>
                         </div>
-                        <a href="https://amzn.to/4a3pgjC" class="cart-button" target="_blank">
-                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        <a href="https://amzn.to/4a3pgjC" class="cart-button" target="_blank" rel="nofollow sponsored">
+                            <span>🛒 Add to Cart</span>
                         </a>
                     </div>
                 </div>
@@ -718,88 +829,159 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
+    <!-- CATEGORIES -->
+    <section class="section" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Shop by Category</h2>
+                <p class="section-description">
+                    Browse our curated selection across different categories.
+                </p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-content" style="text-align: center; padding: 40px 24px;">
+                        <h3 class="product-title">📱 Electronics</h3>
+                        <p class="product-description">Latest gadgets, smartphones, and tech accessories</p>
+                        <a href="https://amzn.to/3MtfUUD" class="cart-button" style="margin-top: 20px;">
+                            Browse Electronics
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-content" style="text-align: center; padding: 40px 24px;">
+                        <h3 class="product-title">🏠 Home & Kitchen</h3>
+                        <p class="product-description">Everything for your home improvement and cooking needs</p>
+                        <a href="https://amzn.to/44hQmQl" class="cart-button" style="margin-top: 20px;">
+                            Browse Home Goods
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-content" style="text-align: center; padding: 40px 24px;">
+                        <h3 class="product-title">👕 Fashion</h3>
+                        <p class="product-description">Clothing, shoes, accessories and personal style</p>
+                        <a href="https://amzn.to/3Kody8Z" class="cart-button" style="margin-top: 20px;">
+                            Browse Fashion
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="gifts">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
                     <h4>Amazon Deals</h4>
                     <p style="color: var(--text-gray); margin-top: 16px; line-height: 1.6;">
                         Curated selection of premium Amazon deals. 
-                        Independent affiliate showcasing quality products.
+                        Independent affiliate showcasing quality products with verified discounts.
                     </p>
                 </div>
                 
                 <div class="footer-column">
                     <h4>Categories</h4>
                     <ul>
-                        <li><a href="https://amzn.to/3MtfUUD" target="_blank">Electronics</a></li>
-                        <li><a href="https://amzn.to/44hQmQl" target="_blank">Home & Kitchen</a></li>
-                        <li><a href="https://amzn.to/3Kody8Z" target="_blank">Fashion</a></li>
-                        <li><a href="https://amzn.to/3YjIZ7u" target="_blank">Beauty</a></li>
-                        <li><a href="https://amzn.to/48Pc6Ve" target="_blank">Books</a></li>
+                        <li><a href="https://amzn.to/3MtfUUD" target="_blank" rel="nofollow">Electronics</a></li>
+                        <li><a href="https://amzn.to/44hQmQl" target="_blank" rel="nofollow">Home & Kitchen</a></li>
+                        <li><a href="https://amzn.to/3Kody8Z" target="_blank" rel="nofollow">Fashion</a></li>
+                        <li><a href="https://amzn.to/3YjIZ7u" target="_blank" rel="nofollow">Beauty</a></li>
+                        <li><a href="https://amzn.to/48Pc6Ve" target="_blank" rel="nofollow">Books</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="https://amzn.to/4rM7HuT" target="_blank">Home</a></li>
-                        <li><a href="https://amzn.to/4iOyl28" target="_blank">Flash Deals</a></li>
-                        <li><a href="https://amzn.to/4aEqUIC" target="_blank">Books</a></li>
-                        <li><a href="https://amzn.to/4aMFxcS" target="_blank">New Releases</a></li>
-                        <li><a href="https://amzn.to/3Yp9V5H" target="_blank">Gift Guide</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#flash-deals">Flash Deals</a></li>
+                        <li><a href="#featured">Featured</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#gifts">Gift Guide</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
                 <div>
-                    © 2024 Amazon Deals. All product names, logos, and brands are property of their respective owners.
-                    Amazon and the Amazon logo are trademarks of Amazon.com, Inc.
+                    © 2024 Amazon Deals. As an Amazon Associate I earn from qualifying purchases. 
+                    Product prices and availability are accurate as of the date/time indicated.
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Countdown Timer
-        function updateTimer() {
-            const now = new Date();
-            const endOfDay = new Date();
-            endOfDay.setHours(23, 59, 59, 999);
-            
-            const diff = endOfDay - now;
-            
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.getElementById('timer-hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('timer-minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('timer-seconds').textContent = seconds.toString().padStart(2, '0');
-        }
-        
-        setInterval(updateTimer, 1000);
-        updateTimer();
-        
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.site-header');
-            if(window.scrollY > 50) {
-                header.style.background = 'rgba(10, 10, 10, 0.98)';
-            } else {
-                header.style.background = 'rgba(10, 10, 10, 0.95)';
+    <!-- AFFILIATE DISCLAIMER BAR -->
+    <div class="affiliate-disclaimer-bar" id="disclaimerBar">
+        <span>
+            <strong>Affiliate Disclosure:</strong> This site contains affiliate links. 
+            I may earn a commission if you make a purchase through these links.
+        </span>
+        <button on="tap:disclaimerBar.hide">
+            I Understand
+        </button>
+    </div>
+
+    <!-- AMP SCRIPTS AND FUNCTIONS -->
+    <amp-bind-macro id="updateTimer" 
+                   arguments="hours, minutes, seconds" 
+                   expression="
+                    timerHours.textContent = hours.toString().padStart(2, '0');
+                    timerMinutes.textContent = minutes.toString().padStart(2, '0');
+                    timerSeconds.textContent = seconds.toString().padStart(2, '0');
+                   ">
+    </amp-bind-macro>
+
+    <amp-script layout="container" src="https://cdn.ampproject.org/v0/amp-script-0.1.js" sandbox="allow-forms">
+        <script type="text/plain" target="amp-script">
+            // Countdown Timer
+            function updateCountdown() {
+                const now = new Date();
+                const endOfDay = new Date();
+                endOfDay.setHours(23, 59, 59, 999);
+                
+                const diff = endOfDay - now;
+                
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                // Update AMP elements
+                document.getElementById('timer-hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('timer-minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('timer-seconds').textContent = seconds.toString().padStart(2, '0');
             }
-        });
-        
-        // Add click tracking for affiliate links
-        document.querySelectorAll('a[href*="amzn.to"]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                // You can add analytics tracking here
-                console.log('Affiliate link clicked:', this.href);
+            
+            // Initialize timer
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+            
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('.site-header');
+                if(window.scrollY > 50) {
+                    header.style.background = 'rgba(10, 10, 10, 0.98)';
+                } else {
+                    header.style.background = 'rgba(10, 10, 10, 0.95)';
+                }
             });
-        });
-    </script>
+            
+            // Add click tracking for analytics
+            document.querySelectorAll('a[href*="amzn.to"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'affiliate_click', {
+                        'event_category': 'Affiliate',
+                        'event_label': this.href
+                    });
+                });
+            });
+        </script>
+    </amp-script>
 </body>
-</html>
+    </html>
